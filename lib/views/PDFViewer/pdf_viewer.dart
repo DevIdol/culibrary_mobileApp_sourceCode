@@ -1,4 +1,3 @@
-import 'dart:async';
 import 'dart:io';
 import 'package:advance_pdf_viewer/advance_pdf_viewer.dart';
 import 'package:culibrary/provider/theme_provider.dart';
@@ -31,16 +30,12 @@ class _PDFViewerPageState extends State<PDFViewerPage> {
     loadDocument();
   }
 
-  loadDocument() {
-    setState(() {
-      Timer(const Duration(milliseconds: 1000), () async {
-        final _doc = await PDFDocument.fromFile(widget.file);
+  loadDocument() async {
+    final _doc = await PDFDocument.fromFile(widget.file);
 
-        setState(() {
-          _document = _doc;
-          _loading = false;
-        });
-      });
+    setState(() {
+      _document = _doc;
+      _loading = false;
     });
   }
 
@@ -71,13 +66,6 @@ class _PDFViewerPageState extends State<PDFViewerPage> {
                 pickerIconColor: _themeMode,
                 pickerButtonColor: _iconColor,
                 indicatorText: _themeMode,
-                numberPickerConfirmWidget: Text(
-                  "OK",
-                  style: TextStyle(
-                    fontSize: 16,
-                    color: _iconColor,
-                  ),
-                ),
               ));
     });
   }

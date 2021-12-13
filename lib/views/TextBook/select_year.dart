@@ -114,7 +114,7 @@ class _SelectYearState extends State<SelectYear> {
                   width: 36,
                   height: 36,
                 ),
-                'ThirdYear',
+                'Third Year',
                 0,
                 50,
                 0,
