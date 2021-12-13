@@ -145,7 +145,7 @@ class _LibraryState extends State<Library> {
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
                         url:
-                            'https://drive.google.com/file/d/1L9wdEtvnGt3dSAXLAB3SySMXDwxUDE5v/view?usp=sharing');
+                            'https://drive.google.com/file/d/1zYf5_VuCa6e4no-ipCVefObQEQtIwDXg/view?usp=sharing');
                   }, 'assets/library/web.jpg', _iconColor),
                   _iconColor,
                   'Professional Web Developer\n              By Ei Maung'),
