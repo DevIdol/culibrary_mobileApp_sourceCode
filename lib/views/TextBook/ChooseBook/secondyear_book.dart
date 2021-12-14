@@ -33,7 +33,7 @@ class _SecondYearBooksState extends State<SecondYearBooks> {
       return Scaffold(
         backgroundColor: _themeMode,
         appBar: appBar(
-            _cardColor, _fontColor, 'Second Year', themeNotifier, _iconColor),
+            _cardColor, _fontColor, 'Second Year', themeNotifier, _iconColor, toolbarHeight: 64),
         body: _chooseBook(context, _iconColor),
       );
     });

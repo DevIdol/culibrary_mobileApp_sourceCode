@@ -33,7 +33,7 @@ class _LibraryState extends State<Library> {
       return Scaffold(
         backgroundColor: _themeMode,
         appBar: appBar(
-            _cardColor, _fontColor, 'Library', themeNotifier, _iconColor),
+            _cardColor, _fontColor, 'Library', themeNotifier, _iconColor, toolbarHeight: 64),
         body: _chooseBook(context, _iconColor),
       );
     });

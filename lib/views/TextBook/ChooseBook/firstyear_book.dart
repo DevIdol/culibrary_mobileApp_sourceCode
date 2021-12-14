@@ -33,7 +33,7 @@ class _FirstYearBooksState extends State<FirstYearBooks> {
       return Scaffold(
         backgroundColor: _themeMode,
         appBar: appBar(
-            _cardColor, _fontColor, 'First Year', themeNotifier, _iconColor),
+            _cardColor, _fontColor, 'First Year', themeNotifier, _iconColor, toolbarHeight: 64),
         body: Center(
           child: _chooseBook(context, _iconColor),
         ),

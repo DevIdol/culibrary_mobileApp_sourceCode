@@ -15,6 +15,7 @@ import 'package:culibrary/widgets/appbar_widget.dart';
 import 'package:culibrary/widgets/delete_dialog.dart';
 import 'package:culibrary/widgets/toggle.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:provider/provider.dart';
 import '../../color_themes.dart';
 import 'MON/monday_view.dart';
@@ -35,6 +36,7 @@ class _TimeTableViewState extends State<TimeTableView>
   final _controller = ScrollController();
   bool _isOpened = false;
   bool _isVisible = true;
+  bool _floatAButton = true;
 
   @override
   void initState() {
@@ -149,162 +151,191 @@ class _TimeTableViewState extends State<TimeTableView>
                   ),
                 ]),
           ),
-          body: TabBarView(
-              physics: const NeverScrollableScrollPhysics(),
-              controller: tabController,
-              children: const [
-                MondayView(),
-                TuesdayView(),
-                WednesdayView(),
-                ThursdayView(),
-                FridayView(),
-                SubjectView()
-              ]),
-          floatingActionButton: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Transform(
-                transform: Matrix4.translationValues(
-                    0.9, _translateButton.value * 3.0, 0.0),
-                child: add(_iconColor, _isVisible, () {
+          body: NotificationListener<UserScrollNotification>(
+            onNotification: (notification) {
+              if (notification.direction == ScrollDirection.forward) {
+                if (!_floatAButton)
                   setState(() {
-                    if (tabController.index == 0) {
-                      setState(() {
-                        if (!_isOpened) {
-                          _animationController.forward();
-                        } else {
-                          _animationController.reverse();
-                        }
-                        _isOpened = !_isOpened;
-                        Navigator.push(context,
-                            addFloatingActionButton(const AddMondayClass()));
-                      });
-                    } else if (tabController.index == 1) {
-                      setState(() {
-                        if (!_isOpened) {
-                          _animationController.forward();
-                        } else {
-                          _animationController.reverse();
-                        }
-                        _isOpened = !_isOpened;
-                        Navigator.push(context,
-                            addFloatingActionButton(const AddTuesdayClass()));
-                      });
-                    } else if (tabController.index == 2) {
-                      setState(() {
-                        if (!_isOpened) {
-                          _animationController.forward();
-                        } else {
-                          _animationController.reverse();
-                        }
-                        _isOpened = !_isOpened;
-                        Navigator.push(context,
-                            addFloatingActionButton(const AddWednesdayClass()));
-                      });
-                    } else if (tabController.index == 3) {
-                      setState(() {
-                        if (!_isOpened) {
-                          _animationController.forward();
-                        } else {
-                          _animationController.reverse();
-                        }
-                        _isOpened = !_isOpened;
-                        Navigator.push(context,
-                            addFloatingActionButton(const AddThursdayClass()));
-                      });
-                    } else if (tabController.index == 4) {
-                      setState(() {
-                        if (!_isOpened) {
-                          _animationController.forward();
-                        } else {
-                          _animationController.reverse();
-                        }
-                        _isOpened = !_isOpened;
-                        Navigator.push(context,
-                            addFloatingActionButton(const AddFridayClass()));
-                      });
-                    } else {
-                      setState(() {
-                        if (!_isOpened) {
-                          _animationController.forward();
-                        } else {
-                          _animationController.reverse();
-                        }
-                        _isOpened = !_isOpened;
-                        Navigator.push(context,
-                            addFloatingActionButton(const AddSubject()));
-                      });
-                    }
+                    _floatAButton = true;
                   });
-                }),
-              ),
-              Transform(
+              } else if (notification.direction == ScrollDirection.reverse) {
+                if (_floatAButton)
+                  setState(() {
+                    _floatAButton = false;
+                  });
+              }
+              return true;
+            },
+            child: TabBarView(
+                physics: const NeverScrollableScrollPhysics(),
+                controller: tabController,
+                children: const [
+                  MondayView(),
+                  TuesdayView(),
+                  WednesdayView(),
+                  ThursdayView(),
+                  FridayView(),
+                  SubjectView()
+                ]),
+          ),
+          floatingActionButton: Visibility(
+            visible: _floatAButton,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Transform(
                   transform: Matrix4.translationValues(
-                      0.9, _translateButton.value * 2.0, 0.0),
-                  child: delete(_iconColor, _isVisible, () {
+                      0.9, _translateButton.value * 3.0, 0.0),
+                  child: add(_iconColor, _isVisible, () {
                     setState(() {
                       if (tabController.index == 0) {
-                        if (mons.isEmpty) {
-                          return;
-                        } else {
-                          deleteDialog(context, () {
-                            monDao.deletAllMons(mons);
-                          }, _themeMode, _iconColor,
-                              'DeleteAll Monday TimeTable', 'Are you sure?');
-                        }
+                        setState(() {
+                          if (!_isOpened) {
+                            _animationController.forward();
+                          } else {
+                            _animationController.reverse();
+                          }
+                          _isOpened = !_isOpened;
+                          Navigator.push(context,
+                              addFloatingActionButton(const AddMondayClass()));
+                        });
                       } else if (tabController.index == 1) {
-                        if (tues.isEmpty) {
-                          return;
-                        } else {
-                          deleteDialog(context, () {
-                            tueDao.deletAllTues(tues);
-                          }, _themeMode, _iconColor,
-                              'DeleteAll Tuesday TimeTable', 'Are you sure?');
-                        }
+                        setState(() {
+                          if (!_isOpened) {
+                            _animationController.forward();
+                          } else {
+                            _animationController.reverse();
+                          }
+                          _isOpened = !_isOpened;
+                          Navigator.push(context,
+                              addFloatingActionButton(const AddTuesdayClass()));
+                        });
                       } else if (tabController.index == 2) {
-                        if (weds.isEmpty) {
-                          return;
-                        } else {
-                          deleteDialog(context, () {
-                            wedDao.deletAllWeds(weds);
-                          }, _themeMode, _iconColor,
-                              'DeleteAll Wednesday TimeTable', 'Are you sure?');
-                        }
+                        setState(() {
+                          if (!_isOpened) {
+                            _animationController.forward();
+                          } else {
+                            _animationController.reverse();
+                          }
+                          _isOpened = !_isOpened;
+                          Navigator.push(
+                              context,
+                              addFloatingActionButton(
+                                  const AddWednesdayClass()));
+                        });
                       } else if (tabController.index == 3) {
-                        if (thus.isEmpty) {
-                          return;
-                        } else {
-                          deleteDialog(context, () {
-                            thuDao.deletAllThus(thus);
-                          }, _themeMode, _iconColor,
-                              'DeleteAll Thursday TimeTable', 'Are you sure?');
-                        }
+                        setState(() {
+                          if (!_isOpened) {
+                            _animationController.forward();
+                          } else {
+                            _animationController.reverse();
+                          }
+                          _isOpened = !_isOpened;
+                          Navigator.push(
+                              context,
+                              addFloatingActionButton(
+                                  const AddThursdayClass()));
+                        });
                       } else if (tabController.index == 4) {
-                        if (fris.isEmpty) {
-                          return;
-                        } else {
-                          deleteDialog(context, () {
-                            friDao.deletAllFris(fris);
-                          }, _themeMode, _iconColor,
-                              'DeleteAll Friday TimeTable', 'Are you sure?');
-                        }
+                        setState(() {
+                          if (!_isOpened) {
+                            _animationController.forward();
+                          } else {
+                            _animationController.reverse();
+                          }
+                          _isOpened = !_isOpened;
+                          Navigator.push(context,
+                              addFloatingActionButton(const AddFridayClass()));
+                        });
                       } else {
-                        if (subs.isEmpty) {
-                          return;
-                        } else {
-                          deleteDialog(context, () {
-                            subDao.deletAllSubs(subs);
-                          },
-                              _themeMode,
-                              _iconColor,
-                              'DeleteAll Subject & TeacherName',
-                              'Are you sure?');
-                        }
+                        setState(() {
+                          if (!_isOpened) {
+                            _animationController.forward();
+                          } else {
+                            _animationController.reverse();
+                          }
+                          _isOpened = !_isOpened;
+                          Navigator.push(context,
+                              addFloatingActionButton(const AddSubject()));
+                        });
                       }
                     });
-                  })),
-              toggle(_iconColor, _isVisible, animate, _animation)
-            ],
+                  }),
+                ),
+                Transform(
+                    transform: Matrix4.translationValues(
+                        0.9, _translateButton.value * 2.0, 0.0),
+                    child: delete(_iconColor, _isVisible, () {
+                      setState(() {
+                        if (tabController.index == 0) {
+                          if (mons.isEmpty) {
+                            return;
+                          } else {
+                            deleteDialog(context, () {
+                              monDao.deletAllMons(mons);
+                            }, _themeMode, _iconColor,
+                                'DeleteAll Monday TimeTable', 'Are you sure?');
+                          }
+                        } else if (tabController.index == 1) {
+                          if (tues.isEmpty) {
+                            return;
+                          } else {
+                            deleteDialog(context, () {
+                              tueDao.deletAllTues(tues);
+                            }, _themeMode, _iconColor,
+                                'DeleteAll Tuesday TimeTable', 'Are you sure?');
+                          }
+                        } else if (tabController.index == 2) {
+                          if (weds.isEmpty) {
+                            return;
+                          } else {
+                            deleteDialog(context, () {
+                              wedDao.deletAllWeds(weds);
+                            },
+                                _themeMode,
+                                _iconColor,
+                                'DeleteAll Wednesday TimeTable',
+                                'Are you sure?');
+                          }
+                        } else if (tabController.index == 3) {
+                          if (thus.isEmpty) {
+                            return;
+                          } else {
+                            deleteDialog(context, () {
+                              thuDao.deletAllThus(thus);
+                            },
+                                _themeMode,
+                                _iconColor,
+                                'DeleteAll Thursday TimeTable',
+                                'Are you sure?');
+                          }
+                        } else if (tabController.index == 4) {
+                          if (fris.isEmpty) {
+                            return;
+                          } else {
+                            deleteDialog(context, () {
+                              friDao.deletAllFris(fris);
+                            }, _themeMode, _iconColor,
+                                'DeleteAll Friday TimeTable', 'Are you sure?');
+                          }
+                        } else {
+                          if (subs.isEmpty) {
+                            return;
+                          } else {
+                            deleteDialog(context, () {
+                              subDao.deletAllSubs(subs);
+                            },
+                                _themeMode,
+                                _iconColor,
+                                'DeleteAll Subject & TeacherName',
+                                'Are you sure?');
+                          }
+                        }
+                      });
+                    })),
+                toggle(_iconColor, _isVisible, animate, _animation)
+              ],
+            ),
           ));
     });
   }

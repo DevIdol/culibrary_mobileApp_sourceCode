@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:culibrary/animation/add_floatingactionbutton.dart';
 import 'package:culibrary/api/package_api.dart';
 import 'package:culibrary/api/text_api.dart';
@@ -10,6 +11,7 @@ import 'package:culibrary/widgets/delete_dialog.dart';
 import 'package:culibrary/widgets/no_data.dart';
 import 'package:culibrary/widgets/toggle.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
@@ -29,6 +31,7 @@ class _ExamViewState extends State<ExamView> with TickerProviderStateMixin {
   final _controller = ScrollController();
   bool _isOpened = false;
   bool _isVisible = true;
+  bool _floatAButton = true;
 
   @override
   void initState() {
@@ -92,43 +95,62 @@ class _ExamViewState extends State<ExamView> with TickerProviderStateMixin {
           backgroundColor: _themeMode,
           appBar: appBar(_cardColor, _fontColor, 'Exam Date & Time',
               themeNotifier, _iconColor,
-              toolbarHeight: 60),
-          body: _examData(themeNotifier, _themeMode, _iconColor, _fontColor),
-          floatingActionButton: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Transform(
-                  transform: Matrix4.translationValues(
-                      0.9, _translateButton.value * 3.0, 0.0),
-                  child: add(_iconColor, _isVisible, () {
-                    setState(() {
-                      if (!_isOpened) {
-                        _animationController.forward();
-                      } else {
-                        _animationController.reverse();
-                      }
-                      _isOpened = !_isOpened;
-                      Navigator.push(context,
-                          addFloatingActionButton(const AddExamDateTime()));
-                    });
-                  })),
-              Transform(
-                  transform: Matrix4.translationValues(
-                      0.9, _translateButton.value * 2.0, 0.0),
-                  child: delete(_iconColor, _isVisible, () {
-                    setState(() {
-                      if (exams.isEmpty) {
-                        return;
-                      } else {
-                        deleteDialog(context, () {
-                          examDao.deletAllExams(exams);
-                        }, _themeMode, _iconColor, 'DeleteAll Exam DateTime',
-                            'Are you sure?');
-                      }
-                    });
-                  })),
-              toggle(_iconColor, _isVisible, animate, _animation)
-            ],
+              toolbarHeight: 70),
+          body: NotificationListener<UserScrollNotification>(
+            onNotification: (notification) {
+              if (notification.direction == ScrollDirection.forward) {
+                if (!_floatAButton)
+                  setState(() {
+                    _floatAButton = true;
+                  });
+              } else if (notification.direction == ScrollDirection.reverse) {
+                if (_floatAButton)
+                  setState(() {
+                    _floatAButton = false;
+                  });
+              }
+              return true;
+            },
+            child: _examData(themeNotifier, _themeMode, _iconColor, _fontColor),
+          ),
+          floatingActionButton: Visibility(
+            visible: _floatAButton,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Transform(
+                    transform: Matrix4.translationValues(
+                        0.9, _translateButton.value * 3.0, 0.0),
+                    child: add(_iconColor, _isVisible, () {
+                      setState(() {
+                        if (!_isOpened) {
+                          _animationController.forward();
+                        } else {
+                          _animationController.reverse();
+                        }
+                        _isOpened = !_isOpened;
+                        Navigator.push(context,
+                            addFloatingActionButton(const AddExamDateTime()));
+                      });
+                    })),
+                Transform(
+                    transform: Matrix4.translationValues(
+                        0.9, _translateButton.value * 2.0, 0.0),
+                    child: delete(_iconColor, _isVisible, () {
+                      setState(() {
+                        if (exams.isEmpty) {
+                          return;
+                        } else {
+                          deleteDialog(context, () {
+                            examDao.deletAllExams(exams);
+                          }, _themeMode, _iconColor, 'DeleteAll Exam DateTime',
+                              'Are you sure?');
+                        }
+                      });
+                    })),
+                toggle(_iconColor, _isVisible, animate, _animation)
+              ],
+            ),
           ));
     });
   }
@@ -154,152 +176,129 @@ class _ExamViewState extends State<ExamView> with TickerProviderStateMixin {
                 final _todayDate = _currentDate == _inputDate;
 
                 return Padding(
-                  padding: const EdgeInsets.only(top: 16, left: 12, right: 12),
-                  child: Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Text(
-                            'Date: ${data.data[position].examDate}',
-                            style: TextStyle(
-                                fontSize: _todayDate ? 16 : 14,
-                                fontWeight: _todayDate
-                                    ? FontWeight.w900
-                                    : FontWeight.w500,
-                                color: _todayDate ? _iconColor : _fontColor),
-                          ),
-                          Text(
-                            'Time: ${data.data[position].examTime}',
-                            style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: _todayDate
-                                    ? FontWeight.w900
-                                    : FontWeight.w500,
-                                color: _todayDate ? _iconColor : _fontColor),
-                          ),
-                        ],
-                      ),
-                      Slidable(
-                        actionPane: const SlidableDrawerActionPane(),
-                        actions: [
-                          SizedBox(
-                            height: 64,
-                            child: IconSlideAction(
-                              caption: 'Edit',
-                              icon: Icons.edit,
-                              foregroundColor: _themeMode,
-                              color: _iconColor,
-                              onTap: () {
-                                Get.to(const UpdateExamDateTime(),
-                                    arguments: data.data[position]);
-                              },
-                            ),
-                          )
-                        ],
-                        secondaryActions: [
-                          SizedBox(
-                            height: 64,
-                            child: IconSlideAction(
-                              caption: 'Delete',
-                              closeOnTap: true,
-                              icon: Icons.delete,
-                              color: Colors.red,
-                              onTap: () {
-                                deleteDialog(context, () {
-                                  examDao.deleteExam(data.data[position]);
-                                }, _themeMode, _iconColor,
-                                    data.data[position].subject, deleteAlert);
-                              },
-                            ),
-                          )
-                        ],
-                        child: InkWell(
-                          onLongPress: () {
+                  padding: const EdgeInsets.only(top: 14, left: 12, right: 12),
+                  child: Slidable(
+                    actionPane: const SlidableDrawerActionPane(),
+                    actions: [
+                      SizedBox(
+                        height: 64,
+                        child: IconSlideAction(
+                          caption: 'Edit',
+                          icon: Icons.edit,
+                          foregroundColor: _themeMode,
+                          color: _iconColor,
+                          onTap: () {
+                            Get.to(const UpdateExamDateTime(),
+                                arguments: data.data[position]);
+                          },
+                        ),
+                      )
+                    ],
+                    secondaryActions: [
+                      SizedBox(
+                        height: 64,
+                        child: IconSlideAction(
+                          caption: 'Delete',
+                          closeOnTap: true,
+                          icon: Icons.delete,
+                          color: Colors.red,
+                          onTap: () {
                             deleteDialog(context, () {
                               examDao.deleteExam(data.data[position]);
                             }, _themeMode, _iconColor,
                                 data.data[position].subject, deleteAlert);
                           },
-                          onDoubleTap: () {
-                            Get.to(const UpdateExamDateTime(),
-                                arguments: data.data[position]);
-                          },
-                          child: Card(
-                            color: themeNotifier.isDark
-                                ? _todayDate
-                                    ? lightFontColor
-                                    : darkCardColor
-                                : _todayDate
-                                    ? darkFontColor
-                                    : lightCardColor,
-                            elevation: 6,
-                            shadowColor: themeNotifier.isDark
-                                ? darkShawdowColor
-                                : lightShawdowColor,
-                            shape: RoundedRectangleBorder(
-                              side: BorderSide(
-                                  color: _todayDate ? _iconColor : secondColor,
-                                  width: _todayDate ? 1.4 : 0.4),
-                              borderRadius: BorderRadius.circular(10),
+                        ),
+                      )
+                    ],
+                    child: InkWell(
+                      onLongPress: () {
+                        deleteDialog(context, () {
+                          examDao.deleteExam(data.data[position]);
+                        }, _themeMode, _iconColor, data.data[position].subject,
+                            deleteAlert);
+                      },
+                      onDoubleTap: () {
+                        Get.to(const UpdateExamDateTime(),
+                            arguments: data.data[position]);
+                      },
+                      child: Card(
+                        color: themeNotifier.isDark
+                            ? _todayDate
+                                ? lightFontColor
+                                : darkCardColor
+                            : _todayDate
+                                ? darkFontColor
+                                : lightCardColor,
+                        elevation: 6,
+                        shadowColor: themeNotifier.isDark
+                            ? darkShawdowColor
+                            : lightShawdowColor,
+                        shape: RoundedRectangleBorder(
+                          side: BorderSide(
+                              color: _todayDate ? _iconColor : secondColor,
+                              width: _todayDate ? 1.4 : 0.4),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: ListTile(
+                          leading: _todayDate
+                              ? Padding(
+                                  padding: const EdgeInsets.only(top: 12),
+                                  child: ClipOval(
+                                    child: Container(
+                                      color: _iconColor,
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 2, vertical: 10),
+                                      child: AnimatedTextKit(
+                                        animatedTexts: [
+                                          WavyAnimatedText("Today",
+                                              textStyle: TextStyle(
+                                                  color: themeNotifier.isDark
+                                                      ? lightFontColor
+                                                      : darkFontColor,
+                                                  fontSize: 10,
+                                                  fontWeight: FontWeight.w900),
+                                              speed: const Duration(
+                                                  milliseconds: 240))
+                                        ],
+                                        isRepeatingAnimation: false,
+                                        repeatForever: false,
+                                        displayFullTextOnTap: true,
+                                      ),
+                                    ),
+                                  ),
+                                )
+                              : null,
+                          title: ListTile(
+                            title: Text(
+                              data.data[position].subject,
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  color: _iconColor,
+                                  fontWeight: _todayDate
+                                      ? FontWeight.w900
+                                      : FontWeight.w500),
                             ),
-                            child: ListTile(
-                              leading: _todayDate
-                                  ? ClipOval(
-                                      child: Container(
-                                        color: _iconColor,
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal: 2, vertical: 10),
-                                        child: Text(
-                                          "Today",
-                                          style: TextStyle(
-                                              color: themeNotifier.isDark
-                                                  ? Colors.black
-                                                  : Colors.white,
-                                              fontSize: 10,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                      ),
-                                    )
-                                  : null,
-                              title: Padding(
-                                padding: const EdgeInsets.only(top: 8),
-                                child: _todayDate
-                                    ? Text(
-                                        data.data[position].subject,
-                                        style: TextStyle(
-                                            fontSize: 16,
-                                            color: _iconColor,
-                                            fontWeight: _todayDate
-                                                ? FontWeight.w900
-                                                : FontWeight.w500),
-                                      )
-                                    : Center(
-                                        child: Text(
-                                          data.data[position].subject,
-                                          style: TextStyle(
-                                              fontSize: 16,
-                                              color: _iconColor,
-                                              fontWeight: _todayDate
-                                                  ? FontWeight.w900
-                                                  : FontWeight.w500),
-                                        ),
-                                      ),
-                              ),
-                              subtitle: Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 8, bottom: 8),
-                                child: _todayDate
-                                    ? Text(data.data[position].note)
-                                    : Center(
-                                        child: Text(data.data[position].note),
-                                      ),
-                              ),
+                            subtitle: Text(
+                              'Date: ${data.data[position].examDate} - Time: ${data.data[position].examTime}',
+                              style: TextStyle(
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.w900,
+                                  ),
                             ),
                           ),
+                          subtitle: _todayDate
+                              ? Padding(
+                                padding: const EdgeInsets.only(left: 18, bottom: 4),
+                                child: Text(data.data[position].note),
+                              )
+                              : Padding(
+                                  padding: const EdgeInsets.only(left: 16, bottom: 4),
+                                  child: Text(data.data[position].note),
+                                ),
                         ),
                       ),
-                    ],
+                    ),
                   ),
                 );
               },

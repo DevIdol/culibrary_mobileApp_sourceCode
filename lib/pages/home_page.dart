@@ -1,4 +1,4 @@
-// ignore_for_file: duplicate_import
+
 import 'dart:io';
 import 'package:culibrary/animation/page_animation_transition.dart';
 import 'package:culibrary/api/pdf_api.dart';
@@ -7,7 +7,6 @@ import 'package:culibrary/pages/about_page.dart';
 import 'package:culibrary/provider/theme_provider.dart';
 import 'package:culibrary/views/Exam/exam_view.dart';
 import 'package:culibrary/views/Note/note_view.dart';
-import 'package:culibrary/views/PDFViewer/pdf_viewer.dart';
 import 'package:culibrary/views/PDFViewer/pdf_viewer.dart';
 import 'package:culibrary/views/TextBook/select_year.dart';
 import 'package:culibrary/views/TimeTable/time_table.dart';
@@ -41,7 +40,7 @@ class HomePage extends StatelessWidget {
               padding: const EdgeInsets.only(left: 10),
               child: Image.asset('assets/icon.png'),
             ),
-            toolbarHeight: 70,
+            toolbarHeight: 72,
           ),
           body: Center(
             child: _selectButton(context, _themeMode, _iconColor),

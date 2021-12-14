@@ -33,7 +33,7 @@ class _FinalYearBooksState extends State<FinalYearBooks> {
       return Scaffold(
         backgroundColor: _themeMode,
         appBar: appBar(
-            _cardColor, _fontColor, 'Final Year', themeNotifier, _iconColor),
+            _cardColor, _fontColor, 'Final Year', themeNotifier, _iconColor, toolbarHeight: 64),
         body: _chooseBook(context, _iconColor),
       );
     });

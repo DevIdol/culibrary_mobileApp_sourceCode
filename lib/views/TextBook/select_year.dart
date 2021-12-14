@@ -40,7 +40,7 @@ class _SelectYearState extends State<SelectYear> {
       return Scaffold(
           backgroundColor: _themeMode,
           appBar: appBar(
-              _cardColor, _fontColor, 'Text Books', themeNotifier, _iconColor),
+              _cardColor, _fontColor, 'Text Books', themeNotifier, _iconColor, toolbarHeight: 70),
           body: Center(
               child:
                   _selectYear(context, _themeMode, _iconColor, height, width)));

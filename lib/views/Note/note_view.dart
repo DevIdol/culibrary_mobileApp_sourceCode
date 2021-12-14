@@ -10,6 +10,7 @@ import 'package:culibrary/widgets/delete_dialog.dart';
 import 'package:culibrary/widgets/no_data.dart';
 import 'package:culibrary/widgets/toggle.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
@@ -29,6 +30,7 @@ class _NoteViewState extends State<NoteView> with TickerProviderStateMixin {
   final _controller = ScrollController();
   bool _isOpened = false;
   bool _isVisible = true;
+  bool _floatAButton = true;
 
   @override
   void initState() {
@@ -93,48 +95,60 @@ class _NoteViewState extends State<NoteView> with TickerProviderStateMixin {
           appBar: appBar(
               _cardColor, _fontColor, 'All Notes', themeNotifier, _iconColor,
               toolbarHeight: 60),
-          body: Container(
-              margin: const EdgeInsets.only(
-                top: 12,
-                left: 1,
-                right: 1,
-              ),
+          body: NotificationListener<UserScrollNotification>(
+              onNotification: (notification) {
+                if (notification.direction == ScrollDirection.forward) {
+                  if (!_floatAButton)
+                    setState(() {
+                      _floatAButton = true;
+                    });
+                } else if (notification.direction == ScrollDirection.reverse) {
+                  if (_floatAButton)
+                    setState(() {
+                      _floatAButton = false;
+                    });
+                }
+                return true;
+              },
               child: _noteDate(_fontColor, _iconColor, _cardColor, _themeMode)),
-          floatingActionButton: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Transform(
-                  transform: Matrix4.translationValues(
-                      0.9, _translateButton.value * 3.0, 0.0),
-                  child: add(_iconColor, _isVisible, () {
-                    setState(() {
-                      if (!_isOpened) {
-                        _animationController.forward();
-                      } else {
-                        _animationController.reverse();
-                      }
-                      _isOpened = !_isOpened;
-                      Navigator.push(
-                          context, addFloatingActionButton(const NoteAdd()));
-                    });
-                  })),
-              Transform(
-                  transform: Matrix4.translationValues(
-                      0.9, _translateButton.value * 2.0, 0.0),
-                  child: delete(_iconColor, _isVisible, () {
-                    setState(() {
-                      if (notes.isEmpty) {
-                        return;
-                      } else {
-                        deleteDialog(context, () {
-                          noteDao.deletAllNotes(notes);
-                        }, _themeMode, _iconColor, 'DeleteAll Notes',
-                            'Are you sure?');
-                      }
-                    });
-                  })),
-              toggle(_iconColor, _isVisible, animate, _animation)
-            ],
+          floatingActionButton: Visibility(
+            visible: _floatAButton,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Transform(
+                    transform: Matrix4.translationValues(
+                        0.9, _translateButton.value * 3.0, 0.0),
+                    child: add(_iconColor, _isVisible, () {
+                      setState(() {
+                        if (!_isOpened) {
+                          _animationController.forward();
+                        } else {
+                          _animationController.reverse();
+                        }
+                        _isOpened = !_isOpened;
+                        Navigator.push(
+                            context, addFloatingActionButton(const NoteAdd()));
+                      });
+                    })),
+                Transform(
+                    transform: Matrix4.translationValues(
+                        0.9, _translateButton.value * 2.0, 0.0),
+                    child: delete(_iconColor, _isVisible, () {
+                      setState(() {
+                        if (notes.isEmpty) {
+                          return;
+                        } else {
+                          deleteDialog(context, () {
+                            noteDao.deletAllNotes(notes);
+                          }, _themeMode, _iconColor, 'DeleteAll Notes',
+                              'Are you sure?');
+                        }
+                      });
+                    })),
+                toggle(_iconColor, _isVisible, animate, _animation)
+              ],
+            ),
           ));
     });
   }

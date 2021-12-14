@@ -18,19 +18,23 @@ dateTimeFormField(double width, _iconColor, themeNotifier, _themeMode,
         final time = await showTimePicker(
             builder: (context, child) {
               return Theme(
-                  data: ThemeData.dark().copyWith(
-                      colorScheme: themeNotifier.isDark
-                          ? ColorScheme.dark(
-                              primary: _iconColor,
-                              surface: _themeMode,
-                              onSurface: _fontColor,
-                            )
-                          : ColorScheme.light(
-                              primary: _iconColor,
-                              surface: _themeMode,
-                              onSurface: _fontColor,
-                            ),
-                      backgroundColor: _themeMode),
+                  data: themeNotifier.isDark
+                      ? ThemeData.dark().copyWith(
+                          colorScheme: ColorScheme.dark(
+                            primary: _iconColor,
+                            onPrimary: _themeMode,
+                            surface: _themeMode,
+                            onSurface: _fontColor,
+                          ),
+                        )
+                      : ThemeData.light().copyWith(
+                          colorScheme: ColorScheme.light(
+                            primary: _iconColor,
+                            onPrimary: _themeMode,
+                            surface: _themeMode,
+                            onSurface: _fontColor,
+                          ),
+                        ),
                   child: child!);
             },
             context: context,
@@ -71,22 +75,23 @@ dateFormField(double width, _iconColor, _themeMode, themeNotifier, _fontColor,
         return showDatePicker(
             builder: (context, child) {
               return Theme(
-                  data: ThemeData.dark().copyWith(
-                    colorScheme: themeNotifier.isDark
-                        ? const ColorScheme.dark(
+                  data: themeNotifier.isDark
+                      ? ThemeData.dark().copyWith(
+                          colorScheme: const ColorScheme.dark(
                             primary: darkModeIconColor,
                             onPrimary: darkMode,
                             surface: darkMode,
                             onSurface: darkFontColor,
-                          )
-                        : const ColorScheme.light(
+                          ),
+                        )
+                      : ThemeData.light().copyWith(
+                          colorScheme: const ColorScheme.light(
                             primary: lightModeIconColor,
                             onPrimary: lightMode,
                             surface: lightMode,
                             onSurface: lightFontColor,
                           ),
-                    dialogBackgroundColor: _themeMode,
-                  ),
+                        ),
                   child: child!);
             },
             context: context,
