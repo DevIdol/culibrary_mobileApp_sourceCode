@@ -96,21 +96,25 @@ class _NoteViewState extends State<NoteView> with TickerProviderStateMixin {
               _cardColor, _fontColor, 'All Notes', themeNotifier, _iconColor,
               toolbarHeight: 60),
           body: NotificationListener<UserScrollNotification>(
-              onNotification: (notification) {
-                if (notification.direction == ScrollDirection.forward) {
-                  if (!_floatAButton)
-                    setState(() {
-                      _floatAButton = true;
-                    });
-                } else if (notification.direction == ScrollDirection.reverse) {
-                  if (_floatAButton)
-                    setState(() {
-                      _floatAButton = false;
-                    });
-                }
-                return true;
-              },
-              child: _noteDate(_fontColor, _iconColor, _cardColor, _themeMode)),
+            onNotification: (notification) {
+              if (notification.direction == ScrollDirection.forward) {
+                if (!_floatAButton)
+                  setState(() {
+                    _floatAButton = true;
+                  });
+              } else if (notification.direction == ScrollDirection.reverse) {
+                if (_floatAButton)
+                  setState(() {
+                    _floatAButton = false;
+                  });
+              }
+              return true;
+            },
+            child: Padding(
+                padding: EdgeInsets.only(top: 10, bottom: 10),
+                child:
+                    _noteDate(_fontColor, _iconColor, _cardColor, _themeMode)),
+          ),
           floatingActionButton: Visibility(
             visible: _floatAButton,
             child: Column(

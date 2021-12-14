@@ -23,7 +23,10 @@ class _MondayViewState extends State<MondayView> {
       final _themeMode = themeNotifier.isDark ? darkMode : lightMode;
       final _iconColor =
           themeNotifier.isDark ? darkModeIconColor : lightModeIconColor;
-      return mondayData(themeNotifier, _iconColor, _themeMode);
+      return Padding(
+        padding: EdgeInsets.only(top: 10, bottom: 10,),
+        child: mondayData(themeNotifier, _iconColor, _themeMode),
+      );
     });
   }
 

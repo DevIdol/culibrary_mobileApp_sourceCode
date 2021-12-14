@@ -93,7 +93,7 @@ class _FinalYearBooksState extends State<FinalYearBooks> {
                     _iconColor,
                   ),
                   _iconColor,
-                  'assets/Distributed Systems')
+                  'Distributed Systems')
             ],
           ),
           const SizedBox(height: 30),

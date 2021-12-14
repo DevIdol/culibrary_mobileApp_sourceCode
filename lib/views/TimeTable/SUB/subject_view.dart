@@ -25,7 +25,10 @@ class _SubjectViewState extends State<SubjectView> {
       final _themeMode = themeNotifier.isDark ? darkMode : lightMode;
       final _iconColor =
           themeNotifier.isDark ? darkModeIconColor : lightModeIconColor;
-      return subjectData(themeNotifier, _iconColor, _themeMode);
+      return Padding(
+        padding: EdgeInsets.only(top: 10, bottom: 10),
+        child: subjectData(themeNotifier, _iconColor, _themeMode),
+      );
     });
   }
 

@@ -111,7 +111,13 @@ class _ExamViewState extends State<ExamView> with TickerProviderStateMixin {
               }
               return true;
             },
-            child: _examData(themeNotifier, _themeMode, _iconColor, _fontColor),
+            child: Padding(
+                padding: EdgeInsets.only(
+                  top: 10,
+                  bottom: 10,
+                ),
+                child: _examData(
+                    themeNotifier, _themeMode, _iconColor, _fontColor)),
           ),
           floatingActionButton: Visibility(
             visible: _floatAButton,
@@ -225,15 +231,13 @@ class _ExamViewState extends State<ExamView> with TickerProviderStateMixin {
                       child: Card(
                         color: themeNotifier.isDark
                             ? _todayDate
-                                ? lightFontColor
+                                ? darkMode
                                 : darkCardColor
                             : _todayDate
                                 ? darkFontColor
                                 : lightCardColor,
-                        elevation: 6,
-                        shadowColor: themeNotifier.isDark
-                            ? darkShawdowColor
-                            : lightShawdowColor,
+                        elevation: _todayDate ? 4 : 3,
+                        shadowColor: _todayDate ? darkFontColor : null,
                         shape: RoundedRectangleBorder(
                           side: BorderSide(
                               color: _todayDate ? _iconColor : secondColor,
@@ -282,18 +286,20 @@ class _ExamViewState extends State<ExamView> with TickerProviderStateMixin {
                             subtitle: Text(
                               'Date: ${data.data[position].examDate} - Time: ${data.data[position].examTime}',
                               style: TextStyle(
-                                  fontSize: 10,
-                                  fontWeight: FontWeight.w900,
-                                  ),
+                                fontSize: 10,
+                                fontWeight: FontWeight.w900,
+                              ),
                             ),
                           ),
                           subtitle: _todayDate
                               ? Padding(
-                                padding: const EdgeInsets.only(left: 18, bottom: 4),
-                                child: Text(data.data[position].note),
-                              )
+                                  padding: const EdgeInsets.only(
+                                      left: 18, bottom: 4),
+                                  child: Text(data.data[position].note),
+                                )
                               : Padding(
-                                  padding: const EdgeInsets.only(left: 16, bottom: 4),
+                                  padding: const EdgeInsets.only(
+                                      left: 16, bottom: 4),
                                   child: Text(data.data[position].note),
                                 ),
                         ),
