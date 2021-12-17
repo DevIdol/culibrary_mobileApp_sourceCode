@@ -46,6 +46,7 @@ app.*.map.json
 # /android/app/release
 
 #ignore folder
+/.vscode/
 /assets/
 /android/
 /ios/

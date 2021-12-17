@@ -33,7 +33,8 @@ class _LibraryState extends State<Library> {
       return Scaffold(
         backgroundColor: _themeMode,
         appBar: appBar(
-            _cardColor, _fontColor, 'Library', themeNotifier, _iconColor, toolbarHeight: 64),
+            _cardColor, _fontColor, 'Library', themeNotifier, _iconColor,
+            toolbarHeight: 64),
         body: _chooseBook(context, _iconColor),
       );
     });
@@ -62,6 +63,30 @@ class _LibraryState extends State<Library> {
                   }, 'assets/library/css.png', _iconColor),
                   _iconColor,
                   'Learn CSS')
+            ],
+          ),
+          const SizedBox(height: 30),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              no_connection(
+                  context,
+                  loadImageFromFirebase(context, () async {
+                    await Utils.openLink(
+                        url:
+                            'https://drive.google.com/file/d/1zYf5_VuCa6e4no-ipCVefObQEQtIwDXg/view?usp=sharing');
+                  }, 'assets/library/web.jpg', _iconColor),
+                  _iconColor,
+                  'Professional Web Developer\n              By Ei Maung'),
+              no_connection(
+                  context,
+                  loadImageFromFirebase(context, () async {
+                    await Utils.openLink(
+                        url:
+                            'https://drive.google.com/file/d/13iBdHMRZqKdiuvvLvYYPsuWPfwcppryt/view?usp=sharing');
+                  }, 'assets/library/rockstar.jpg', _iconColor),
+                  _iconColor,
+                  'Rockstar Developer\n       By Ei Maung')
             ],
           ),
           const SizedBox(height: 30),
@@ -134,30 +159,6 @@ class _LibraryState extends State<Library> {
                   }, 'assets/library/api.jpg', _iconColor),
                   _iconColor,
                   'API By Ei Maung')
-            ],
-          ),
-          const SizedBox(height: 30),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              no_connection(
-                  context,
-                  loadImageFromFirebase(context, () async {
-                    await Utils.openLink(
-                        url:
-                            'https://drive.google.com/file/d/1zYf5_VuCa6e4no-ipCVefObQEQtIwDXg/view?usp=sharing');
-                  }, 'assets/library/web.jpg', _iconColor),
-                  _iconColor,
-                  'Professional Web Developer\n              By Ei Maung'),
-              no_connection(
-                  context,
-                  loadImageFromFirebase(context, () async {
-                    await Utils.openLink(
-                        url:
-                            'https://drive.google.com/file/d/13iBdHMRZqKdiuvvLvYYPsuWPfwcppryt/view?usp=sharing');
-                  }, 'assets/library/rockstar.jpg', _iconColor),
-                  _iconColor,
-                  'Rockstar Developer\n       By Ei Maung')
             ],
           ),
           const SizedBox(height: 30),
