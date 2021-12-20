@@ -43,7 +43,7 @@ class _LoadingWidgetState extends State<LoadingWidget> {
                                 SizedBox(height: 20),
                                 Text(
                                   'Connecting...',
-                                  style: TextStyle(color: secondColor),
+                                  style: TextStyle(color: secondColor, fontFamily: 'Lora'),
                                 ),
                               ],
                             )),
@@ -52,7 +52,7 @@ class _LoadingWidgetState extends State<LoadingWidget> {
                             child: Text(
                               'Developed by DevIdol',
                               style:
-                                  TextStyle(fontSize: 10, color: secondColor),
+                                  TextStyle(fontSize: 10, color: secondColor, fontFamily: 'Lora'),
                             ))
                       ],
                     )

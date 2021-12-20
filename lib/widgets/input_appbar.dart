@@ -16,7 +16,7 @@ inputAppBar(themeNotifier, _cardColor, _fontColor, text) {
     foregroundColor: _fontColor,
     title: Text(
       text,
-      style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+      style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, fontFamily: 'Lora'),
     ),
   );
 }

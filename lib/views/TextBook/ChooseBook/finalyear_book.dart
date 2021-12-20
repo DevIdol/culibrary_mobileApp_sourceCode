@@ -47,7 +47,7 @@ class _FinalYearBooksState extends State<FinalYearBooks> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
@@ -56,7 +56,7 @@ class _FinalYearBooksState extends State<FinalYearBooks> {
                   }, 'assets/finalyear/5E.jpg', _iconColor),
                   _iconColor,
                   'IELTS-13'),
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
@@ -71,7 +71,7 @@ class _FinalYearBooksState extends State<FinalYearBooks> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
@@ -80,7 +80,7 @@ class _FinalYearBooksState extends State<FinalYearBooks> {
                   }, 'assets/fourthyear/operationResearch.jpg', _iconColor),
                   _iconColor,
                   'Operation Research'),
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(
                     context,
@@ -100,7 +100,7 @@ class _FinalYearBooksState extends State<FinalYearBooks> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(
                     context,
@@ -114,7 +114,7 @@ class _FinalYearBooksState extends State<FinalYearBooks> {
                   ),
                   _iconColor,
                   'T C P / I P'),
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
@@ -129,7 +129,7 @@ class _FinalYearBooksState extends State<FinalYearBooks> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
@@ -138,7 +138,7 @@ class _FinalYearBooksState extends State<FinalYearBooks> {
                   }, 'assets/fourthyear/AI.jpg', _iconColor),
                   _iconColor,
                   'Artificial Intelligence'),
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(
                     context,
@@ -158,7 +158,7 @@ class _FinalYearBooksState extends State<FinalYearBooks> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(
                     context,
@@ -172,7 +172,7 @@ class _FinalYearBooksState extends State<FinalYearBooks> {
                   ),
                   _iconColor,
                   'Enterprise Systems\n  For Management'),
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(
                     context,
@@ -192,7 +192,7 @@ class _FinalYearBooksState extends State<FinalYearBooks> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(
                     context,
@@ -206,7 +206,7 @@ class _FinalYearBooksState extends State<FinalYearBooks> {
                   ),
                   _iconColor,
                   ' Cryptography &\nNetwork Security'),
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(

@@ -12,6 +12,6 @@ noData(text1, text2) {
 isEmpty(text, double size) {
   return Text(
     text,
-    style: TextStyle(fontSize: size, color: secondColor),
+    style: TextStyle(fontSize: size, color: secondColor, fontFamily: 'Lora'),
   );
 }

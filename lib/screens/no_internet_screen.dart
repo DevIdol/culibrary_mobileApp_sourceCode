@@ -2,7 +2,6 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:culibrary/color_themes.dart';
 import 'package:flutter/material.dart';
 
-
 class NoInternetScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -14,15 +13,17 @@ class NoInternetScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(Icons.wifi_off, color: secondColor,
-                size: 120,),
+                Icon(
+                  Icons.wifi_off,
+                  color: secondColor,
+                  size: 120,
+                ),
                 SizedBox(height: 30),
                 AnimatedTextKit(
                   animatedTexts: [
                     TyperAnimatedText('No Internet Connection',
                         textStyle: const TextStyle(
-                            fontSize: 16,
-                            letterSpacing: 1),
+                            fontSize: 16, fontFamily: 'Lora', letterSpacing: 1),
                         speed: const Duration(milliseconds: 60))
                   ],
                   isRepeatingAnimation: false,

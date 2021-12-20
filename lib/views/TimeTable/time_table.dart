@@ -129,7 +129,9 @@ class _TimeTableViewState extends State<TimeTableView>
                 unselectedLabelColor: _fontColor,
                 indicatorWeight: 3.0,
                 labelColor: _iconColor,
-                labelStyle: const TextStyle(fontWeight: FontWeight.bold),
+                labelPadding: EdgeInsets.all(0),
+                labelStyle: const TextStyle(
+                    fontFamily: 'Lora', fontWeight: FontWeight.bold),
                 tabs: const [
                   Tab(
                     text: 'Mon',

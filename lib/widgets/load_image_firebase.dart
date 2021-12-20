@@ -26,7 +26,8 @@ Future<Widget> _getImage(BuildContext context, String imageName) async {
             SizedBox(height: 8),
             Text(
               'Connecting...',
-              style: TextStyle(fontSize: 8, color: secondColor),
+              style: TextStyle(
+                  fontSize: 8, color: secondColor, fontFamily: 'Lora'),
             )
           ],
         );
@@ -38,7 +39,8 @@ Future<Widget> _getImage(BuildContext context, String imageName) async {
           SizedBox(height: 8),
           Text(
             'Connection Failed!',
-            style: TextStyle(fontSize: 8, color: secondColor),
+            style:
+                TextStyle(fontSize: 8, color: secondColor, fontFamily: 'Lora'),
           )
         ],
       ),
@@ -99,7 +101,10 @@ loadImageFromFirebase(context, tap, imageName, _iconColor) {
                       SizedBox(height: 8),
                       Text(
                         'Connecting...',
-                        style: TextStyle(fontSize: 8, color: secondColor),
+                        style: TextStyle(
+                            fontSize: 8,
+                            color: secondColor,
+                            fontFamily: 'Lora'),
                       )
                     ],
                   ),

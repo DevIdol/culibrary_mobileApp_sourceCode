@@ -10,7 +10,7 @@ buttonWidget(_iconColor, press, text, _themeMode, themeNotifier) {
     child: Text(
       text,
       style: TextStyle(
-          fontSize: 18, fontWeight: FontWeight.bold, color: _themeMode),
+          fontSize: 18, fontWeight: FontWeight.bold, color: _themeMode, fontFamily: 'Lora'),
     ),
     enabled: true,
     shadowDegree: themeNotifier.isDark ? ShadowDegree.dark : ShadowDegree.light,

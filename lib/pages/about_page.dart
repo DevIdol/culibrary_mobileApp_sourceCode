@@ -39,7 +39,8 @@ class _AboutPageState extends State<AboutPage> {
                   style: TextStyle(
                       fontSize: 20,
                       color: _iconColor,
-                      fontWeight: FontWeight.bold),
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Lora'),
                   child: AnimatedTextKit(
                     animatedTexts: [
                       WavyAnimatedText('CU LIBRARY',
@@ -58,14 +59,15 @@ class _AboutPageState extends State<AboutPage> {
           In this app, you can check Daily Time Table, Text Book PDF, Note, Exam Date & Time and PDF Viewer. When you check to view the Text-Book PDF, using Google Drive and One Drive will be smoother than other browsers.
           This app may not be 100% convenient, but it will be expected to be useful to some extent.  Thanks to all users.""",
                   style: TextStyle(
-                      fontSize: 14, color: _fontColor, letterSpacing: 0.01),
+                      fontSize: 14,
+                      color: _fontColor,
+                      letterSpacing: 0.01,
+                      fontFamily: 'Lora'),
                 ),
               ),
               const SizedBox(height: 16),
               InkWell(
-                onTap: () => Utils.openLink(
-                    url:
-                        'https://github.com/DevIdol'),
+                onTap: () => Utils.openLink(url: 'https://github.com/DevIdol'),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
@@ -78,7 +80,9 @@ class _AboutPageState extends State<AboutPage> {
                             TyperAnimatedText('Developed By DevIdol',
                                 speed: const Duration(milliseconds: 80),
                                 textStyle: const TextStyle(
-                                    fontSize: 14, fontWeight: FontWeight.bold))
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: 'Lora'))
                           ],
                           isRepeatingAnimation: false,
                           repeatForever: false,
@@ -105,7 +109,8 @@ class _AboutPageState extends State<AboutPage> {
                             style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
-                                color: _iconColor),
+                                color: _iconColor,
+                                fontFamily: 'Lora'),
                           ),
                         ],
                       ),
@@ -123,7 +128,8 @@ class _AboutPageState extends State<AboutPage> {
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 16,
-                        color: _fontColor),
+                        color: _fontColor,
+                        fontFamily: 'Lora'),
                   ),
                 ),
               ),
@@ -164,107 +170,128 @@ class _AboutPageState extends State<AboutPage> {
                     color: secondColor,
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
-                    letterSpacing: 0.5),
+                    letterSpacing: 0.5,
+                    fontFamily: 'Lora'),
               ),
               const SizedBox(height: 20),
-              Column(
-                children: [
-                  Container(
-                    alignment: Alignment.topLeft,
-                    child: const Text(
-                      '   1. To Add Data',
-                      style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: secondColor),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 14),
+                child: Column(
+                  children: [
+                    Container(
+                      alignment: Alignment.topLeft,
+                      child: const Text(
+                        '1. To Add Data',
+                        style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: secondColor,
+                            fontFamily: 'Lora'),
+                      ),
                     ),
-                  ),
-                  Container(
-                    alignment: Alignment.topLeft,
-                    child: const Text(
-                      '           Tap the add botton into the menu.',
-                      style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                          color: secondColor),
-                    ),
-                  )
-                ],
+                    Container(
+                      alignment: Alignment.topLeft,
+                      child: const Text(
+                        'Tap the add botton into the menu.',
+                        style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                            color: secondColor,
+                            fontFamily: 'Lora'),
+                      ),
+                    )
+                  ],
+                ),
               ),
               const SizedBox(height: 20),
-              Column(
-                children: [
-                  Container(
-                    alignment: Alignment.topLeft,
-                    child: const Text(
-                      '   2. To Edit Data',
-                      style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: secondColor),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 14),
+                child: Column(
+                  children: [
+                    Container(
+                      alignment: Alignment.topLeft,
+                      child: const Text(
+                        '2. To Edit Data',
+                        style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: secondColor,
+                            fontFamily: 'Lora'),
+                      ),
                     ),
-                  ),
-                  Container(
-                    alignment: Alignment.topLeft,
-                    child: const Text(
-                      '           Double Click on the card or Slide card to the left.',
-                      style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                          color: secondColor),
-                    ),
-                  )
-                ],
+                    Container(
+                      alignment: Alignment.topLeft,
+                      child: const Text(
+                        'Double Click on the card or Slide card to the left.',
+                        style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                            color: secondColor,
+                            fontFamily: 'Lora'),
+                      ),
+                    )
+                  ],
+                ),
               ),
               const SizedBox(height: 20),
-              Column(
-                children: [
-                  Container(
-                    alignment: Alignment.topLeft,
-                    child: const Text(
-                      '   3. To Delete Data',
-                      style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: secondColor),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 14),
+                child: Column(
+                  children: [
+                    Container(
+                      alignment: Alignment.topLeft,
+                      child: const Text(
+                        '3. To Delete Data',
+                        style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: secondColor,
+                            fontFamily: 'Lora'),
+                      ),
                     ),
-                  ),
-                  Container(
-                    alignment: Alignment.topLeft,
-                    child: const Text(
-                      '           Long press on the card or Slide card to the right.',
-                      style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                          color: secondColor),
-                    ),
-                  )
-                ],
+                    Container(
+                      alignment: Alignment.topLeft,
+                      child: const Text(
+                        'Long press on the card or Slide card to the right.',
+                        style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                            color: secondColor,
+                            fontFamily: 'Lora'),
+                      ),
+                    )
+                  ],
+                ),
               ),
               const SizedBox(height: 20),
-              Column(
-                children: [
-                  Container(
-                    alignment: Alignment.topLeft,
-                    child: const Text(
-                      '   4. To Delete All Datas',
-                      style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: secondColor),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 14),
+                child: Column(
+                  children: [
+                    Container(
+                      alignment: Alignment.topLeft,
+                      child: const Text(
+                        '4. To Delete All Datas',
+                        style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: secondColor,
+                            fontFamily: 'Lora'),
+                      ),
                     ),
-                  ),
-                  Container(
-                    alignment: Alignment.topLeft,
-                    child: const Text(
-                      '           Tap the delete botton into the menu.',
-                      style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                          color: secondColor),
-                    ),
-                  )
-                ],
+                    Container(
+                      alignment: Alignment.topLeft,
+                      child: const Text(
+                        'Tap the delete botton into the menu.',
+                        style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                            color: secondColor,
+                            fontFamily: 'Lora'),
+                      ),
+                    )
+                  ],
+                ),
               ),
               const SizedBox(height: 20),
               Padding(
@@ -274,7 +301,8 @@ class _AboutPageState extends State<AboutPage> {
                   style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
-                      color: _iconColor),
+                      color: _iconColor,
+                      fontFamily: 'Lora'),
                 ),
               ),
               const SizedBox(height: 60),
@@ -306,7 +334,8 @@ class _AboutPageState extends State<AboutPage> {
                   style: TextStyle(
                       color: fontColor,
                       fontSize: 16,
-                      fontWeight: FontWeight.bold),
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Lora'),
                 )
               ],
             ),

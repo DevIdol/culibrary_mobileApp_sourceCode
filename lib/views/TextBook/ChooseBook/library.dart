@@ -48,7 +48,7 @@ class _LibraryState extends State<Library> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
@@ -56,7 +56,7 @@ class _LibraryState extends State<Library> {
                   }, 'assets/library/html5.jpg', _iconColor),
                   _iconColor,
                   'Learn HTML'),
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(url: 'https://www.w3schools.com/css/');
@@ -69,7 +69,7 @@ class _LibraryState extends State<Library> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
@@ -78,7 +78,7 @@ class _LibraryState extends State<Library> {
                   }, 'assets/library/web.jpg', _iconColor),
                   _iconColor,
                   'Professional Web Developer\n              By Ei Maung'),
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
@@ -93,7 +93,7 @@ class _LibraryState extends State<Library> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
@@ -102,7 +102,7 @@ class _LibraryState extends State<Library> {
                   }, 'assets/library/bootstrip.jpg', _iconColor),
                   _iconColor,
                   'Bootstrap By Ei Maung'),
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
@@ -117,7 +117,7 @@ class _LibraryState extends State<Library> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
@@ -126,7 +126,7 @@ class _LibraryState extends State<Library> {
                   }, 'assets/library/react.jpg', _iconColor),
                   _iconColor,
                   'React By Ei Maung'),
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
@@ -141,7 +141,7 @@ class _LibraryState extends State<Library> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
@@ -150,7 +150,7 @@ class _LibraryState extends State<Library> {
                   }, 'assets/library/laravel.jpg', _iconColor),
                   _iconColor,
                   'Laravel By Ei Maung'),
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
@@ -165,7 +165,7 @@ class _LibraryState extends State<Library> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
@@ -174,7 +174,7 @@ class _LibraryState extends State<Library> {
                   }, 'assets/library/ubuntu.jpg', _iconColor),
                   _iconColor,
                   'Ubuntu-Linux By Ei Maung'),
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
@@ -189,7 +189,7 @@ class _LibraryState extends State<Library> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
@@ -197,7 +197,7 @@ class _LibraryState extends State<Library> {
                   }, 'assets/library/js.png', _iconColor),
                   _iconColor,
                   'JavaScript Tutorial'),
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
@@ -211,7 +211,7 @@ class _LibraryState extends State<Library> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
@@ -219,7 +219,7 @@ class _LibraryState extends State<Library> {
                   }, 'assets/library/sql.jpg', _iconColor),
                   _iconColor,
                   'SQL Tutorial'),
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
@@ -233,7 +233,7 @@ class _LibraryState extends State<Library> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
@@ -241,7 +241,7 @@ class _LibraryState extends State<Library> {
                   }, 'assets/library/java.jpg', _iconColor),
                   _iconColor,
                   'Java Tutorial'),
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
@@ -256,7 +256,7 @@ class _LibraryState extends State<Library> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
@@ -264,7 +264,7 @@ class _LibraryState extends State<Library> {
                   }, 'assets/library/python.jpg', _iconColor),
                   _iconColor,
                   'Python Tutorial'),
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(url: 'https://zetcode.com/all/');

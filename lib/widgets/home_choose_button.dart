@@ -31,6 +31,7 @@ chooseButton(press, double height, double width, img, name, double toLeft,
                 name,
                 style: const TextStyle(
                     fontSize: 16,
+                    fontFamily: 'Lora',
                     fontWeight: FontWeight.bold,
                     letterSpacing: 1),
               )

@@ -84,8 +84,12 @@ timetableList(
                   : _todayTime
                       ? darkFontColor
                       : lightCardColor,
-              elevation: _todayTime ? 4 : 3,
-              shadowColor: _todayTime ? darkFontColor : null,
+              elevation: _todayTime ? 4 : 2,
+              shadowColor: _todayTime
+                  ? themeNotifier.isDark
+                      ? darkFontColor
+                      : lightFontColor
+                  : null,
               shape: RoundedRectangleBorder(
                 side: BorderSide(
                     color: _todayTime ? _iconColor : secondColor,
@@ -95,7 +99,7 @@ timetableList(
               child: ListTile(
                 title: ListTile(
                   title: Padding(
-                    padding: const EdgeInsets.only(bottom: 6),
+                    padding: const EdgeInsets.only(bottom: 4, top: 10),
                     child: Text(
                       data.data[position].subject,
                       style: TextStyle(
@@ -103,27 +107,41 @@ timetableList(
                           color: _iconColor,
                           letterSpacing: 0.5,
                           fontWeight:
-                              _todayTime ? FontWeight.w900 : FontWeight.w500),
+                              _todayTime ? FontWeight.w900 : FontWeight.w500,
+                          fontFamily: 'Lora'),
                     ),
                   ),
-                  subtitle: Text(
-                    'Time: ${data.data[position].startTime} - ${data.data[position].endTime}',
-                    style: TextStyle(
-                        fontSize: 12,
-                        letterSpacing: 0.5,
-                        fontWeight: FontWeight.w900),
-                  ),
-                ),
-                subtitle: Padding(
-                  padding: const EdgeInsets.only(left: 20, bottom: 4),
-                  child: Text(
-                    data.data[position].note,
-                    style: TextStyle(
-                        fontSize: 12, color: secondColor, letterSpacing: 0.5),
+                  subtitle: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 6),
+                        child: Text(
+                          'Time: ${data.data[position].startTime} - ${data.data[position].endTime}',
+                          style: TextStyle(
+                              fontSize: 12,
+                              letterSpacing: 0.5,
+                              fontWeight: FontWeight.w900,
+                              fontFamily: 'Lora'),
+                        ),
+                      ),
+                      Padding(
+                        padding:
+                            const EdgeInsets.only(bottom: 6, top: 8, left: 6),
+                        child: Text(
+                          data.data[position].note,
+                          style: TextStyle(
+                              fontSize: 12,
+                              color: secondColor,
+                              letterSpacing: 0.5,
+                              fontFamily: 'Lora'),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
                 trailing: Padding(
-                  padding: const EdgeInsets.only(top: 15),
+                  padding: const EdgeInsets.only(top: 12),
                   child: _todayTime
                       ? ClipOval(
                           child: Container(
@@ -138,8 +156,9 @@ timetableList(
                                             ? Colors.black
                                             : Colors.white,
                                         fontSize: 10,
-                                        fontWeight: FontWeight.w900),
-                                    speed: const Duration(milliseconds: 160))
+                                        fontWeight: FontWeight.w900,
+                                        fontFamily: 'Lora'),
+                                    speed: const Duration(milliseconds: 150))
                               ],
                               isRepeatingAnimation: true,
                               repeatForever: true,

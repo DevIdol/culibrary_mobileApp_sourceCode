@@ -48,7 +48,7 @@ class _ThirdYearBooksState extends State<ThirdYearBooks> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(
                     context,
@@ -62,7 +62,7 @@ class _ThirdYearBooksState extends State<ThirdYearBooks> {
                   ),
                   _iconColor,
                   'Mathematics'),
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(
                     context,
@@ -82,7 +82,7 @@ class _ThirdYearBooksState extends State<ThirdYearBooks> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(
                     context,
@@ -96,7 +96,7 @@ class _ThirdYearBooksState extends State<ThirdYearBooks> {
                   ),
                   _iconColor,
                   'Data Communications'),
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(
                     context,
@@ -116,7 +116,7 @@ class _ThirdYearBooksState extends State<ThirdYearBooks> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
@@ -125,7 +125,7 @@ class _ThirdYearBooksState extends State<ThirdYearBooks> {
                   }, 'assets/thirdyear/programmingL11.jpg', _iconColor),
                   _iconColor,
                   'Programming Language'),
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(
                     context,
@@ -145,7 +145,7 @@ class _ThirdYearBooksState extends State<ThirdYearBooks> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
@@ -154,7 +154,7 @@ class _ThirdYearBooksState extends State<ThirdYearBooks> {
                   }, 'assets/secondyear/databaseconcept.jpg', _iconColor),
                   _iconColor,
                   'Database System Concepts'),
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
@@ -169,7 +169,7 @@ class _ThirdYearBooksState extends State<ThirdYearBooks> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(
                     context,
@@ -183,7 +183,7 @@ class _ThirdYearBooksState extends State<ThirdYearBooks> {
                   ),
                   _iconColor,
                   'H C I'),
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(
                     context,
@@ -203,7 +203,7 @@ class _ThirdYearBooksState extends State<ThirdYearBooks> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(
                     context,
@@ -217,7 +217,7 @@ class _ThirdYearBooksState extends State<ThirdYearBooks> {
                   ),
                   _iconColor,
                   'E-Device & E-Circuit '),
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(

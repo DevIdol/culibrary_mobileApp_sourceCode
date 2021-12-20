@@ -52,13 +52,13 @@ class _SplashScreenState extends State<SplashScreen>
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      width: 100,
-                      height: 100,
+                      width: 120,
+                      height: 120,
                       decoration: const BoxDecoration(
                           shape: BoxShape.circle,
                           image: DecorationImage(
                               image: AssetImage('assets/logo.jpg'),
-                              fit: BoxFit.fill)),
+                              fit: BoxFit.cover)),
                     ),
                     SizedBox(height: 20),
                     AnimatedTextKit(
@@ -68,7 +68,8 @@ class _SplashScreenState extends State<SplashScreen>
                                 color: Colors.white,
                                 fontSize: 28,
                                 fontWeight: FontWeight.bold,
-                                letterSpacing: 1),
+                                letterSpacing: 1,
+                                fontFamily: 'Lora'),
                             speed: const Duration(milliseconds: 60))
                       ],
                       isRepeatingAnimation: false,
@@ -81,7 +82,8 @@ class _SplashScreenState extends State<SplashScreen>
                 bottom: 60.0,
                 child: Text(
                   'Developed by DevIdol',
-                  style: TextStyle(fontSize: 12, color: secondColor),
+                  style: TextStyle(
+                      fontSize: 12, color: secondColor, fontFamily: 'Lora'),
                 ))
           ],
         ));

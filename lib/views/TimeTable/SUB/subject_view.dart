@@ -52,7 +52,7 @@ class _SubjectViewState extends State<SubjectView> {
                       actionPane: const SlidableDrawerActionPane(),
                       actions: [
                         SizedBox(
-                          height: 64,
+                          height: 60,
                           child: IconSlideAction(
                             caption: 'Edit',
                             icon: Icons.edit,
@@ -67,7 +67,7 @@ class _SubjectViewState extends State<SubjectView> {
                       ],
                       secondaryActions: [
                         SizedBox(
-                          height: 70,
+                          height: 60,
                           child: IconSlideAction(
                             caption: 'Delete',
                             closeOnTap: true,
@@ -113,7 +113,8 @@ class _SubjectViewState extends State<SubjectView> {
                                 style: TextStyle(
                                     fontSize: 14,
                                     fontWeight: FontWeight.w700,
-                                    color: _iconColor),
+                                    color: _iconColor,
+                                    fontFamily: 'Lora'),
                               ),
                             ),
                             title: Padding(
@@ -121,9 +122,9 @@ class _SubjectViewState extends State<SubjectView> {
                               child: Text(
                                 data.data[position].subjectName,
                                 style: const TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w600,
-                                ),
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w600,
+                                    fontFamily: 'Lora'),
                               ),
                             ),
                             subtitle: Padding(
@@ -131,7 +132,9 @@ class _SubjectViewState extends State<SubjectView> {
                               child: Text(
                                 data.data[position].teacher,
                                 style: const TextStyle(
-                                    fontSize: 12, color: secondColor),
+                                    fontSize: 12,
+                                    color: secondColor,
+                                    fontFamily: 'Lora'),
                               ),
                             ),
                           ),

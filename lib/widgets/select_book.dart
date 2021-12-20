@@ -34,7 +34,10 @@ selectBook(tap, img, name, _iconColor) {
         Text(
           name,
           style: TextStyle(
-              fontWeight: FontWeight.bold, fontSize: 12, color: _iconColor),
+              fontWeight: FontWeight.bold,
+              fontSize: 12,
+              color: _iconColor,
+              fontFamily: 'Lora'),
         )
       ],
     ),

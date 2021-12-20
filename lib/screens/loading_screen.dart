@@ -24,7 +24,7 @@ class LoadingScreen extends StatelessWidget {
                 bottom: 60.0,
                 child: Text(
                   'Developed by DevIdol',
-                  style: TextStyle(fontSize: 12, color: secondColor),
+                  style: TextStyle(fontSize: 12, color: secondColor, fontFamily: 'Lora'),
                 ))
           ],
         ));

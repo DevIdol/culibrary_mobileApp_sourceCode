@@ -36,10 +36,6 @@ class HomePage extends StatelessWidget {
             themeNotifier,
             _iconColor,
             leadingWidth: 42,
-            leading: Padding(
-              padding: const EdgeInsets.only(left: 10),
-              child: Image.asset('assets/icon.png'),
-            ),
             toolbarHeight: 72,
           ),
           body: Center(

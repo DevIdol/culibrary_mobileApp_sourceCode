@@ -11,10 +11,10 @@ deleteDialog(context, dao, _themeMode, _iconColor, title, content) {
         child: Text(
           'No',
           style: TextStyle(
-            color: _iconColor,
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-          ),
+              color: _iconColor,
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+              fontFamily: 'Lora'),
         ),
       ));
 
@@ -28,10 +28,10 @@ deleteDialog(context, dao, _themeMode, _iconColor, title, content) {
         child: Text(
           'Yes',
           style: TextStyle(
-            color: _iconColor,
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-          ),
+              color: _iconColor,
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+              fontFamily: 'Lora'),
         ),
       ));
 
@@ -45,14 +45,14 @@ deleteDialog(context, dao, _themeMode, _iconColor, title, content) {
     title: Text(
       title,
       style: TextStyle(
-        color: _iconColor,
-        fontSize: 14,
-        fontWeight: FontWeight.bold,
-      ),
+          color: _iconColor,
+          fontSize: 14,
+          fontWeight: FontWeight.bold,
+          fontFamily: 'Lora'),
     ),
     content: Text(
       content,
-      style: const TextStyle(fontSize: 12),
+      style: const TextStyle(fontSize: 12, fontFamily: 'Lora'),
     ),
     actions: [
       cancelButton,

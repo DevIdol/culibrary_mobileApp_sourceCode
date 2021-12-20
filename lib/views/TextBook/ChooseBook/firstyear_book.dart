@@ -49,7 +49,7 @@ class _FirstYearBooksState extends State<FirstYearBooks> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(
                     context,
@@ -63,7 +63,7 @@ class _FirstYearBooksState extends State<FirstYearBooks> {
                   ),
                   _iconColor,
                   'English'),
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(
                     context,
@@ -83,7 +83,7 @@ class _FirstYearBooksState extends State<FirstYearBooks> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                 context,
                 loadImageFromFirebase(
                   context,
@@ -98,7 +98,7 @@ class _FirstYearBooksState extends State<FirstYearBooks> {
                 _iconColor,
                 'College Physics',
               ),
-              no_connection(
+              noConnection(
                 context,
                 loadImageFromFirebase(
                   context,
@@ -119,7 +119,7 @@ class _FirstYearBooksState extends State<FirstYearBooks> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                 context,
                 loadImageFromFirebase(
                   context,
@@ -134,7 +134,7 @@ class _FirstYearBooksState extends State<FirstYearBooks> {
                 _iconColor,
                 'OOP(C++)',
               ),
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(
                     context,

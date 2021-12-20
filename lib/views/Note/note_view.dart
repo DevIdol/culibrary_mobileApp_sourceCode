@@ -199,7 +199,8 @@ class _NoteViewState extends State<NoteView> with TickerProviderStateMixin {
                           style: TextStyle(
                               fontSize: 16,
                               color: _fontColor,
-                              fontWeight: FontWeight.bold),
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'Lora'),
                         ),
                         const SizedBox(height: 10),
                         Container(
@@ -208,9 +209,9 @@ class _NoteViewState extends State<NoteView> with TickerProviderStateMixin {
                             data.data[position].contact,
                             maxLines: 4,
                             style: TextStyle(
-                              fontSize: 12,
-                              color: _fontColor,
-                            ),
+                                fontSize: 12,
+                                color: _fontColor,
+                                fontFamily: 'Lora'),
                           ),
                         ),
                       ],
@@ -224,7 +225,8 @@ class _NoteViewState extends State<NoteView> with TickerProviderStateMixin {
                           style: TextStyle(
                               fontSize: 8,
                               color: _iconColor,
-                              fontWeight: FontWeight.bold),
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'Lora'),
                         ),
                       ),
                     ),

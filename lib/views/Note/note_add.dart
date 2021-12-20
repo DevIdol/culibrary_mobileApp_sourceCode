@@ -40,7 +40,8 @@ class _NoteAddState extends State<NoteAdd> {
           ),
           title: const Text(
             'Add Note',
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            style: TextStyle(
+                fontSize: 18, fontWeight: FontWeight.bold, fontFamily: 'Lora'),
           ),
           actions: [
             InkWell(
@@ -55,11 +56,11 @@ class _NoteAddState extends State<NoteAdd> {
                   padding: const EdgeInsets.only(right: 14),
                   child: Text('Save',
                       style: TextStyle(
-                        color: _iconColor,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 0.1,
-                      )),
+                          color: _iconColor,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 0.1,
+                          fontFamily: 'Lora')),
                 ),
               ),
             )
@@ -69,7 +70,10 @@ class _NoteAddState extends State<NoteAdd> {
           child: DoubleBack(
             message: 'Double back!',
             textStyle: TextStyle(
-                fontSize: 14, fontWeight: FontWeight.bold, color: _fontColor),
+                fontSize: 14,
+                fontWeight: FontWeight.bold,
+                color: _fontColor,
+                fontFamily: 'Lora'),
             background: _themeMode,
             child: Container(
               margin: const EdgeInsets.symmetric(
@@ -99,14 +103,16 @@ class _NoteAddState extends State<NoteAdd> {
                       style: TextStyle(
                           color: _fontColor,
                           fontSize: 20,
-                          fontWeight: FontWeight.bold),
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Lora'),
                       decoration: InputDecoration(
                           border: InputBorder.none,
                           hintText: 'Title',
                           hintStyle: TextStyle(
                               fontSize: 18,
                               color: _fontColor,
-                              fontWeight: FontWeight.bold),
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'Lora'),
                           focusColor: firstColor),
                     ),
                     const SizedBox(height: 2),
@@ -116,16 +122,14 @@ class _NoteAddState extends State<NoteAdd> {
                       textCapitalization: TextCapitalization.sentences,
                       maxLines: null,
                       style: TextStyle(
-                        color: _fontColor,
-                        fontSize: 14,
-                      ),
+                          color: _fontColor, fontSize: 14, fontFamily: 'Lora'),
                       decoration: InputDecoration(
                           border: InputBorder.none,
                           hintText: 'Description',
                           hintStyle: TextStyle(
-                            fontSize: 16,
-                            color: _fontColor,
-                          ),
+                              fontSize: 16,
+                              color: _fontColor,
+                              fontFamily: 'Lora'),
                           focusColor: _iconColor),
                     ),
                   ],

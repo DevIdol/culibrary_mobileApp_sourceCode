@@ -28,7 +28,8 @@ noSignal(context) {
             SizedBox(height: 8),
             Text(
               'No Internet Connection!',
-              style: TextStyle(fontSize: 8, color: secondColor),
+              style: TextStyle(
+                  fontSize: 8, color: secondColor, fontFamily: 'Lora'),
             )
           ],
         ),
@@ -37,7 +38,7 @@ noSignal(context) {
   });
 }
 
-no_connection(context, function, _iconColor, name) {
+noConnection(context, function, _iconColor, name) {
   return Column(
     children: [
       Consumer<ConnectivityProvider>(
@@ -56,7 +57,10 @@ no_connection(context, function, _iconColor, name) {
       Text(
         name,
         style: TextStyle(
-            fontWeight: FontWeight.bold, fontSize: 12, color: _iconColor),
+            fontWeight: FontWeight.bold,
+            fontSize: 12,
+            color: _iconColor,
+            fontFamily: 'Lora'),
       ),
     ],
   );

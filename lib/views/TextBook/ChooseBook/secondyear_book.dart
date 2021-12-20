@@ -47,7 +47,7 @@ class _SecondYearBooksState extends State<SecondYearBooks> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                 context,
                 loadImageFromFirebase(
                   context,
@@ -62,7 +62,7 @@ class _SecondYearBooksState extends State<SecondYearBooks> {
                 _iconColor,
                 'HTML (Ch 1 - 7)',
               ),
-              no_connection(
+              noConnection(
                 context,
                 loadImageFromFirebase(
                   context,
@@ -83,7 +83,7 @@ class _SecondYearBooksState extends State<SecondYearBooks> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                 context,
                 loadImageFromFirebase(
                   context,
@@ -98,7 +98,7 @@ class _SecondYearBooksState extends State<SecondYearBooks> {
                 _iconColor,
                 'English',
               ),
-              no_connection(
+              noConnection(
                 context,
                 loadImageFromFirebase(
                   context,
@@ -119,7 +119,7 @@ class _SecondYearBooksState extends State<SecondYearBooks> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                 context,
                 loadImageFromFirebase(
                   context,
@@ -134,7 +134,7 @@ class _SecondYearBooksState extends State<SecondYearBooks> {
                 _iconColor,
                 'Java',
               ),
-              no_connection(
+              noConnection(
                 context,
                 loadImageFromFirebase(context, () async {
                   await Utils.openLink(
@@ -150,7 +150,7 @@ class _SecondYearBooksState extends State<SecondYearBooks> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                 context,
                 loadImageFromFirebase(context, () async {
                   await Utils.openLink(
@@ -160,7 +160,7 @@ class _SecondYearBooksState extends State<SecondYearBooks> {
                 _iconColor,
                 'Database Systems',
               ),
-              no_connection(
+              noConnection(
                 context,
                 loadImageFromFirebase(context, () async {
                   await Utils.openLink(
@@ -176,7 +176,7 @@ class _SecondYearBooksState extends State<SecondYearBooks> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
@@ -185,7 +185,7 @@ class _SecondYearBooksState extends State<SecondYearBooks> {
                   }, 'assets/secondyear/digitalFun.jpg', _iconColor),
                   _iconColor,
                   'Digital Fundamentals'),
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(

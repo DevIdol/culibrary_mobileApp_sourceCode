@@ -247,12 +247,12 @@ class _ExamViewState extends State<ExamView> with TickerProviderStateMixin {
                         child: ListTile(
                           leading: _todayDate
                               ? Padding(
-                                  padding: const EdgeInsets.only(top: 12),
+                                  padding: const EdgeInsets.only(top: 10),
                                   child: ClipOval(
                                     child: Container(
                                       color: _iconColor,
                                       padding: const EdgeInsets.symmetric(
-                                          horizontal: 2, vertical: 10),
+                                          horizontal: 4, vertical: 14),
                                       child: AnimatedTextKit(
                                         animatedTexts: [
                                           WavyAnimatedText("Today",
@@ -261,12 +261,13 @@ class _ExamViewState extends State<ExamView> with TickerProviderStateMixin {
                                                       ? lightFontColor
                                                       : darkFontColor,
                                                   fontSize: 10,
-                                                  fontWeight: FontWeight.w900),
+                                                  fontWeight: FontWeight.w900,
+                                                  fontFamily: 'Lora'),
                                               speed: const Duration(
-                                                  milliseconds: 240))
+                                                  milliseconds: 200))
                                         ],
-                                        isRepeatingAnimation: false,
-                                        repeatForever: false,
+                                        isRepeatingAnimation: true,
+                                        repeatForever: true,
                                         displayFullTextOnTap: true,
                                       ),
                                     ),
@@ -274,34 +275,47 @@ class _ExamViewState extends State<ExamView> with TickerProviderStateMixin {
                                 )
                               : null,
                           title: ListTile(
-                            title: Text(
-                              data.data[position].subject,
-                              style: TextStyle(
-                                  fontSize: 16,
-                                  color: _iconColor,
-                                  fontWeight: _todayDate
-                                      ? FontWeight.w900
-                                      : FontWeight.w500),
-                            ),
-                            subtitle: Text(
-                              'Date: ${data.data[position].examDate} - Time: ${data.data[position].examTime}',
-                              style: TextStyle(
-                                fontSize: 10,
-                                fontWeight: FontWeight.w900,
+                            title: Padding(
+                              padding: const EdgeInsets.only(top: 10),
+                              child: Text(
+                                data.data[position].subject,
+                                style: TextStyle(
+                                    fontSize: 16,
+                                    color: _iconColor,
+                                    fontWeight: _todayDate
+                                        ? FontWeight.w900
+                                        : FontWeight.w500,
+                                    fontFamily: 'Lora'),
                               ),
                             ),
-                          ),
-                          subtitle: _todayDate
-                              ? Padding(
-                                  padding: const EdgeInsets.only(
-                                      left: 18, bottom: 4),
-                                  child: Text(data.data[position].note),
-                                )
-                              : Padding(
-                                  padding: const EdgeInsets.only(
-                                      left: 16, bottom: 4),
-                                  child: Text(data.data[position].note),
+                            subtitle: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(left: 6, top: 4),
+                                  child: Text(
+                                    'Date: ${data.data[position].examDate} - Time: ${data.data[position].examTime}',
+                                    style: TextStyle(
+                                        fontSize: 10,
+                                        fontWeight: FontWeight.w900,
+                                        fontFamily: 'Lora'),
+                                  ),
                                 ),
+                                _todayDate
+                                    ? Padding(
+                                        padding: const EdgeInsets.only(
+                                            bottom: 6, left: 6, top: 6),
+                                        child: Text(data.data[position].note),
+                                      )
+                                    : Padding(
+                                        padding: const EdgeInsets.only(
+                                            left: 16, bottom: 4),
+                                        child: Text(data.data[position].note),
+                                      ),
+                              ],
+                            ),
+                          ),
                         ),
                       ),
                     ),

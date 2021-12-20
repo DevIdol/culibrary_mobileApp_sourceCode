@@ -48,7 +48,7 @@ class _FourthYearBooksState extends State<FourthYearBooks> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
@@ -57,7 +57,7 @@ class _FourthYearBooksState extends State<FourthYearBooks> {
                   }, 'assets/fourthyear/grammar.jpg', _iconColor),
                   _iconColor,
                   'Grammar'),
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
@@ -72,7 +72,7 @@ class _FourthYearBooksState extends State<FourthYearBooks> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
@@ -81,7 +81,7 @@ class _FourthYearBooksState extends State<FourthYearBooks> {
                   }, 'assets/fourthyear/graphic.jpg', _iconColor),
                   _iconColor,
                   'Computer Graphics'),
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(
                     context,
@@ -101,7 +101,7 @@ class _FourthYearBooksState extends State<FourthYearBooks> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
@@ -110,7 +110,7 @@ class _FourthYearBooksState extends State<FourthYearBooks> {
                   }, 'assets/secondyear/softwareEngeneering.jpg', _iconColor),
                   _iconColor,
                   'Software Engeneering'),
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
@@ -125,7 +125,7 @@ class _FourthYearBooksState extends State<FourthYearBooks> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
@@ -134,7 +134,7 @@ class _FourthYearBooksState extends State<FourthYearBooks> {
                   }, 'assets/fourthyear/AI.jpg', _iconColor),
                   _iconColor,
                   'Artificial Intelligence'),
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(
                     context,
@@ -154,7 +154,7 @@ class _FourthYearBooksState extends State<FourthYearBooks> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(
                     context,
@@ -168,7 +168,7 @@ class _FourthYearBooksState extends State<FourthYearBooks> {
                   ),
                   _iconColor,
                   '      Digital Business and\nE-Commerce Management'),
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
@@ -183,7 +183,7 @@ class _FourthYearBooksState extends State<FourthYearBooks> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
@@ -192,7 +192,7 @@ class _FourthYearBooksState extends State<FourthYearBooks> {
                   }, 'assets/fourthyear/UML.jpg', _iconColor),
                   _iconColor,
                   'U M L'),
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(
                     context,
@@ -212,7 +212,7 @@ class _FourthYearBooksState extends State<FourthYearBooks> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
@@ -221,7 +221,7 @@ class _FourthYearBooksState extends State<FourthYearBooks> {
                   }, 'assets/thirdyear/E_Device&E_Circuit.jpg', _iconColor),
                   _iconColor,
                   'E-Device & E-Circuit'),
-              no_connection(
+              noConnection(
                   context,
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
