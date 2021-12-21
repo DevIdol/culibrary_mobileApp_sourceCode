@@ -33,7 +33,8 @@ class _SecondYearBooksState extends State<SecondYearBooks> {
       return Scaffold(
         backgroundColor: _themeMode,
         appBar: appBar(
-            _cardColor, _fontColor, 'Second Year', themeNotifier, _iconColor, toolbarHeight: 64),
+            _cardColor, _fontColor, 'Second Year', themeNotifier, _iconColor,
+            toolbarHeight: 64),
         body: _chooseBook(context, _iconColor),
       );
     });
@@ -54,7 +55,7 @@ class _SecondYearBooksState extends State<SecondYearBooks> {
                   () async {
                     await Utils.openLink(
                         url:
-                            'https://drive.google.com/file/d/1hjDu-7i9UGKauW0yE7zUk0Clw52RA-V4/view?usp=sharing');
+                            'https://drive.google.com/file/d/1xtAFOKlZZXj_ZBvqR7g4vvswS283RkNe/view?usp=sharing');
                   },
                   'assets/secondyear/html.jpg',
                   _iconColor,
@@ -69,7 +70,7 @@ class _SecondYearBooksState extends State<SecondYearBooks> {
                   () async {
                     await Utils.openLink(
                         url:
-                            'https://drive.google.com/file/d/17aNEUDcWTTJWcmtSYlJesTQWqsJchYqE/view?usp=sharing');
+                            'https://drive.google.com/file/d/1aCedeDM8wPicAjdDKb16Pj9MurwrYyqv/view?usp=sharing');
                   },
                   'assets/secondyear/html.jpg',
                   _iconColor,
@@ -90,7 +91,7 @@ class _SecondYearBooksState extends State<SecondYearBooks> {
                   () async {
                     await Utils.openLink(
                         url:
-                            'https://drive.google.com/file/d/19VqYF_zmljNxe2fbF3X4QEk3LIKBHmp9/view?usp=sharing');
+                            'https://drive.google.com/file/d/1uZ090Jtv73s8GPJox-gy5noqwuYc2gfv/view?usp=sharing');
                   },
                   'assets/secondyear/eng2nd.jpg',
                   _iconColor,
@@ -105,7 +106,7 @@ class _SecondYearBooksState extends State<SecondYearBooks> {
                   () async {
                     await Utils.openLink(
                         url:
-                            'https://drive.google.com/file/d/1d9FxCbAMg8PUaRvsMn1j4TtINVkz7eIk/view?usp=sharing');
+                            'https://drive.google.com/file/d/1yzBhTBQKqpRKqCmE0ad6mYRbyrs6JZEZ/view?usp=sharing');
                   },
                   'assets/secondyear/javascript.jpg',
                   _iconColor,
@@ -126,7 +127,7 @@ class _SecondYearBooksState extends State<SecondYearBooks> {
                   () async {
                     await Utils.openLink(
                         url:
-                            'https://drive.google.com/file/d/1N-37Kx0RPAoVWZmeei1iI3Z1z3eRqf0A/view?usp=sharing');
+                            'https://drive.google.com/file/d/1dY8TMbxQYFT2pIfxFHIHY3ReOqaoQsic/view?usp=sharing');
                   },
                   'assets/secondyear/java.jpg',
                   _iconColor,
@@ -139,7 +140,7 @@ class _SecondYearBooksState extends State<SecondYearBooks> {
                 loadImageFromFirebase(context, () async {
                   await Utils.openLink(
                       url:
-                          'https://drive.google.com/file/d/1zXdfZuhhXN-7oEQq4n2F7z5OwpmC1xQI/view?usp=sharing');
+                          'https://drive.google.com/file/d/1dZOrq0s-F0AWMXobQR1puIVVIkfgNP4O/view?usp=sharing');
                 }, 'assets/secondyear/databaseconcept.jpg', _iconColor),
                 _iconColor,
                 'Database System Concepts',
@@ -155,7 +156,7 @@ class _SecondYearBooksState extends State<SecondYearBooks> {
                 loadImageFromFirebase(context, () async {
                   await Utils.openLink(
                       url:
-                          'https://drive.google.com/file/d/1LpQe3C-jVYUxLKaZlyA4nYg86qeX5Yra/view?usp=sharing');
+                          'https://drive.google.com/file/d/1_Hfc_lCI5bwumKxfIOaalJ8fpKSe5mfH/view?usp=sharing');
                 }, 'assets/secondyear/databasesystem.jpg', _iconColor),
                 _iconColor,
                 'Database Systems',
@@ -165,7 +166,7 @@ class _SecondYearBooksState extends State<SecondYearBooks> {
                 loadImageFromFirebase(context, () async {
                   await Utils.openLink(
                       url:
-                          'https://drive.google.com/file/d/1VvbdaVifPLlUrrJxDMxOiobiYp0dxwjp/view?usp=sharing');
+                          'https://drive.google.com/file/d/16jbt0pKTpxFrzasglAf_tRnHWs7hzx-3/view?usp=sharing');
                 }, 'assets/secondyear/softwareEngeneering.jpg', _iconColor),
                 _iconColor,
                 'Software Engeneering',
@@ -190,7 +191,7 @@ class _SecondYearBooksState extends State<SecondYearBooks> {
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
                         url:
-                            'https://drive.google.com/file/d/1BX2XkcL-aigFbOzj1hUb6ZciJmMg_yQo/view?usp=sharing');
+                            'https://drive.google.com/file/d/1cDi95mfBX0A7guk4vyeJE2WQPbZAZzO0/view?usp=sharing');
                   }, 'assets/secondyear/logicDesign.jpg', _iconColor),
                   _iconColor,
                   'Programming Logic&Design')

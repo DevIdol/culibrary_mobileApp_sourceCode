@@ -153,10 +153,10 @@ timetableList(
                                 WavyAnimatedText("NOW",
                                     textStyle: TextStyle(
                                         color: themeNotifier.isDark
-                                            ? Colors.black
-                                            : Colors.white,
+                                            ? lightFontColor
+                                            : darkFontColor,
                                         fontSize: 10,
-                                        fontWeight: FontWeight.w900,
+                                        fontWeight: FontWeight.bold,
                                         fontFamily: 'Lora'),
                                     speed: const Duration(milliseconds: 150))
                               ],

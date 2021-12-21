@@ -56,7 +56,7 @@ class _AboutPageState extends State<AboutPage> {
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: Text(
                   """           I would like to say special thanks to Mg Kam Khan Pau (UCSK), Ma Nang Poei Shwe Sin (UCSK), and Ma Phyo Theint Theint Kyaw (UCSMdy) for their help to get PDF files TextBooks.
-          In this app, you can check Daily Time Table, Text Book PDF, Note, Exam Date & Time and PDF Viewer. When you check to view the Text-Book PDF, using Google Drive and One Drive will be smoother than other browsers.
+          In this app, you can check Daily Time Table, Text Book PDF, Note, Exam Date-Time and PDF Viewer. When you check to view the Text-Book PDF, using Google Drive and One Drive will be smoother than other browsers.
           This app may not be 100% convenient, but it will be expected to be useful to some extent.  Thanks to all users.""",
                   style: TextStyle(
                       fontSize: 14,

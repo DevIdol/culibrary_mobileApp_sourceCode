@@ -17,29 +17,29 @@ final formatTime = DateFormat("h:mm aa");
 final formatDate = DateFormat("d-M-yyy (EE)");
 var scrollView = ScrollController();
 
-DateTime now = DateTime.now();
-String noteDate = DateFormat("d-M-yyy (EE)").format(now);
+final DateTime now = DateTime.now();
+final String noteDate = DateFormat("d-M-yyy (EE)").format(now);
 
-MonDao monDao = Get.find();
+final MonDao monDao = Get.find();
 List<Mon> mons = [];
 
-TueDao tueDao = Get.find();
+final TueDao tueDao = Get.find();
 List<Tue> tues = [];
 
-WedDao wedDao = Get.find();
+final WedDao wedDao = Get.find();
 List<Wed> weds = [];
 
-ThuDao thuDao = Get.find();
+final ThuDao thuDao = Get.find();
 List<Thu> thus = [];
 
-FriDao friDao = Get.find();
+final FriDao friDao = Get.find();
 List<Fri> fris = [];
 
-SubDao subDao = Get.find();
+final SubDao subDao = Get.find();
 List<Sub> subs = [];
 
-NoteDao noteDao = Get.find();
+final NoteDao noteDao = Get.find();
 List<Note> notes = [];
 
-ExamDao examDao = Get.find();
+final ExamDao examDao = Get.find();
 List<Exam> exams = [];

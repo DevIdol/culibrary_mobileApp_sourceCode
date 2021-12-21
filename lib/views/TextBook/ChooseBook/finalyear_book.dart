@@ -76,7 +76,7 @@ class _FinalYearBooksState extends State<FinalYearBooks> {
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
                         url:
-                            'https://drive.google.com/file/d/1zeZkYLw74-pEBZOkAbvTCXLjC5TTiiUv/view?usp=sharing');
+                            'https://drive.google.com/file/d/18Q0TZgB3zIUQr6P3t_6QT-BOZo8p6Dap/view?usp=sharing');
                   }, 'assets/fourthyear/operationResearch.jpg', _iconColor),
                   _iconColor,
                   'Operation Research'),
@@ -107,7 +107,7 @@ class _FinalYearBooksState extends State<FinalYearBooks> {
                     () async {
                       await Utils.openLink(
                           url:
-                              'https://drive.google.com/file/d/1kSfe8ZPDq8_0-x5vQ7AiM0ymXn3MtgE8/view?usp=sharing');
+                              'https://drive.google.com/file/d/1tcw0WmLSShNhLE3hZbcxruFDK3fOR9Xo/view?usp=sharing');
                     },
                     'assets/finalyear/TCPIP.jpg',
                     _iconColor,
@@ -119,7 +119,7 @@ class _FinalYearBooksState extends State<FinalYearBooks> {
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
                         url:
-                            'https://drive.google.com/file/d/1ncXTzs9l_75mB6PN-MZCfnvRVpJzY0jj/view?usp=sharing');
+                            'https://drive.google.com/file/d/1EIlvXmZDXQfUn-4yZWqUOseVNvoPSQNE/view?usp=sharing');
                   }, 'assets/finalyear/securityManage.jpg', _iconColor),
                   _iconColor,
                   'Information Security')
@@ -134,7 +134,7 @@ class _FinalYearBooksState extends State<FinalYearBooks> {
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
                         url:
-                            'https://drive.google.com/file/d/1D2LMtlc_h7OnKI-tNiGn0B3MDt9g18Qf/view?usp=sharing');
+                            'https://drive.google.com/file/d/1BgSSdPa9JcF3NTGAeWFBWbnIIeozZ2-y/view?usp=sharing');
                   }, 'assets/fourthyear/AI.jpg', _iconColor),
                   _iconColor,
                   'Artificial Intelligence'),
@@ -145,7 +145,7 @@ class _FinalYearBooksState extends State<FinalYearBooks> {
                     () async {
                       await Utils.openLink(
                           url:
-                              'https://drive.google.com/file/d/1LEBJEwT9g34J93V-QO82U7kUWyrdAPwd/view?usp=sharing');
+                              'https://drive.google.com/file/d/1eWET78RS7bHaTyYoW6Ac5ob17SHxe3nd/view?usp=sharing');
                     },
                     'assets/fourthyear/datamining.jpg',
                     _iconColor,
@@ -165,7 +165,7 @@ class _FinalYearBooksState extends State<FinalYearBooks> {
                     () async {
                       await Utils.openLink(
                           url:
-                              'https://drive.google.com/file/d/1cZVZ4kkCLF_WIR0LePsiZYNAi7Ti4Xgx/view?usp=sharing');
+                              'https://drive.google.com/file/d/1W1-Zc9EW5rMg_S2SpAdct_k37uOH8rVY/view?usp=sharing');
                     },
                     'assets/finalyear/systemManage.jpg',
                     _iconColor,
@@ -179,7 +179,7 @@ class _FinalYearBooksState extends State<FinalYearBooks> {
                     () async {
                       await Utils.openLink(
                           url:
-                              'https://drive.google.com/file/d/1diZwV0wgglmngFEMvIOB9NsoPG5o7o6y/view?usp=sharing');
+                              'https://drive.google.com/file/d/1QJRcl95-JcU5SG-oUDzsMiK-Kd6jhbVo/view?usp=sharing');
                     },
                     'assets/finalyear/fuzzyLog.jpg',
                     _iconColor,
@@ -199,7 +199,7 @@ class _FinalYearBooksState extends State<FinalYearBooks> {
                     () async {
                       await Utils.openLink(
                           url:
-                              'https://drive.google.com/file/d/1HDKmX4ykkOw4rtf-BdSTtqtpXRcxOPA1/view?usp=sharing');
+                              'https://drive.google.com/file/d/1miWm0EOsgPZry_XW6W4jfeo_uf4JI5zq/view?usp=sharing');
                     },
                     'assets/finalyear/networkSecure.jpg',
                     _iconColor,
@@ -211,7 +211,7 @@ class _FinalYearBooksState extends State<FinalYearBooks> {
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
                         url:
-                            'https://drive.google.com/file/d/1OFYVz6slz00hOScnpD99SJHPp5B9RUlG/view?usp=sharing');
+                            'https://drive.google.com/file/d/15JVaU0E1e26ebithk3ShKUlnUsu_kypC/view?usp=sharing');
                   }, 'assets/finalyear/imageProcess.jpg', _iconColor),
                   _iconColor,
                   'Digital Image Processing')

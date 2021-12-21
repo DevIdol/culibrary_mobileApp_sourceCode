@@ -170,7 +170,7 @@ class _ExamViewState extends State<ExamView> with TickerProviderStateMixin {
           if (exams.isEmpty) {
             return Center(
               child: noData(
-                  'No Exam Date And Time', 'Tab the add button to create.'),
+                  'No Exam Date And Time', ''),
             );
           } else {
             return ListView.builder(

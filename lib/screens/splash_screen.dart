@@ -52,13 +52,13 @@ class _SplashScreenState extends State<SplashScreen>
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      width: 120,
-                      height: 120,
+                      width: 100,
+                      height: 100,
                       decoration: const BoxDecoration(
                           shape: BoxShape.circle,
                           image: DecorationImage(
                               image: AssetImage('assets/logo.jpg'),
-                              fit: BoxFit.cover)),
+                              fit: BoxFit.fill)),
                     ),
                     SizedBox(height: 20),
                     AnimatedTextKit(

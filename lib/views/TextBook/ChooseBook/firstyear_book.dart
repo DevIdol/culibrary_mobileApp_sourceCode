@@ -33,7 +33,8 @@ class _FirstYearBooksState extends State<FirstYearBooks> {
       return Scaffold(
         backgroundColor: _themeMode,
         appBar: appBar(
-            _cardColor, _fontColor, 'First Year', themeNotifier, _iconColor, toolbarHeight: 64),
+            _cardColor, _fontColor, 'First Year', themeNotifier, _iconColor,
+            toolbarHeight: 64),
         body: Center(
           child: _chooseBook(context, _iconColor),
         ),
@@ -56,7 +57,7 @@ class _FirstYearBooksState extends State<FirstYearBooks> {
                     () async {
                       await Utils.openLink(
                           url:
-                              'https://drive.google.com/file/d/1vp5H_ZuzibeEKlj2Ekqv4zw-fXw10Msq/view?usp=sharing');
+                              'https://drive.google.com/file/d/1J5DEp_PGowChAcvm5LBz4vysV2oztQRi/view?usp=sharing');
                     },
                     'assets/firstyear/1styearEng.jpg',
                     _iconColor,
@@ -70,7 +71,7 @@ class _FirstYearBooksState extends State<FirstYearBooks> {
                     () async {
                       await Utils.openLink(
                           url:
-                              'https://drive.google.com/file/d/1guALqacRvkKRhhCRVOvkU1q4LTWJWy24/view?usp=sharing');
+                              'https://drive.google.com/file/d/1d8RBwXgLJq-9Rhp6G8sfGANxRSQ2phkS/view?usp=sharing');
                     },
                     'assets/firstyear/1styearMath.jpg',
                     _iconColor,
@@ -90,7 +91,7 @@ class _FirstYearBooksState extends State<FirstYearBooks> {
                   () async {
                     await Utils.openLink(
                         url:
-                            'https://drive.google.com/file/d/1JMRQSff1HhykJMca2tD-6ML3vDtFfABY/view?usp=sharing');
+                            'https://drive.google.com/file/d/1pVRt18A87At7TjmV-UjxlYdmwSLbGvIp/view?usp=sharing');
                   },
                   'assets/firstyear/physics.jpg',
                   _iconColor,
@@ -105,7 +106,7 @@ class _FirstYearBooksState extends State<FirstYearBooks> {
                   () async {
                     await Utils.openLink(
                         url:
-                            'https://drive.google.com/file/d/1RZTiCa-FY5KNS2TwGhECw0JA0ezjI3q-/view?usp=sharing');
+                            'https://drive.google.com/file/d/1xHF_tVF0Bj2V1cshEi7JDS9cqi3QCA68/view?usp=sharing');
                   },
                   'assets/firstyear/Information-Teach.jpg',
                   _iconColor,
@@ -126,7 +127,7 @@ class _FirstYearBooksState extends State<FirstYearBooks> {
                   () async {
                     await Utils.openLink(
                         url:
-                            'https://drive.google.com/file/d/1P_6EGTk2Ij_GpVehO_0A1pMj-FErt0VH/view?usp=sharing');
+                            'https://drive.google.com/file/d/1Fmuac3fpdvGy3E14SN9vW1Mk6WMMWhF2/view?usp=sharing');
                   },
                   'assets/firstyear/1styearOOP.jpg',
                   _iconColor,
@@ -141,7 +142,7 @@ class _FirstYearBooksState extends State<FirstYearBooks> {
                     () async {
                       await Utils.openLink(
                           url:
-                              'https://drive.google.com/file/d/1ywS3J_cxt3iUpXNG-_Mx3BCAs-1I1p2B/view?usp=sharing');
+                              'https://drive.google.com/file/d/1rTq7_-M93_ZbXXJswNdYW_j1zpFeo60r/view?usp=sharing');
                     },
                     'assets/firstyear/computer-fundamentals.jpg',
                     _iconColor,

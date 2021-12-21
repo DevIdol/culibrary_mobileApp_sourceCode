@@ -62,7 +62,7 @@ class _FourthYearBooksState extends State<FourthYearBooks> {
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
                         url:
-                            'https://drive.google.com/file/d/1zeZkYLw74-pEBZOkAbvTCXLjC5TTiiUv/view?usp=sharing');
+                            'https://drive.google.com/file/d/18Q0TZgB3zIUQr6P3t_6QT-BOZo8p6Dap/view?usp=sharing');
                   }, 'assets/fourthyear/operationResearch.jpg', _iconColor),
                   _iconColor,
                   'Operation Research')
@@ -77,7 +77,7 @@ class _FourthYearBooksState extends State<FourthYearBooks> {
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
                         url:
-                            'https://drive.google.com/file/d/1dQuUToKFm8YiB3JyFVpqoKOEDlSNWZBz/view?usp=sharing');
+                            'https://drive.google.com/file/d/1w5BAXiCXLJFGHPllX_E26dBfvkHPG9lq/view?usp=sharing');
                   }, 'assets/fourthyear/graphic.jpg', _iconColor),
                   _iconColor,
                   'Computer Graphics'),
@@ -88,7 +88,7 @@ class _FourthYearBooksState extends State<FourthYearBooks> {
                     () async {
                       await Utils.openLink(
                           url:
-                              'https://drive.google.com/file/d/1LEBJEwT9g34J93V-QO82U7kUWyrdAPwd/view?usp=sharing');
+                              'https://drive.google.com/file/d/1eWET78RS7bHaTyYoW6Ac5ob17SHxe3nd/view?usp=sharing');
                     },
                     'assets/fourthyear/datamining.jpg',
                     _iconColor,
@@ -106,7 +106,7 @@ class _FourthYearBooksState extends State<FourthYearBooks> {
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
                         url:
-                            'https://drive.google.com/file/d/1VvbdaVifPLlUrrJxDMxOiobiYp0dxwjp/view?usp=sharing');
+                            'https://drive.google.com/file/d/16jbt0pKTpxFrzasglAf_tRnHWs7hzx-3/view?usp=sharing');
                   }, 'assets/secondyear/softwareEngeneering.jpg', _iconColor),
                   _iconColor,
                   'Software Engeneering'),
@@ -130,7 +130,7 @@ class _FourthYearBooksState extends State<FourthYearBooks> {
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
                         url:
-                            'https://drive.google.com/file/d/1D2LMtlc_h7OnKI-tNiGn0B3MDt9g18Qf/view?usp=sharing');
+                            'https://drive.google.com/file/d/1BgSSdPa9JcF3NTGAeWFBWbnIIeozZ2-y/view?usp=sharing');
                   }, 'assets/fourthyear/AI.jpg', _iconColor),
                   _iconColor,
                   'Artificial Intelligence'),
@@ -141,7 +141,7 @@ class _FourthYearBooksState extends State<FourthYearBooks> {
                     () async {
                       await Utils.openLink(
                           url:
-                              'https://drive.google.com/file/d/1y_9-4EvNpBbrgwn82CRhqX0CjODesmj3/view?usp=sharing');
+                          'https://drive.google.com/file/d/1lS65X4Hxa9EUn9VfJFOzzKpfxpPh_b4I/view?usp=sharing');
                     },
                     'assets/fourthyear/informationSystem.jpg',
                     _iconColor,
@@ -161,7 +161,7 @@ class _FourthYearBooksState extends State<FourthYearBooks> {
                     () async {
                       await Utils.openLink(
                           url:
-                              'https://drive.google.com/file/d/15UrvL7-xx4JWXPfesmKXBxDYFuWPh4Sr/view?usp=sharing');
+                              'https://drive.google.com/file/d/1E-nB0-FUaQgPl5mmhXfrsXXZ0kP5bBf-/view?usp=sharing');
                     },
                     'assets/fourthyear/digitalManagement.jpg',
                     _iconColor,
@@ -173,7 +173,7 @@ class _FourthYearBooksState extends State<FourthYearBooks> {
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
                         url:
-                            'https://drive.google.com/file/d/1AFL3wDiHswreeZmsYqO88P9eBm0ztcTk/view?usp=sharing');
+                            'https://drive.google.com/file/d/1V_QygGvjt4k9fhld098IvmKPuP6VgM9I/view?usp=sharing');
                   }, 'assets/thirdyear/operatingSystem.jpg', _iconColor),
                   _iconColor,
                   'Operation Systems')
@@ -188,7 +188,7 @@ class _FourthYearBooksState extends State<FourthYearBooks> {
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
                         url:
-                            'https://drive.google.com/file/d/1skzphCKh743PVdWldn7tAklKhjxytAIF/view?usp=sharing');
+                            'https://drive.google.com/file/d/1_DgGRAAmauCRsDfjKKTUlUJSRL0xHb27/view?usp=sharing');
                   }, 'assets/fourthyear/UML.jpg', _iconColor),
                   _iconColor,
                   'U M L'),
@@ -199,7 +199,7 @@ class _FourthYearBooksState extends State<FourthYearBooks> {
                     () async {
                       await Utils.openLink(
                           url:
-                              'https://drive.google.com/file/d/1HDKmX4ykkOw4rtf-BdSTtqtpXRcxOPA1/view?usp=sharing');
+                              'https://drive.google.com/file/d/1miWm0EOsgPZry_XW6W4jfeo_uf4JI5zq/view?usp=sharing');
                     },
                     'assets/finalyear/networkSecure.jpg',
                     _iconColor,
@@ -217,7 +217,7 @@ class _FourthYearBooksState extends State<FourthYearBooks> {
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
                         url:
-                            'https://drive.google.com/file/d/1alLQn-MxXm4uCpJNdB9GBeBS-zRYqVnX/view?usp=sharing');
+                            'https://drive.google.com/file/d/1QQY-i4OKOAT840joM9uJeGgqunTKFzo7/view?usp=sharing');
                   }, 'assets/thirdyear/E_Device&E_Circuit.jpg', _iconColor),
                   _iconColor,
                   'E-Device & E-Circuit'),
@@ -226,7 +226,7 @@ class _FourthYearBooksState extends State<FourthYearBooks> {
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
                         url:
-                            'https://drive.google.com/file/d/1XfP0eOLlRyzQ8NRJpDxyOrEcCPwLyDoW/view?usp=sharing');
+                            'https://drive.google.com/file/d/1PcVBLzTStVX1Iam6_iSDat1hWL3vo2DN/view?usp=sharing');
                   }, 'assets/fourthyear/modernControl.jpg', _iconColor),
                   _iconColor,
                   'Modern Control systems')

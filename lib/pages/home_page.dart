@@ -1,4 +1,3 @@
-
 import 'dart:io';
 import 'package:culibrary/animation/page_animation_transition.dart';
 import 'package:culibrary/api/pdf_api.dart';
@@ -55,7 +54,10 @@ class HomePage extends StatelessWidget {
           content: Text(
             'Double back to exit from the app.',
             style: TextStyle(
-                fontSize: 14, fontWeight: FontWeight.bold, color: _iconColor),
+                fontSize: 14,
+                fontWeight: FontWeight.bold,
+                color: _iconColor,
+                fontFamily: 'Lora'),
           ),
         ),
         child: Column(

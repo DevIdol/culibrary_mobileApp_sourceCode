@@ -55,7 +55,7 @@ class _ThirdYearBooksState extends State<ThirdYearBooks> {
                     () async {
                       await Utils.openLink(
                           url:
-                              'https://drive.google.com/file/d/10ll7ASQPa8fs4Gur6Lq_K-kER-lDxX8A/view?usp=sharing');
+                              'https://drive.google.com/file/d/1oqr-x2J0UaKVY7Aw84ZS97LaruFCKNvg/view?usp=sharing');
                     },
                     'assets/thirdyear/3math.jpg',
                     _iconColor,
@@ -69,7 +69,7 @@ class _ThirdYearBooksState extends State<ThirdYearBooks> {
                     () async {
                       await Utils.openLink(
                           url:
-                              'https://drive.google.com/file/d/1AFL3wDiHswreeZmsYqO88P9eBm0ztcTk/view?usp=sharing');
+                              'https://drive.google.com/file/d/1V_QygGvjt4k9fhld098IvmKPuP6VgM9I/view?usp=sharing');
                     },
                     'assets/thirdyear/operatingSystem.jpg',
                     _iconColor,
@@ -89,7 +89,7 @@ class _ThirdYearBooksState extends State<ThirdYearBooks> {
                     () async {
                       await Utils.openLink(
                           url:
-                              'https://drive.google.com/file/d/1oZoqY3ZBMLM10ABCiSFCIS9J3Ln7VEa_/view?usp=sharing');
+                              'https://drive.google.com/file/d/1GuNQutQVoj5h_a1EeJ_q0e8QX_SjH_iE/view?usp=sharing');
                     },
                     'assets/thirdyear/dataCommunication.jpg',
                     _iconColor,
@@ -103,7 +103,7 @@ class _ThirdYearBooksState extends State<ThirdYearBooks> {
                     () async {
                       await Utils.openLink(
                           url:
-                              'https://drive.google.com/file/d/1VvbdaVifPLlUrrJxDMxOiobiYp0dxwjp/view?usp=sharing');
+                              'https://drive.google.com/file/d/16jbt0pKTpxFrzasglAf_tRnHWs7hzx-3/view?usp=sharing');
                     },
                     'assets/secondyear/softwareEngeneering.jpg',
                     _iconColor,
@@ -121,7 +121,7 @@ class _ThirdYearBooksState extends State<ThirdYearBooks> {
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
                         url:
-                            'https://drive.google.com/file/d/1hlt0SaO78hRTjUK7wmrbILN59sOmbufX/view?usp=sharing');
+                            'https://drive.google.com/file/d/1ADEwhVU-irO8h_4lTesUBDIkEHT_6PlX/view?usp=sharing');
                   }, 'assets/thirdyear/programmingL11.jpg', _iconColor),
                   _iconColor,
                   'Programming Language'),
@@ -132,7 +132,7 @@ class _ThirdYearBooksState extends State<ThirdYearBooks> {
                     () async {
                       await Utils.openLink(
                           url:
-                              'https://drive.google.com/file/d/1d9FxCbAMg8PUaRvsMn1j4TtINVkz7eIk/view?usp=sharing');
+                              'https://drive.google.com/file/d/1yzBhTBQKqpRKqCmE0ad6mYRbyrs6JZEZ/view?usp=sharing');
                     },
                     'assets/secondyear/javascript.jpg',
                     _iconColor,
@@ -150,7 +150,7 @@ class _ThirdYearBooksState extends State<ThirdYearBooks> {
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
                         url:
-                            'https://drive.google.com/file/d/1zXdfZuhhXN-7oEQq4n2F7z5OwpmC1xQI/view?usp=sharing');
+                            'https://drive.google.com/file/d/1dZOrq0s-F0AWMXobQR1puIVVIkfgNP4O/view?usp=sharing');
                   }, 'assets/secondyear/databaseconcept.jpg', _iconColor),
                   _iconColor,
                   'Database System Concepts'),
@@ -159,7 +159,7 @@ class _ThirdYearBooksState extends State<ThirdYearBooks> {
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
                         url:
-                            'https://drive.google.com/file/d/1LpQe3C-jVYUxLKaZlyA4nYg86qeX5Yra/view?usp=sharing');
+                            'https://drive.google.com/file/d/1_Hfc_lCI5bwumKxfIOaalJ8fpKSe5mfH/view?usp=sharing');
                   }, 'assets/secondyear/databasesystem.jpg', _iconColor),
                   _iconColor,
                   'Database Systems')
@@ -176,7 +176,7 @@ class _ThirdYearBooksState extends State<ThirdYearBooks> {
                     () async {
                       await Utils.openLink(
                           url:
-                              'https://drive.google.com/file/d/1F2Ht-huGsPf-oTfXm9SiBwTYmuTZBUcC/view?usp=sharing');
+                              'https://drive.google.com/file/d/1Z6EfoBEeC5_jYVFoU-CPyMkrg2w_Dv6i/view?usp=sharing');
                     },
                     'assets/thirdyear/hci.jpg',
                     _iconColor,
@@ -210,7 +210,7 @@ class _ThirdYearBooksState extends State<ThirdYearBooks> {
                     () async {
                       await Utils.openLink(
                           url:
-                              'https://drive.google.com/file/d/1alLQn-MxXm4uCpJNdB9GBeBS-zRYqVnX/view?usp=sharing');
+                              'https://drive.google.com/file/d/1QQY-i4OKOAT840joM9uJeGgqunTKFzo7/view?usp=sharing');
                     },
                     'assets/thirdyear/E_Device&E_Circuit.jpg',
                     _iconColor,
