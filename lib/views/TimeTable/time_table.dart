@@ -13,6 +13,7 @@ import 'package:culibrary/views/TimeTable/WED/wednesday_add.dart';
 import 'package:culibrary/views/TimeTable/WED/wednesday_view.dart';
 import 'package:culibrary/widgets/appbar_widget.dart';
 import 'package:culibrary/widgets/delete_dialog.dart';
+import 'package:culibrary/widgets/no_data.dart';
 import 'package:culibrary/widgets/toggle.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -271,7 +272,7 @@ class _TimeTableViewState extends State<TimeTableView>
                       setState(() {
                         if (tabController.index == 0) {
                           if (mons.isEmpty) {
-                            return;
+                            return noDatas(context, _themeMode, _iconColor);
                           } else {
                             deleteDialog(context, () {
                               monDao.deletAllMons(mons);
@@ -280,7 +281,7 @@ class _TimeTableViewState extends State<TimeTableView>
                           }
                         } else if (tabController.index == 1) {
                           if (tues.isEmpty) {
-                            return;
+                            return noDatas(context, _themeMode, _iconColor);
                           } else {
                             deleteDialog(context, () {
                               tueDao.deletAllTues(tues);
@@ -289,7 +290,7 @@ class _TimeTableViewState extends State<TimeTableView>
                           }
                         } else if (tabController.index == 2) {
                           if (weds.isEmpty) {
-                            return;
+                            return noDatas(context, _themeMode, _iconColor);
                           } else {
                             deleteDialog(context, () {
                               wedDao.deletAllWeds(weds);
@@ -301,7 +302,7 @@ class _TimeTableViewState extends State<TimeTableView>
                           }
                         } else if (tabController.index == 3) {
                           if (thus.isEmpty) {
-                            return;
+                            return noDatas(context, _themeMode, _iconColor);
                           } else {
                             deleteDialog(context, () {
                               thuDao.deletAllThus(thus);
@@ -313,7 +314,7 @@ class _TimeTableViewState extends State<TimeTableView>
                           }
                         } else if (tabController.index == 4) {
                           if (fris.isEmpty) {
-                            return;
+                            return noDatas(context, _themeMode, _iconColor);
                           } else {
                             deleteDialog(context, () {
                               friDao.deletAllFris(fris);
@@ -322,7 +323,7 @@ class _TimeTableViewState extends State<TimeTableView>
                           }
                         } else {
                           if (subs.isEmpty) {
-                            return;
+                            return noDatas(context, _themeMode, _iconColor);
                           } else {
                             deleteDialog(context, () {
                               subDao.deletAllSubs(subs);

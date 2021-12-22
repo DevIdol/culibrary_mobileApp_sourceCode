@@ -52,19 +52,21 @@ class _NoteUpdateState extends State<NoteUpdate> {
           actions: [
             InkWell(
               onTap: () {
-                if (formKey.currentState!.validate()) {
-                  noteDao.updateNote(Note(
-                      _date.text, _title.text, _contact.text,
-                      id: note.id));
-                }
+                noteDao.updateNote(
+                    Note(_date.text, _title.text, _contact.text, id: note.id));
+
                 var snackBar = SnackBar(
                   backgroundColor: _themeMode,
                   duration: const Duration(milliseconds: 500),
                   content: Text(
-                    "Saved",
+                    _title.text.length != note.title!.toString().length ||
+                            _contact.text.length !=
+                                note.contact!.toString().length
+                        ? "Saved"
+                        : '',
                     style: TextStyle(
                         color: _iconColor,
-                        fontSize: 16,
+                        fontSize: 14,
                         fontWeight: FontWeight.bold,
                         letterSpacing: 1,
                         fontFamily: 'Lora'),
@@ -91,6 +93,7 @@ class _NoteUpdateState extends State<NoteUpdate> {
         body: SingleChildScrollView(
           child: DoubleBack(
             message: 'Double back!',
+            waitForSecondBackPress: 1,
             textStyle: TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.bold,
@@ -101,60 +104,56 @@ class _NoteUpdateState extends State<NoteUpdate> {
               margin: const EdgeInsets.symmetric(
                 horizontal: 15,
               ),
-              child: Form(
-                key: formKey,
-                child: Column(
-                  children: [
-                    const SizedBox(height: 10),
-                    TextFormField(
-                      controller: _title,
-                      cursorColor: _iconColor,
-                      showCursor: true,
-                      maxLines: null,
-                      autocorrect: true,
-                      inputFormatters: [LengthLimitingTextInputFormatter(62)],
-                      autovalidateMode: AutovalidateMode.onUserInteraction,
-                      validator: (value) {
-                        if (value!.isEmpty) {
-                          return 'Title can\'t be empty.';
-                        } else if (value.length > 60) {
-                          return 'Title can\'t be more than 60.';
-                        }
-                        return null;
-                      },
-                      style: TextStyle(
-                          color: _fontColor,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'Lora'),
-                      decoration: InputDecoration(
-                          border: InputBorder.none,
-                          hintText: 'Title',
-                          hintStyle: TextStyle(
-                              fontSize: 18,
-                              color: _fontColor,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: 'Lora'),
-                          focusColor: firstColor),
-                    ),
-                    const SizedBox(height: 2),
-                    TextFormField(
-                      controller: _contact,
-                      cursorColor: _iconColor,
-                      maxLines: null,
-                      style: TextStyle(
-                          color: _fontColor, fontSize: 14, fontFamily: 'Lora'),
-                      decoration: InputDecoration(
-                          border: InputBorder.none,
-                          hintText: 'Description',
-                          hintStyle: TextStyle(
-                              fontSize: 16,
-                              color: _fontColor,
-                              fontFamily: 'Lora'),
-                          focusColor: _iconColor),
-                    ),
-                  ],
-                ),
+              child: Column(
+                children: [
+                  const SizedBox(height: 10),
+                  TextFormField(
+                    controller: _title,
+                    cursorColor: _iconColor,
+                    showCursor: true,
+                    inputFormatters: [LengthLimitingTextInputFormatter(61)],
+                    autocorrect: true,
+                    textCapitalization: TextCapitalization.words,
+                    autovalidateMode: AutovalidateMode.onUserInteraction,
+                    validator: (value) {
+                      if (value!.length > 60) {
+                        return "Title is too long.";
+                      }
+                    },
+                    style: TextStyle(
+                        color: _fontColor,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Lora'),
+                    decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: 'Title',
+                        hintStyle: TextStyle(
+                            fontSize: 18,
+                            color: secondColor,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'Lora'),
+                        focusColor: firstColor),
+                  ),
+                  TextFormField(
+                    controller: _contact,
+                    cursorColor: _iconColor,
+                    showCursor: true,
+                    textCapitalization: TextCapitalization.sentences,
+                    maxLines: null,
+                    style: TextStyle(
+                        color: _fontColor, fontSize: 18, fontFamily: 'Lora'),
+                    decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: 'Description',
+                        hintStyle: TextStyle(
+                            fontSize: 16,
+                            color: secondColor,
+                            fontFamily: 'Lora'),
+                        focusColor: _iconColor),
+                  ),
+                  SizedBox(height: 40)
+                ],
               ),
             ),
           ),

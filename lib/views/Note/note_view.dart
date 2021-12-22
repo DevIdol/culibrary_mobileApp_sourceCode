@@ -141,7 +141,7 @@ class _NoteViewState extends State<NoteView> with TickerProviderStateMixin {
                     child: delete(_iconColor, _isVisible, () {
                       setState(() {
                         if (notes.isEmpty) {
-                          return;
+                          return noDatas(context, _themeMode, _iconColor);
                         } else {
                           deleteDialog(context, () {
                             noteDao.deletAllNotes(notes);
@@ -169,6 +169,8 @@ class _NoteViewState extends State<NoteView> with TickerProviderStateMixin {
             );
           } else {
             return StaggeredGridView.countBuilder(
+              addAutomaticKeepAlives: false,
+              addRepaintBoundaries: false,
               controller: scrollView,
               crossAxisCount: 4,
               itemCount: data.data.length,
@@ -179,7 +181,12 @@ class _NoteViewState extends State<NoteView> with TickerProviderStateMixin {
                 onLongPress: () {
                   deleteDialog(context, () {
                     noteDao.deleteNote(data.data[position]);
-                  }, _themeMode, _iconColor, data.data[position].title,
+                  },
+                      _themeMode,
+                      _iconColor,
+                      data.data[position].title.toString().isEmpty
+                          ? "No Title"
+                          : data.data[position].title,
                       deleteAlert);
                 },
                 child: Card(
@@ -194,11 +201,19 @@ class _NoteViewState extends State<NoteView> with TickerProviderStateMixin {
                       children: [
                         const SizedBox(height: 10),
                         Text(
-                          data.data[position].title,
+                          data.data[position].title.toString().isEmpty
+                              ? "No Title"
+                              : data.data[position].title,
                           maxLines: 2,
                           style: TextStyle(
-                              fontSize: 16,
-                              color: _fontColor,
+                              fontSize:
+                                  data.data[position].title.toString().isEmpty
+                                      ? 14
+                                      : 16,
+                              color:
+                                  data.data[position].title.toString().isEmpty
+                                      ? secondColor
+                                      : _fontColor,
                               fontWeight: FontWeight.bold,
                               fontFamily: 'Lora'),
                         ),
@@ -206,11 +221,21 @@ class _NoteViewState extends State<NoteView> with TickerProviderStateMixin {
                         Container(
                           alignment: Alignment.topLeft,
                           child: Text(
-                            data.data[position].contact,
+                            data.data[position].contact.toString().isEmpty
+                                ? "No Description"
+                                : data.data[position].contact,
                             maxLines: 4,
                             style: TextStyle(
-                                fontSize: 12,
-                                color: _fontColor,
+                                fontSize: data.data[position].contact
+                                        .toString()
+                                        .isEmpty
+                                    ? 10
+                                    : 14,
+                                color: data.data[position].contact
+                                        .toString()
+                                        .isEmpty
+                                    ? secondColor
+                                    : _fontColor,
                                 fontFamily: 'Lora'),
                           ),
                         ),

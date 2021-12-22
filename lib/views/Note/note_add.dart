@@ -3,6 +3,7 @@ import 'package:culibrary/database/table.dart';
 import 'package:culibrary/provider/theme_provider.dart';
 import 'package:double_back_to_close/double_back_to_close.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 import '../../color_themes.dart';
@@ -31,25 +32,46 @@ class _NoteAddState extends State<NoteAdd> {
         appBar: AppBar(
           foregroundColor: _fontColor,
           backgroundColor: _cardColor,
-          toolbarHeight: 60,
+          toolbarHeight: 80,
           elevation: 20,
           shadowColor: themeNotifier.isDark ? Colors.white12 : Colors.black54,
           shape: RoundedRectangleBorder(
             side: BorderSide(color: secondColor, width: 0.2),
             borderRadius: BorderRadius.circular(10),
           ),
-          title: const Text(
-            'Add Note',
+          title: TextFormField(
+            controller: _title,
+            cursorColor: _iconColor,
+            showCursor: true,
+            inputFormatters: [LengthLimitingTextInputFormatter(61)],
+            autocorrect: true,
+            textCapitalization: TextCapitalization.words,
+            autovalidateMode: AutovalidateMode.onUserInteraction,
+            validator: (value) {
+              if (value!.length > 60) {
+                return "Title is too long.";
+              }
+            },
             style: TextStyle(
-                fontSize: 18, fontWeight: FontWeight.bold, fontFamily: 'Lora'),
+                color: _fontColor,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Lora'),
+            decoration: InputDecoration(
+                border: InputBorder.none,
+                hintText: 'Title',
+                hintStyle: TextStyle(
+                    fontSize: 18,
+                    color: secondColor,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'Lora'),
+                focusColor: firstColor),
           ),
           actions: [
             InkWell(
               onTap: () {
-                if (formKey.currentState!.validate()) {
-                  noteDao.addNote(Note(noteDate, _title.text, _contact.text));
-                  Get.back();
-                }
+                noteDao.addNote(Note(noteDate, _title.text, _contact.text));
+                Get.back();
               },
               child: Center(
                 child: Padding(
@@ -57,7 +79,7 @@ class _NoteAddState extends State<NoteAdd> {
                   child: Text('Save',
                       style: TextStyle(
                           color: _iconColor,
-                          fontSize: 16,
+                          fontSize: 14,
                           fontWeight: FontWeight.bold,
                           letterSpacing: 0.1,
                           fontFamily: 'Lora')),
@@ -69,6 +91,7 @@ class _NoteAddState extends State<NoteAdd> {
         body: SingleChildScrollView(
           child: DoubleBack(
             message: 'Double back!',
+            waitForSecondBackPress: 1,
             textStyle: TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.bold,
@@ -79,61 +102,27 @@ class _NoteAddState extends State<NoteAdd> {
               margin: const EdgeInsets.symmetric(
                 horizontal: 15,
               ),
-              child: Form(
-                key: formKey,
-                child: Column(
-                  children: [
-                    const SizedBox(height: 10),
-                    TextFormField(
-                      controller: _title,
-                      cursorColor: _iconColor,
-                      showCursor: true,
-                      maxLines: null,
-                      maxLength: 60,
-                      autofocus: true,
-                      autocorrect: true,
-                      textCapitalization: TextCapitalization.words,
-                      autovalidateMode: AutovalidateMode.onUserInteraction,
-                      validator: (value) {
-                        if (value!.isEmpty) {
-                          return 'Title can\'t be empty.';
-                        }
-                        return null;
-                      },
-                      style: TextStyle(
-                          color: _fontColor,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'Lora'),
-                      decoration: InputDecoration(
-                          border: InputBorder.none,
-                          hintText: 'Title',
-                          hintStyle: TextStyle(
-                              fontSize: 18,
-                              color: _fontColor,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: 'Lora'),
-                          focusColor: firstColor),
-                    ),
-                    const SizedBox(height: 2),
-                    TextFormField(
-                      controller: _contact,
-                      cursorColor: _iconColor,
-                      textCapitalization: TextCapitalization.sentences,
-                      maxLines: null,
-                      style: TextStyle(
-                          color: _fontColor, fontSize: 14, fontFamily: 'Lora'),
-                      decoration: InputDecoration(
-                          border: InputBorder.none,
-                          hintText: 'Description',
-                          hintStyle: TextStyle(
-                              fontSize: 16,
-                              color: _fontColor,
-                              fontFamily: 'Lora'),
-                          focusColor: _iconColor),
-                    ),
-                  ],
-                ),
+              child: Column(
+                children: [
+                  const SizedBox(height: 10),
+                  TextFormField(
+                    controller: _contact,
+                    cursorColor: _iconColor,
+                    autofocus: true,
+                    textCapitalization: TextCapitalization.sentences,
+                    maxLines: null,
+                    style: TextStyle(
+                        color: _fontColor, fontSize: 18, fontFamily: 'Lora'),
+                    decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: 'Description',
+                        hintStyle: TextStyle(
+                            fontSize: 16,
+                            color: secondColor,
+                            fontFamily: 'Lora'),
+                        focusColor: _iconColor),
+                  ),
+                ],
               ),
             ),
           ),

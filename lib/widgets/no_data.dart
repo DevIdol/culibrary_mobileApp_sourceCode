@@ -15,3 +15,21 @@ isEmpty(text, double size) {
     style: TextStyle(fontSize: size, color: secondColor, fontFamily: 'Lora'),
   );
 }
+
+noDatas(context, _themeMode, _iconColor, {text= "No Data"}) {
+  var snackBar = SnackBar(
+    backgroundColor: _themeMode,
+    duration: const Duration(milliseconds: 500),
+    content: Text(
+      text,
+      style: TextStyle(
+          color: _iconColor,
+          fontSize: 14,
+          fontWeight: FontWeight.bold,
+          letterSpacing: 1,
+          fontFamily: 'Lora'),
+    ),
+  );
+
+  ScaffoldMessenger.of(context).showSnackBar(snackBar);
+}

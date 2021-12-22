@@ -145,7 +145,7 @@ class _ExamViewState extends State<ExamView> with TickerProviderStateMixin {
                     child: delete(_iconColor, _isVisible, () {
                       setState(() {
                         if (exams.isEmpty) {
-                          return;
+                          return noDatas(context, _themeMode, _iconColor);
                         } else {
                           deleteDialog(context, () {
                             examDao.deletAllExams(exams);
