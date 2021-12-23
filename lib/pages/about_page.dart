@@ -30,9 +30,14 @@ class _AboutPageState extends State<AboutPage> {
           child: Column(
             children: [
               const SizedBox(height: 60),
-              Image.asset(
-                'assets/icon.png',
-                width: 130,
+              Container(
+                width: 120,
+                height: 110,
+                decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                    image: DecorationImage(
+                        image: AssetImage('assets/icon.png'),
+                        fit: BoxFit.fill)),
               ),
               const SizedBox(height: 20),
               DefaultTextStyle(

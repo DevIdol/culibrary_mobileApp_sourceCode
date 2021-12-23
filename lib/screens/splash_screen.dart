@@ -57,7 +57,7 @@ class _SplashScreenState extends State<SplashScreen>
                       decoration: const BoxDecoration(
                           shape: BoxShape.circle,
                           image: DecorationImage(
-                              image: AssetImage('assets/logo.jpg'),
+                              image: AssetImage('assets/icon.png'),
                               fit: BoxFit.fill)),
                     ),
                     SizedBox(height: 20),
