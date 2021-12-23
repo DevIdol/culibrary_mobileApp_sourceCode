@@ -111,6 +111,7 @@ class _NoteUpdateState extends State<NoteUpdate> {
                     controller: _title,
                     cursorColor: _iconColor,
                     showCursor: true,
+                    maxLines: null,
                     inputFormatters: [LengthLimitingTextInputFormatter(61)],
                     autocorrect: true,
                     textCapitalization: TextCapitalization.words,
