@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_statements
+
 import 'package:culibrary/api/package_api.dart';
 import 'package:culibrary/database/table.dart';
 import 'package:culibrary/provider/theme_provider.dart';
@@ -72,8 +74,10 @@ class _NoteUpdateState extends State<NoteUpdate> {
                         fontFamily: 'Lora'),
                   ),
                 );
-
-                ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                _title.text.length != note.title!.toString().length ||
+                        _contact.text.length != note.contact!.toString().length
+                    ? ScaffoldMessenger.of(context).showSnackBar(snackBar)
+                    : null;
               },
               child: Center(
                 child: Padding(
