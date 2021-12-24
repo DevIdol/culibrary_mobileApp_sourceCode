@@ -51,16 +51,17 @@ class _AddSubjectState extends State<AddSubject> {
                     }
 
                     return null;
-                  }),
-                  textFormField(_iconColor, _fontColor, 'Subject Name',
-                      _subjectName, 102, (value) {
+                  }, 1),
+                  textFormField(
+                      _iconColor, _fontColor, 'Subject Name', _subjectName, 102,
+                      (value) {
                     if (value!.isEmpty) {
                       return 'Please enter your subject name.(Eg:👉 English)';
                     } else if (value!.length > 100) {
                       return 'Subject Name is too long.';
                     }
                     return null;
-                  }),
+                  }, null),
                   textFormField(
                       _iconColor, _fontColor, 'Teacher Name', _teacher, 102,
                       (value) {
@@ -68,7 +69,7 @@ class _AddSubjectState extends State<AddSubject> {
                       return 'Teacher Name is too long.';
                     }
                     return null;
-                  }),
+                  }, null),
                   const SizedBox(height: 40),
                   buttonWidget(_iconColor, () {
                     if (formKey.currentState!.validate()) {

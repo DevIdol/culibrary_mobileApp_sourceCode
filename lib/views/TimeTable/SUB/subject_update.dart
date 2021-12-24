@@ -55,7 +55,7 @@ class _UpdateSubjectState extends State<UpdateSubject> {
                     }
 
                     return null;
-                  }),
+                  }, 1),
                   textFormField(
                       _iconColor, _fontColor, 'Subject Name', _subjectName, 102,
                       (value) {
@@ -65,7 +65,7 @@ class _UpdateSubjectState extends State<UpdateSubject> {
                       return 'Subject Name is too long.(Eg:👉 English)';
                     }
                     return null;
-                  }),
+                  }, null),
                   textFormField(
                       _iconColor, _fontColor, 'Teacher Name', _teacher, 102,
                       (value) {
@@ -73,7 +73,7 @@ class _UpdateSubjectState extends State<UpdateSubject> {
                       return 'Teacher Name is too long.';
                     }
                     return null;
-                  }),
+                  }, null),
                   const SizedBox(height: 40),
                   buttonWidget(_iconColor, () {
                     if (formKey.currentState!.validate()) {

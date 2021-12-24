@@ -86,14 +86,14 @@ class _UpdateMondayClassState extends State<UpdateMondayClass> {
                       return subjectValidate;
                     }
                     return null;
-                  }),
+                  }, 1),
                   textFormField(_iconColor, _fontColor, other, note, 101,
                       (value) {
                     if (value!.length > 100) {
                       return otherValidate;
                     }
                     return null;
-                  }),
+                  }, null),
                   const SizedBox(height: 40),
                   buttonWidget(_iconColor, () {
                     if (formKey.currentState!.validate()) {

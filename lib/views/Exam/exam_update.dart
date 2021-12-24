@@ -93,14 +93,14 @@ class _UpdateExamDateTimeState extends State<UpdateExamDateTime> {
                       return 'Subject type is too long.';
                     }
                     return null;
-                  }),
+                  }, null),
                   textFormField(_iconColor, _fontColor, other, _note, 101,
                       (value) {
                     if (value!.length > 100) {
                       return 'Your note can\'t be more than 100.';
                     }
                     return null;
-                  }),
+                  }, null),
                   const SizedBox(height: 40),
                   buttonWidget(_iconColor, () {
                     if (formKey.currentState!.validate()) {

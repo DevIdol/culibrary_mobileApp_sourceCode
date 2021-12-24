@@ -135,7 +135,7 @@ dateFormField(double width, _iconColor, _themeMode, themeNotifier, _fontColor,
 }
 
 textFormField(
-    _iconColor, _fontColor, labelText, _controller, maxLength, validate) {
+    _iconColor, _fontColor, labelText, _controller, maxLength, validate, maxLine) {
   return Padding(
     padding: const EdgeInsets.only(left: 10, right: 10),
     child: TextFormField(
@@ -146,7 +146,7 @@ textFormField(
       autovalidateMode: AutovalidateMode.onUserInteraction,
       validator: validate,
       cursorColor: _iconColor,
-      maxLines: null,
+      maxLines: maxLine,
       showCursor: true,
       style: TextStyle(
           color: _fontColor,
