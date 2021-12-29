@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:culibrary/animation/page_animation_transition.dart';
 import 'package:culibrary/api/pdf_api.dart';
+import 'package:culibrary/api/text_api.dart';
 import 'package:culibrary/color_themes.dart';
 import 'package:culibrary/pages/about_page.dart';
 import 'package:culibrary/provider/theme_provider.dart';
@@ -57,7 +58,7 @@ class HomePage extends StatelessWidget {
                 fontSize: 14,
                 fontWeight: FontWeight.bold,
                 color: _iconColor,
-                fontFamily: 'Lora'),
+                fontFamily: fontStyle),
           ),
         ),
         child: Column(

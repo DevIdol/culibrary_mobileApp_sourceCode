@@ -9,3 +9,5 @@ String timeStart = 'Start Time';
 String timeEnd = 'End Time';
 String subjectType = 'Subject Type';
 String other = 'Other';
+
+String fontStyle = 'Lora';

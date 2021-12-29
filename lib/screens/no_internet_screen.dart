@@ -1,4 +1,5 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:culibrary/api/text_api.dart';
 import 'package:culibrary/color_themes.dart';
 import 'package:flutter/material.dart';
 
@@ -22,8 +23,10 @@ class NoInternetScreen extends StatelessWidget {
                 AnimatedTextKit(
                   animatedTexts: [
                     TyperAnimatedText('No Internet Connection',
-                        textStyle: const TextStyle(
-                            fontSize: 16, fontFamily: 'Lora', letterSpacing: 1),
+                        textStyle: TextStyle(
+                            fontSize: 16,
+                            fontFamily: fontStyle,
+                            letterSpacing: 1),
                         speed: const Duration(milliseconds: 60))
                   ],
                   isRepeatingAnimation: false,

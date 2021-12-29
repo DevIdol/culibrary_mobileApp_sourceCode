@@ -1,5 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:culibrary/api/package_api.dart';
+import 'package:culibrary/api/text_api.dart';
 import 'package:culibrary/api/url_launcher_api.dart';
 import 'package:culibrary/provider/theme_provider.dart';
 import 'package:flutter/material.dart';
@@ -45,7 +46,7 @@ class _AboutPageState extends State<AboutPage> {
                       fontSize: 20,
                       color: _iconColor,
                       fontWeight: FontWeight.bold,
-                      fontFamily: 'Lora'),
+                      fontFamily: fontStyle),
                   child: AnimatedTextKit(
                     animatedTexts: [
                       WavyAnimatedText('CU LIBRARY',
@@ -67,7 +68,7 @@ class _AboutPageState extends State<AboutPage> {
                       fontSize: 14,
                       color: _fontColor,
                       letterSpacing: 0.01,
-                      fontFamily: 'Lora'),
+                      fontFamily: fontStyle),
                 ),
               ),
               const SizedBox(height: 16),
@@ -84,10 +85,10 @@ class _AboutPageState extends State<AboutPage> {
                           animatedTexts: [
                             TyperAnimatedText('Developed By DevIdol',
                                 speed: const Duration(milliseconds: 80),
-                                textStyle: const TextStyle(
+                                textStyle: TextStyle(
                                     fontSize: 14,
                                     fontWeight: FontWeight.bold,
-                                    fontFamily: 'Lora'))
+                                    fontFamily: fontStyle))
                           ],
                           isRepeatingAnimation: false,
                           repeatForever: false,
@@ -115,7 +116,7 @@ class _AboutPageState extends State<AboutPage> {
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
                                 color: _iconColor,
-                                fontFamily: 'Lora'),
+                                fontFamily: fontStyle),
                           ),
                         ],
                       ),
@@ -134,7 +135,7 @@ class _AboutPageState extends State<AboutPage> {
                         fontWeight: FontWeight.bold,
                         fontSize: 16,
                         color: _fontColor,
-                        fontFamily: 'Lora'),
+                        fontFamily: fontStyle),
                   ),
                 ),
               ),
@@ -169,14 +170,14 @@ class _AboutPageState extends State<AboutPage> {
                 ),
               ),
               const SizedBox(height: 20),
-              const Text(
+              Text(
                 'How To Use?',
                 style: TextStyle(
                     color: secondColor,
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 0.5,
-                    fontFamily: 'Lora'),
+                    fontFamily: fontStyle),
               ),
               const SizedBox(height: 20),
               Padding(
@@ -185,24 +186,24 @@ class _AboutPageState extends State<AboutPage> {
                   children: [
                     Container(
                       alignment: Alignment.topLeft,
-                      child: const Text(
+                      child: Text(
                         '1. To Add Data',
                         style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                             color: secondColor,
-                            fontFamily: 'Lora'),
+                            fontFamily: fontStyle),
                       ),
                     ),
                     Container(
                       alignment: Alignment.topLeft,
-                      child: const Text(
+                      child: Text(
                         'Tap the add botton into the menu.',
                         style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.bold,
                             color: secondColor,
-                            fontFamily: 'Lora'),
+                            fontFamily: fontStyle),
                       ),
                     )
                   ],
@@ -215,24 +216,24 @@ class _AboutPageState extends State<AboutPage> {
                   children: [
                     Container(
                       alignment: Alignment.topLeft,
-                      child: const Text(
+                      child: Text(
                         '2. To Edit Data',
                         style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                             color: secondColor,
-                            fontFamily: 'Lora'),
+                            fontFamily: fontStyle),
                       ),
                     ),
                     Container(
                       alignment: Alignment.topLeft,
-                      child: const Text(
+                      child: Text(
                         'Double Click on the card or Slide card to the left.',
                         style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.bold,
                             color: secondColor,
-                            fontFamily: 'Lora'),
+                            fontFamily: fontStyle),
                       ),
                     )
                   ],
@@ -245,24 +246,24 @@ class _AboutPageState extends State<AboutPage> {
                   children: [
                     Container(
                       alignment: Alignment.topLeft,
-                      child: const Text(
+                      child: Text(
                         '3. To Delete Data',
                         style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                             color: secondColor,
-                            fontFamily: 'Lora'),
+                            fontFamily: fontStyle),
                       ),
                     ),
                     Container(
                       alignment: Alignment.topLeft,
-                      child: const Text(
+                      child: Text(
                         'Long press on the card or Slide card to the right.',
                         style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.bold,
                             color: secondColor,
-                            fontFamily: 'Lora'),
+                            fontFamily: fontStyle),
                       ),
                     )
                   ],
@@ -275,24 +276,24 @@ class _AboutPageState extends State<AboutPage> {
                   children: [
                     Container(
                       alignment: Alignment.topLeft,
-                      child: const Text(
+                      child: Text(
                         '4. To Delete All Datas',
                         style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                             color: secondColor,
-                            fontFamily: 'Lora'),
+                            fontFamily: fontStyle),
                       ),
                     ),
                     Container(
                       alignment: Alignment.topLeft,
-                      child: const Text(
+                      child: Text(
                         'Tap the delete botton into the menu.',
                         style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.bold,
                             color: secondColor,
-                            fontFamily: 'Lora'),
+                            fontFamily: fontStyle),
                       ),
                     )
                   ],
@@ -307,7 +308,7 @@ class _AboutPageState extends State<AboutPage> {
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                       color: _iconColor,
-                      fontFamily: 'Lora'),
+                      fontFamily: fontStyle),
                 ),
               ),
               const SizedBox(height: 60),
@@ -340,7 +341,7 @@ class _AboutPageState extends State<AboutPage> {
                       color: fontColor,
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
-                      fontFamily: 'Lora'),
+                      fontFamily: fontStyle),
                 )
               ],
             ),

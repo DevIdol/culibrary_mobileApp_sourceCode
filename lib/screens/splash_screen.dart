@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:culibrary/api/text_api.dart';
 import 'package:culibrary/color_themes.dart';
 import 'package:culibrary/pages/home_page.dart';
 import 'package:flutter/material.dart';
@@ -64,12 +65,12 @@ class _SplashScreenState extends State<SplashScreen>
                     AnimatedTextKit(
                       animatedTexts: [
                         TyperAnimatedText('CU LIBRARY',
-                            textStyle: const TextStyle(
+                            textStyle: TextStyle(
                                 color: Colors.white,
                                 fontSize: 28,
                                 fontWeight: FontWeight.bold,
                                 letterSpacing: 1,
-                                fontFamily: 'Lora'),
+                                fontFamily: fontStyle),
                             speed: const Duration(milliseconds: 60))
                       ],
                       isRepeatingAnimation: false,
@@ -83,7 +84,7 @@ class _SplashScreenState extends State<SplashScreen>
                 child: Text(
                   'Developed by DevIdol',
                   style: TextStyle(
-                      fontSize: 12, color: secondColor, fontFamily: 'Lora'),
+                      fontSize: 12, color: secondColor, fontFamily: fontStyle),
                 ))
           ],
         ));

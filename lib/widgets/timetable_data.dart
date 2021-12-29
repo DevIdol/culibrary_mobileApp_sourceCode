@@ -108,7 +108,7 @@ timetableList(
                           letterSpacing: 0.5,
                           fontWeight:
                               _todayTime ? FontWeight.w900 : FontWeight.w500,
-                          fontFamily: 'Lora'),
+                          fontFamily: fontStyle),
                     ),
                   ),
                   subtitle: Column(
@@ -122,7 +122,7 @@ timetableList(
                               fontSize: 12,
                               letterSpacing: 0.5,
                               fontWeight: FontWeight.w900,
-                              fontFamily: 'Lora'),
+                              fontFamily: fontStyle),
                         ),
                       ),
                       Padding(
@@ -134,7 +134,7 @@ timetableList(
                               fontSize: 12,
                               color: secondColor,
                               letterSpacing: 0.5,
-                              fontFamily: 'Lora'),
+                              fontFamily: fontStyle),
                         ),
                       ),
                     ],
@@ -157,7 +157,7 @@ timetableList(
                                             : darkFontColor,
                                         fontSize: 10,
                                         fontWeight: FontWeight.bold,
-                                        fontFamily: 'Lora'),
+                                        fontFamily: fontStyle),
                                     speed: const Duration(milliseconds: 150))
                               ],
                               isRepeatingAnimation: true,

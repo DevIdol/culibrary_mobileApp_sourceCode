@@ -1,3 +1,4 @@
+import 'package:culibrary/api/text_api.dart';
 import 'package:culibrary/color_themes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -24,7 +25,7 @@ class LoadingScreen extends StatelessWidget {
                 bottom: 60.0,
                 child: Text(
                   'Developed by DevIdol',
-                  style: TextStyle(fontSize: 12, color: secondColor, fontFamily: 'Lora'),
+                  style: TextStyle(fontSize: 12, color: secondColor, fontFamily: fontStyle),
                 ))
           ],
         ));

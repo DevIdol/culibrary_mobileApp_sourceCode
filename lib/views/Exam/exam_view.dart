@@ -262,7 +262,7 @@ class _ExamViewState extends State<ExamView> with TickerProviderStateMixin {
                                                       : darkFontColor,
                                                   fontSize: 10,
                                                   fontWeight: FontWeight.w900,
-                                                  fontFamily: 'Lora'),
+                                                  fontFamily: fontStyle),
                                               speed: const Duration(
                                                   milliseconds: 200))
                                         ],
@@ -285,7 +285,7 @@ class _ExamViewState extends State<ExamView> with TickerProviderStateMixin {
                                     fontWeight: _todayDate
                                         ? FontWeight.w900
                                         : FontWeight.w500,
-                                    fontFamily: 'Lora'),
+                                    fontFamily: fontStyle),
                               ),
                             ),
                             subtitle: Column(
@@ -299,7 +299,7 @@ class _ExamViewState extends State<ExamView> with TickerProviderStateMixin {
                                     style: TextStyle(
                                         fontSize: 10,
                                         fontWeight: FontWeight.w900,
-                                        fontFamily: 'Lora'),
+                                        fontFamily: fontStyle),
                                   ),
                                 ),
                                 _todayDate

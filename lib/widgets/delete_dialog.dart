@@ -1,3 +1,4 @@
+import 'package:culibrary/api/text_api.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -14,7 +15,7 @@ deleteDialog(context, dao, _themeMode, _iconColor, title, content) {
               color: _iconColor,
               fontSize: 16,
               fontWeight: FontWeight.bold,
-              fontFamily: 'Lora'),
+              fontFamily: fontStyle),
         ),
       ));
 
@@ -31,7 +32,7 @@ deleteDialog(context, dao, _themeMode, _iconColor, title, content) {
               color: _iconColor,
               fontSize: 16,
               fontWeight: FontWeight.bold,
-              fontFamily: 'Lora'),
+              fontFamily: fontStyle),
         ),
       ));
 
@@ -48,11 +49,11 @@ deleteDialog(context, dao, _themeMode, _iconColor, title, content) {
           color: _iconColor,
           fontSize: 14,
           fontWeight: FontWeight.bold,
-          fontFamily: 'Lora'),
+          fontFamily: fontStyle),
     ),
     content: Text(
       content,
-      style: const TextStyle(fontSize: 12, fontFamily: 'Lora'),
+      style: TextStyle(fontSize: 12, fontFamily: fontStyle),
     ),
     actions: [
       cancelButton,

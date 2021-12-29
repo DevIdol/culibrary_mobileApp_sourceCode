@@ -1,4 +1,5 @@
 import 'package:animated_button/animated_button.dart';
+import 'package:culibrary/api/text_api.dart';
 import 'package:flutter/material.dart';
 
 buttonWidget(_iconColor, press, text, _themeMode, themeNotifier) {
@@ -10,7 +11,7 @@ buttonWidget(_iconColor, press, text, _themeMode, themeNotifier) {
     child: Text(
       text,
       style: TextStyle(
-          fontSize: 18, fontWeight: FontWeight.bold, color: _themeMode, fontFamily: 'Lora'),
+          fontSize: 18, fontWeight: FontWeight.bold, color: _themeMode, fontFamily: fontStyle),
     ),
     enabled: true,
     shadowDegree: themeNotifier.isDark ? ShadowDegree.dark : ShadowDegree.light,

@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:culibrary/api/text_api.dart';
 import 'package:culibrary/color_themes.dart';
 import 'package:culibrary/provider/firebase_provider.dart';
 import 'package:culibrary/provider/theme_provider.dart';
@@ -27,7 +28,7 @@ Future<Widget> _getImage(BuildContext context, String imageName) async {
             Text(
               'Connecting...',
               style: TextStyle(
-                  fontSize: 8, color: secondColor, fontFamily: 'Lora'),
+                  fontSize: 8, color: secondColor, fontFamily: fontStyle),
             )
           ],
         );
@@ -39,8 +40,8 @@ Future<Widget> _getImage(BuildContext context, String imageName) async {
           SizedBox(height: 8),
           Text(
             'Connection Failed!',
-            style:
-                TextStyle(fontSize: 8, color: secondColor, fontFamily: 'Lora'),
+            style: TextStyle(
+                fontSize: 8, color: secondColor, fontFamily: fontStyle),
           )
         ],
       ),
@@ -104,7 +105,7 @@ loadImageFromFirebase(context, tap, imageName, _iconColor) {
                         style: TextStyle(
                             fontSize: 8,
                             color: secondColor,
-                            fontFamily: 'Lora'),
+                            fontFamily: fontStyle),
                       )
                     ],
                   ),

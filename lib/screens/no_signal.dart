@@ -1,3 +1,4 @@
+import 'package:culibrary/api/text_api.dart';
 import 'package:culibrary/color_themes.dart';
 import 'package:culibrary/provider/conectivity_provider.dart';
 import 'package:culibrary/provider/theme_provider.dart';
@@ -29,7 +30,7 @@ noSignal(context) {
             Text(
               'No Internet Connection!',
               style: TextStyle(
-                  fontSize: 8, color: secondColor, fontFamily: 'Lora'),
+                  fontSize: 8, color: secondColor, fontFamily: fontStyle),
             )
           ],
         ),
@@ -60,7 +61,7 @@ noConnection(context, function, _iconColor, name) {
             fontWeight: FontWeight.bold,
             fontSize: 12,
             color: _iconColor,
-            fontFamily: 'Lora'),
+            fontFamily: fontStyle),
       ),
     ],
   );

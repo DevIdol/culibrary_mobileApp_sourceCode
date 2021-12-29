@@ -1,5 +1,6 @@
 import 'package:culibrary/animation/add_floatingactionbutton.dart';
 import 'package:culibrary/api/package_api.dart';
+import 'package:culibrary/api/text_api.dart';
 import 'package:culibrary/provider/theme_provider.dart';
 import 'package:culibrary/views/TimeTable/FRI/friday_add.dart';
 import 'package:culibrary/views/TimeTable/FRI/friday_view.dart';
@@ -131,8 +132,8 @@ class _TimeTableViewState extends State<TimeTableView>
                 indicatorWeight: 3.0,
                 labelColor: _iconColor,
                 labelPadding: EdgeInsets.all(0),
-                labelStyle: const TextStyle(
-                    fontFamily: 'Lora', fontWeight: FontWeight.bold),
+                labelStyle: TextStyle(
+                    fontFamily: fontStyle, fontWeight: FontWeight.bold),
                 tabs: const [
                   Tab(
                     text: 'Mon',

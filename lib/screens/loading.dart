@@ -1,3 +1,4 @@
+import 'package:culibrary/api/text_api.dart';
 import 'package:culibrary/color_themes.dart';
 import 'package:culibrary/provider/conectivity_provider.dart';
 import 'package:culibrary/provider/theme_provider.dart';
@@ -43,7 +44,7 @@ class _LoadingWidgetState extends State<LoadingWidget> {
                                 SizedBox(height: 20),
                                 Text(
                                   'Connecting...',
-                                  style: TextStyle(color: secondColor, fontFamily: 'Lora'),
+                                  style: TextStyle(color: secondColor, fontFamily: fontStyle),
                                 ),
                               ],
                             )),
@@ -52,7 +53,7 @@ class _LoadingWidgetState extends State<LoadingWidget> {
                             child: Text(
                               'Developed by DevIdol',
                               style:
-                                  TextStyle(fontSize: 10, color: secondColor, fontFamily: 'Lora'),
+                                  TextStyle(fontSize: 10, color: secondColor, fontFamily: fontStyle),
                             ))
                       ],
                     )

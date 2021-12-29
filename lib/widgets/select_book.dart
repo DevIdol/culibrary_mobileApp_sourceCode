@@ -1,3 +1,4 @@
+import 'package:culibrary/api/text_api.dart';
 import 'package:culibrary/provider/theme_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -37,7 +38,7 @@ selectBook(tap, img, name, _iconColor) {
               fontWeight: FontWeight.bold,
               fontSize: 12,
               color: _iconColor,
-              fontFamily: 'Lora'),
+              fontFamily: fontStyle),
         )
       ],
     ),

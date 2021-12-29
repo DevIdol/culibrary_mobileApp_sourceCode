@@ -1,3 +1,4 @@
+import 'package:culibrary/api/text_api.dart';
 import 'package:flutter/material.dart';
 import '../color_themes.dart';
 
@@ -16,8 +17,8 @@ appBar(_cardColor, _fontColor, title, themeNotifier, _iconColor,
     automaticallyImplyLeading: false,
     title: Text(
       title,
-      style: const TextStyle(
-          fontFamily: 'Lora',
+      style: TextStyle(
+          fontFamily: fontStyle,
           fontWeight: FontWeight.bold,
           letterSpacing: 0.8,
           fontSize: 18),
@@ -34,7 +35,7 @@ appBar(_cardColor, _fontColor, title, themeNotifier, _iconColor,
           children: [
             Text(themeNotifier.isDark ? 'DarkMode' : 'LightMode',
                 style: TextStyle(
-                    color: _fontColor, fontSize: 12, fontFamily: 'Lora',)),
+                    color: _fontColor, fontSize: 12, fontFamily: fontStyle,)),
             SizedBox(width: 2),
             Icon(
               themeNotifier.isDark ? Icons.dark_mode : Icons.light_mode,

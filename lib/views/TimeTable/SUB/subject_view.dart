@@ -114,27 +114,27 @@ class _SubjectViewState extends State<SubjectView> {
                                     fontSize: 14,
                                     fontWeight: FontWeight.w700,
                                     color: _iconColor,
-                                    fontFamily: 'Lora'),
+                                    fontFamily: fontStyle),
                               ),
                             ),
                             title: Padding(
                               padding: const EdgeInsets.only(top: 12),
                               child: Text(
                                 data.data[position].subjectName,
-                                style: const TextStyle(
+                                style: TextStyle(
                                     fontSize: 14,
                                     fontWeight: FontWeight.w600,
-                                    fontFamily: 'Lora'),
+                                    fontFamily: fontStyle),
                               ),
                             ),
                             subtitle: Padding(
                               padding: const EdgeInsets.only(top: 8, bottom: 4),
                               child: Text(
                                 data.data[position].teacher,
-                                style: const TextStyle(
+                                style: TextStyle(
                                     fontSize: 12,
                                     color: secondColor,
-                                    fontFamily: 'Lora'),
+                                    fontFamily: fontStyle),
                               ),
                             ),
                           ),

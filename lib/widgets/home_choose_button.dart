@@ -1,3 +1,4 @@
+import 'package:culibrary/api/text_api.dart';
 import 'package:culibrary/provider/theme_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -29,9 +30,9 @@ chooseButton(press, double height, double width, img, name, double toLeft,
               const SizedBox(height: 12),
               Text(
                 name,
-                style: const TextStyle(
+                style: TextStyle(
                     fontSize: 16,
-                    fontFamily: 'Lora',
+                    fontFamily: fontStyle,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 1),
               )

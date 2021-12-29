@@ -1,3 +1,4 @@
+import 'package:culibrary/api/text_api.dart';
 import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -45,13 +46,13 @@ dateTimeFormField(double width, _iconColor, themeNotifier, _themeMode,
           color: _fontColor,
           fontSize: 12,
           fontWeight: FontWeight.bold,
-          fontFamily: 'Lora'),
+          fontFamily: fontStyle),
       decoration: InputDecoration(
-        errorStyle: const TextStyle(
+        errorStyle: TextStyle(
             color: Colors.red,
             fontSize: 10,
             fontWeight: FontWeight.bold,
-            fontFamily: 'Lora'),
+            fontFamily: fontStyle),
         focusedBorder: const UnderlineInputBorder(
           borderSide: BorderSide(color: secondColor),
         ),
@@ -63,7 +64,7 @@ dateTimeFormField(double width, _iconColor, themeNotifier, _themeMode,
             color: _iconColor,
             fontSize: 12,
             fontWeight: FontWeight.bold,
-            fontFamily: 'Lora'),
+            fontFamily: fontStyle),
       ),
     ),
   );
@@ -111,13 +112,13 @@ dateFormField(double width, _iconColor, _themeMode, themeNotifier, _fontColor,
           color: _fontColor,
           fontSize: 14,
           fontWeight: FontWeight.bold,
-          fontFamily: 'Lora'),
+          fontFamily: fontStyle),
       decoration: InputDecoration(
-          errorStyle: const TextStyle(
+          errorStyle: TextStyle(
               color: Colors.red,
               fontSize: 10,
               fontWeight: FontWeight.bold,
-              fontFamily: 'Lora'),
+              fontFamily: fontStyle),
           focusedBorder: const UnderlineInputBorder(
             borderSide: BorderSide(color: secondColor),
           ),
@@ -129,13 +130,13 @@ dateFormField(double width, _iconColor, _themeMode, themeNotifier, _fontColor,
               color: _iconColor,
               fontSize: 12,
               fontWeight: FontWeight.bold,
-              fontFamily: 'Lora')),
+              fontFamily: fontStyle)),
     ),
   );
 }
 
-textFormField(
-    _iconColor, _fontColor, labelText, _controller, maxLength, validate, maxLine) {
+textFormField(_iconColor, _fontColor, labelText, _controller, maxLength,
+    validate, maxLine) {
   return Padding(
     padding: const EdgeInsets.only(left: 10, right: 10),
     child: TextFormField(
@@ -152,13 +153,13 @@ textFormField(
           color: _fontColor,
           fontSize: 14,
           fontWeight: FontWeight.bold,
-          fontFamily: 'Lora'),
+          fontFamily: fontStyle),
       decoration: InputDecoration(
-          errorStyle: const TextStyle(
+          errorStyle: TextStyle(
               color: Colors.red,
               fontSize: 10,
               fontWeight: FontWeight.bold,
-              fontFamily: 'Lora'),
+              fontFamily: fontStyle),
           focusedBorder: const UnderlineInputBorder(
             borderSide: BorderSide(color: secondColor),
           ),
@@ -169,7 +170,7 @@ textFormField(
               color: _iconColor,
               fontSize: 12,
               fontWeight: FontWeight.bold,
-              fontFamily: 'Lora')),
+              fontFamily: fontStyle)),
     ),
   );
 }

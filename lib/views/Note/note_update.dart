@@ -1,9 +1,9 @@
 // ignore_for_file: unnecessary_statements
 
 import 'package:culibrary/api/package_api.dart';
+import 'package:culibrary/api/text_api.dart';
 import 'package:culibrary/database/table.dart';
 import 'package:culibrary/provider/theme_provider.dart';
-import 'package:double_back_to_close/double_back_to_close.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -46,10 +46,12 @@ class _NoteUpdateState extends State<NoteUpdate> {
             side: BorderSide(color: secondColor, width: 0.2),
             borderRadius: BorderRadius.circular(10),
           ),
-          title: const Text(
+          title: Text(
             'Note',
             style: TextStyle(
-                fontSize: 18, fontWeight: FontWeight.bold, fontFamily: 'Lora'),
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                fontFamily: fontStyle),
           ),
           actions: [
             InkWell(
@@ -61,17 +63,13 @@ class _NoteUpdateState extends State<NoteUpdate> {
                   backgroundColor: _themeMode,
                   duration: const Duration(milliseconds: 500),
                   content: Text(
-                    _title.text.length != note.title!.toString().length ||
-                            _contact.text.length !=
-                                note.contact!.toString().length
-                        ? "Saved"
-                        : '',
+                    "Saved",
                     style: TextStyle(
                         color: _iconColor,
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
                         letterSpacing: 1,
-                        fontFamily: 'Lora'),
+                        fontFamily: fontStyle),
                   ),
                 );
                 _title.text.length != note.title!.toString().length ||
@@ -88,78 +86,68 @@ class _NoteUpdateState extends State<NoteUpdate> {
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                           letterSpacing: 0.1,
-                          fontFamily: 'Lora')),
+                          fontFamily: fontStyle)),
                 ),
               ),
             )
           ],
         ),
         body: SingleChildScrollView(
-          child: DoubleBack(
-            message: 'Double back!',
-            waitForSecondBackPress: 1,
-            textStyle: TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.bold,
-                color: _fontColor,
-                fontFamily: 'Lora'),
-            background: _themeMode,
-            child: Container(
-              margin: const EdgeInsets.symmetric(
-                horizontal: 15,
-              ),
-              child: Column(
-                children: [
-                  const SizedBox(height: 10),
-                  TextFormField(
-                    controller: _title,
-                    cursorColor: _iconColor,
-                    showCursor: true,
-                    maxLines: null,
-                    inputFormatters: [LengthLimitingTextInputFormatter(61)],
-                    autocorrect: true,
-                    textCapitalization: TextCapitalization.words,
-                    autovalidateMode: AutovalidateMode.onUserInteraction,
-                    validator: (value) {
-                      if (value!.length > 60) {
-                        return "Title is too long.";
-                      }
-                    },
-                    style: TextStyle(
-                        color: _fontColor,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: 'Lora'),
-                    decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: 'Title',
-                        hintStyle: TextStyle(
-                            fontSize: 18,
-                            color: secondColor,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: 'Lora'),
-                        focusColor: firstColor),
-                  ),
-                  TextFormField(
-                    controller: _contact,
-                    cursorColor: _iconColor,
-                    showCursor: true,
-                    textCapitalization: TextCapitalization.sentences,
-                    maxLines: null,
-                    style: TextStyle(
-                        color: _fontColor, fontSize: 18, fontFamily: 'Lora'),
-                    decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: 'Description',
-                        hintStyle: TextStyle(
-                            fontSize: 16,
-                            color: secondColor,
-                            fontFamily: 'Lora'),
-                        focusColor: _iconColor),
-                  ),
-                  SizedBox(height: 40)
-                ],
-              ),
+          child: Container(
+            margin: const EdgeInsets.symmetric(
+              horizontal: 15,
+            ),
+            child: Column(
+              children: [
+                const SizedBox(height: 10),
+                TextFormField(
+                  controller: _title,
+                  cursorColor: _iconColor,
+                  showCursor: true,
+                  maxLines: null,
+                  inputFormatters: [LengthLimitingTextInputFormatter(61)],
+                  autocorrect: true,
+                  textCapitalization: TextCapitalization.words,
+                  autovalidateMode: AutovalidateMode.onUserInteraction,
+                  validator: (value) {
+                    if (value!.length > 60) {
+                      return "Title is too long.";
+                    }
+                  },
+                  style: TextStyle(
+                      color: _fontColor,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: fontStyle),
+                  decoration: InputDecoration(
+                      border: InputBorder.none,
+                      hintText: 'Title',
+                      hintStyle: TextStyle(
+                          fontSize: 18,
+                          color: secondColor,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: fontStyle),
+                      focusColor: firstColor),
+                ),
+                TextFormField(
+                  controller: _contact,
+                  cursorColor: _iconColor,
+                  showCursor: true,
+                  textCapitalization: TextCapitalization.sentences,
+                  maxLines: null,
+                  style: TextStyle(
+                      color: _fontColor, fontSize: 18, fontFamily: fontStyle),
+                  decoration: InputDecoration(
+                      border: InputBorder.none,
+                      hintText: 'Description',
+                      hintStyle: TextStyle(
+                          fontSize: 16,
+                          color: secondColor,
+                          fontFamily: fontStyle),
+                      focusColor: _iconColor),
+                ),
+                SizedBox(height: 40)
+              ],
             ),
           ),
         ),

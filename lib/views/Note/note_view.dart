@@ -215,7 +215,7 @@ class _NoteViewState extends State<NoteView> with TickerProviderStateMixin {
                                       ? secondColor
                                       : _fontColor,
                               fontWeight: FontWeight.bold,
-                              fontFamily: 'Lora'),
+                              fontFamily: fontStyle),
                         ),
                         const SizedBox(height: 10),
                         Container(
@@ -236,7 +236,7 @@ class _NoteViewState extends State<NoteView> with TickerProviderStateMixin {
                                         .isEmpty
                                     ? secondColor
                                     : _fontColor,
-                                fontFamily: 'Lora'),
+                                fontFamily: fontStyle),
                           ),
                         ),
                       ],
@@ -251,7 +251,7 @@ class _NoteViewState extends State<NoteView> with TickerProviderStateMixin {
                               fontSize: 8,
                               color: _iconColor,
                               fontWeight: FontWeight.bold,
-                              fontFamily: 'Lora'),
+                              fontFamily: fontStyle),
                         ),
                       ),
                     ),

@@ -1,3 +1,4 @@
+import 'package:culibrary/api/text_api.dart';
 import 'package:flutter/material.dart';
 
 import '../color_themes.dart';
@@ -12,7 +13,7 @@ noData(text1, text2) {
 isEmpty(text, double size) {
   return Text(
     text,
-    style: TextStyle(fontSize: size, color: secondColor, fontFamily: 'Lora'),
+    style: TextStyle(fontSize: size, color: secondColor, fontFamily: fontStyle),
   );
 }
 
@@ -27,7 +28,7 @@ noDatas(context, _themeMode, _iconColor, {text= "No Data"}) {
           fontSize: 14,
           fontWeight: FontWeight.bold,
           letterSpacing: 1,
-          fontFamily: 'Lora'),
+          fontFamily: fontStyle),
     ),
   );
 

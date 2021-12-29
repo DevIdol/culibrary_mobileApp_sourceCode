@@ -1,3 +1,4 @@
+import 'package:culibrary/api/text_api.dart';
 import 'package:flutter/material.dart';
 
 import '../color_themes.dart';
@@ -16,7 +17,8 @@ inputAppBar(themeNotifier, _cardColor, _fontColor, text) {
     foregroundColor: _fontColor,
     title: Text(
       text,
-      style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, fontFamily: 'Lora'),
+      style: TextStyle(
+          fontSize: 16, fontWeight: FontWeight.bold, fontFamily: fontStyle),
     ),
   );
 }
