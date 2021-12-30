@@ -53,7 +53,7 @@ class _FourthYearBooksState extends State<FourthYearBooks> {
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
                         url:
-                            'https://1drv.ms/b/s!Ag2kIDUsRn6jdZvGU9VA72iY2_E?e=x1aHK9');
+                            'https://1drv.ms/b/s!Ag2kIDUsRn6jdZvGU9VA72iY2_E?e=ZYVsqZ');
                   }, 'assets/fourthyear/grammar.jpg', _iconColor),
                   _iconColor,
                   'Grammar'),
@@ -115,7 +115,7 @@ class _FourthYearBooksState extends State<FourthYearBooks> {
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
                         url:
-                            'https://1drv.ms/b/s!Ag2kIDUsRn6jcwT7yT342-oNxxw?e=YSLTuS');
+                            'https://1drv.ms/b/s!Ag2kIDUsRn6jcwT7yT342-oNxxw?e=SVW0Ff');
                   }, 'assets/fourthyear/computerAlgo.jpg', _iconColor),
                   _iconColor,
                   'Analysis of Algorithms')
@@ -199,7 +199,7 @@ class _FourthYearBooksState extends State<FourthYearBooks> {
                     () async {
                       await Utils.openLink(
                           url:
-                              'https://1drv.ms/b/s!Ag2kIDUsRn6jgQUhAml2bUCVBBGu?e=1V1MUj');
+                              'https://1drv.ms/b/s!Ag2kIDUsRn6jgQUhAml2bUCVBBGu?e=uVbW1G');
                     },
                     'assets/finalyear/networkSecure.jpg',
                     _iconColor,

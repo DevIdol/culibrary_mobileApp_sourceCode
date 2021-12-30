@@ -182,7 +182,7 @@ class _SecondYearBooksState extends State<SecondYearBooks> {
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
                         url:
-                            'https://1drv.ms/b/s!Ag2kIDUsRn6jdGE68pIZ5gL6pRw?e=dizG17');
+                            'https://1drv.ms/b/s!Ag2kIDUsRn6jdGE68pIZ5gL6pRw?e=2tJycz');
                   }, 'assets/secondyear/digitalFun.jpg', _iconColor),
                   _iconColor,
                   'Digital Fundamentals'),

@@ -190,7 +190,7 @@ class _ThirdYearBooksState extends State<ThirdYearBooks> {
                     () async {
                       await Utils.openLink(
                           url:
-                              'https://1drv.ms/b/s!Ag2kIDUsRn6jcG2CqRThuwaVw4A?e=tzrim0');
+                              'https://1drv.ms/b/s!Ag2kIDUsRn6jcG2CqRThuwaVw4A?e=TCdLMd');
                     },
                     'assets/thirdyear/computerOrganization.jpg',
                     _iconColor,
@@ -222,7 +222,7 @@ class _ThirdYearBooksState extends State<ThirdYearBooks> {
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
                         url:
-                            'https://1drv.ms/b/s!Ag2kIDUsRn6jeAa-Tc6g3x7u6Wo?e=EdYGCX');
+                            'https://1drv.ms/b/s!Ag2kIDUsRn6jeAa-Tc6g3x7u6Wo?e=W545eI');
                   }, 'assets/thirdyear/C#and.NetCore.jpg', _iconColor),
                   _iconColor,
                   'C# And .Net Core')

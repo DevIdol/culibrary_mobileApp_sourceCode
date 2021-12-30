@@ -52,7 +52,7 @@ class _FinalYearBooksState extends State<FinalYearBooks> {
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
                         url:
-                            'https://1drv.ms/b/s!Ag2kIDUsRn6jcTz9KfgSiPwP1bU?e=runliz');
+                            'https://1drv.ms/b/s!Ag2kIDUsRn6jcTz9KfgSiPwP1bU?e=Rckf2I');
                   }, 'assets/finalyear/5E.jpg', _iconColor),
                   _iconColor,
                   'IELTS-13'),
@@ -61,7 +61,7 @@ class _FinalYearBooksState extends State<FinalYearBooks> {
                   loadImageFromFirebase(context, () async {
                     await Utils.openLink(
                         url:
-                            'https://1drv.ms/b/s!Ag2kIDUsRn6jdZvGU9VA72iY2_E?e=x1aHK9');
+                            'https://1drv.ms/b/s!Ag2kIDUsRn6jdZvGU9VA72iY2_E?e=ZYVsqZ');
                   }, 'assets/fourthyear/grammar.jpg', _iconColor),
                   _iconColor,
                   'Grammar')
@@ -87,7 +87,7 @@ class _FinalYearBooksState extends State<FinalYearBooks> {
                     () async {
                       await Utils.openLink(
                           url:
-                              'https://1drv.ms/b/s!Ag2kIDUsRn6jckTrF2F5ruc5Ncs?e=7sDSch');
+                              'https://1drv.ms/b/s!Ag2kIDUsRn6jckTrF2F5ruc5Ncs?e=ctXBSP');
                     },
                     'assets/finalyear/distributedSys.jpg',
                     _iconColor,
@@ -199,7 +199,7 @@ class _FinalYearBooksState extends State<FinalYearBooks> {
                     () async {
                       await Utils.openLink(
                           url:
-                              'https://1drv.ms/b/s!Ag2kIDUsRn6jgQUhAml2bUCVBBGu?e=1V1MUj');
+                              'https://1drv.ms/b/s!Ag2kIDUsRn6jgQUhAml2bUCVBBGu?e=uVbW1G');
                     },
                     'assets/finalyear/networkSecure.jpg',
                     _iconColor,
