@@ -32,7 +32,7 @@ class _AboutPageState extends State<AboutPage> {
             children: [
               const SizedBox(height: 60),
               Container(
-                width: 120,
+                width: 110,
                 height: 110,
                 decoration: const BoxDecoration(
                     shape: BoxShape.circle,

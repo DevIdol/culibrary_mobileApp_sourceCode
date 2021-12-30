@@ -121,6 +121,11 @@ class _NoteUpdateState extends State<NoteUpdate> {
                       fontFamily: fontStyle),
                   decoration: InputDecoration(
                       border: InputBorder.none,
+                      focusedBorder: const UnderlineInputBorder(
+                        borderSide: BorderSide(color: secondColor),
+                      ),
+                      enabledBorder: const UnderlineInputBorder(
+                          borderSide: BorderSide(color: secondColor)),
                       hintText: 'Title',
                       hintStyle: TextStyle(
                           fontSize: 18,
