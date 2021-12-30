@@ -199,7 +199,7 @@ class _FourthYearBooksState extends State<FourthYearBooks> {
                     () async {
                       await Utils.openLink(
                           url:
-                              'https://drive.google.com/file/d/1miWm0EOsgPZry_XW6W4jfeo_uf4JI5zq/view?usp=sharing');
+                              'https://1drv.ms/b/s!Ag2kIDUsRn6jgQUhAml2bUCVBBGu?e=1V1MUj');
                     },
                     'assets/finalyear/networkSecure.jpg',
                     _iconColor,
