@@ -105,15 +105,23 @@ class _AboutPageState extends State<AboutPage> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
+                          Text(
+                            'Copyright ',
+                            style: TextStyle(
+                                fontSize: 10,
+                                fontWeight: FontWeight.bold,
+                                color: _iconColor,
+                                fontFamily: fontStyle),
+                          ),
                           Icon(
                             Icons.copyright,
-                            size: 18,
+                            size: 14,
                             color: _iconColor,
                           ),
                           Text(
-                            '2020-$formattedYear',
+                            ' 2020-$formattedYear',
                             style: TextStyle(
-                                fontSize: 14,
+                                fontSize: 10,
                                 fontWeight: FontWeight.bold,
                                 color: _iconColor,
                                 fontFamily: fontStyle),
