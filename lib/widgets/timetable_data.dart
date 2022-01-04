@@ -119,7 +119,10 @@ timetableList(
                               Container(
                                 decoration: BoxDecoration(
                                     color: _iconColor,
-                                    borderRadius: BorderRadius.circular(2)),
+                                    borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(3),
+                                      bottomLeft: Radius.circular(3),
+                                    )),
                                 child: Center(
                                   child: Padding(
                                     padding: const EdgeInsets.symmetric(
@@ -139,7 +142,10 @@ timetableList(
                               Container(
                                 decoration: BoxDecoration(
                                     color: Colors.red,
-                                    borderRadius: BorderRadius.circular(2)),
+                                    borderRadius: BorderRadius.only(
+                                      topRight: Radius.circular(3),
+                                      bottomRight: Radius.circular(3),
+                                    )),
                                 child: Center(
                                   child: Padding(
                                     padding: const EdgeInsets.symmetric(
