@@ -97,51 +97,101 @@ timetableList(
                 borderRadius: BorderRadius.circular(10),
               ),
               child: ListTile(
-                title: ListTile(
-                  title: Padding(
-                    padding: const EdgeInsets.only(bottom: 4, top: 10),
-                    child: Text(
-                      data.data[position].subject,
-                      style: TextStyle(
-                          fontSize: _todayTime ? 16 : 14.8,
-                          color: _iconColor,
-                          letterSpacing: 0.5,
-                          fontWeight:
-                              _todayTime ? FontWeight.w900 : FontWeight.w500,
-                          fontFamily: fontStyle),
-                    ),
-                  ),
-                  subtitle: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 6),
-                        child: Text(
-                          'Time: ${data.data[position].startTime} - ${data.data[position].endTime}',
-                          style: TextStyle(
-                              fontSize: 12,
-                              letterSpacing: 0.5,
-                              fontWeight: FontWeight.w900,
-                              fontFamily: fontStyle),
-                        ),
-                      ),
-                      Padding(
-                        padding:
-                            const EdgeInsets.only(bottom: 6, top: 8, left: 6),
-                        child: Text(
-                          data.data[position].note,
-                          style: TextStyle(
-                              fontSize: 12,
-                              color: secondColor,
-                              letterSpacing: 0.5,
-                              fontFamily: fontStyle),
-                        ),
-                      ),
-                    ],
+                title: Padding(
+                  padding: const EdgeInsets.only(bottom: 4, top: 10),
+                  child: Text(
+                    data.data[position].subject,
+                    style: TextStyle(
+                        fontSize: _todayTime ? 16 : 14.8,
+                        color: _iconColor,
+                        letterSpacing: 0.5,
+                        fontWeight:
+                            _todayTime ? FontWeight.w900 : FontWeight.w500,
+                        fontFamily: fontStyle),
                   ),
                 ),
+                subtitle: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    _todayTime
+                        ? Row(
+                            children: [
+                              Card(
+                                color: _todayTime ? _iconColor : null,
+                                child: Center(
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 6, vertical: 3),
+                                    child: Text(
+                                      'Start: ${data.data[position].startTime}',
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          color:
+                                              _todayTime ? _themeMode : null,
+                                          letterSpacing: 0.5,
+                                          fontWeight: FontWeight.w900,
+                                          fontFamily: fontStyle),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Text(
+                                '-',
+                                style: TextStyle(
+                                    color: themeNotifier.isDark
+                                        ? darkFontColor
+                                        : lightFontColor,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              Card(
+                                color: _todayTime ? Colors.red : null,
+                                child: Center(
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 6, vertical: 3),
+                                    child: Text(
+                                      'End: ${data.data[position].endTime}',
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          color: _todayTime
+                                              ? lightCardColor
+                                              : null,
+                                          letterSpacing: 0.5,
+                                          fontWeight: FontWeight.w900,
+                                          fontFamily: fontStyle),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          )
+                        : Padding(
+                          padding: const EdgeInsets.only(left: 6),
+                          child: Text(
+                              'Time: ${data.data[position].startTime} - ${data.data[position].endTime}',
+                              style: TextStyle(
+                                  fontSize: 12,
+                                  letterSpacing: 0.5,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: fontStyle),
+                            ),
+                        ),
+                    Padding(
+                      padding:
+                          const EdgeInsets.only(bottom: 10, top: 8, left: 6),
+                      child: Text(
+                        data.data[position].note,
+                        style: TextStyle(
+                            fontSize: 12,
+                            color: secondColor,
+                            letterSpacing: 0.5,
+                            fontFamily: fontStyle),
+                      ),
+                    ),
+                  ],
+                ),
                 trailing: Padding(
-                  padding: const EdgeInsets.only(top: 12),
+                  padding: const EdgeInsets.only(top: 18),
                   child: _todayTime
                       ? ClipOval(
                           child: Container(

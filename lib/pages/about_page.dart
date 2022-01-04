@@ -31,15 +31,9 @@ class _AboutPageState extends State<AboutPage> {
           child: Column(
             children: [
               const SizedBox(height: 60),
-              Container(
-                width: 110,
-                height: 110,
-                decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
-                    image: DecorationImage(
-                        image: AssetImage('assets/icon.png'),
-                        fit: BoxFit.fill)),
-              ),
+              SizedBox(
+                width: 100,
+                child: Image.asset('assets/icon.png',)),
               const SizedBox(height: 20),
               DefaultTextStyle(
                   style: TextStyle(
