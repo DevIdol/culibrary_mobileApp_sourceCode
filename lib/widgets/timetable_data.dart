@@ -116,18 +116,19 @@ timetableList(
                     _todayTime
                         ? Row(
                             children: [
-                              Card(
-                                color: _todayTime ? _iconColor : null,
+                              Container(
+                                decoration: BoxDecoration(
+                                    color: _iconColor,
+                                    borderRadius: BorderRadius.circular(2)),
                                 child: Center(
                                   child: Padding(
                                     padding: const EdgeInsets.symmetric(
-                                        horizontal: 6, vertical: 3),
+                                        horizontal: 3, vertical: 3),
                                     child: Text(
                                       'Start: ${data.data[position].startTime}',
                                       style: TextStyle(
                                           fontSize: 12,
-                                          color:
-                                              _todayTime ? _themeMode : null,
+                                          color: _themeMode,
                                           letterSpacing: 0.5,
                                           fontWeight: FontWeight.w900,
                                           fontFamily: fontStyle),
@@ -135,20 +136,14 @@ timetableList(
                                   ),
                                 ),
                               ),
-                              Text(
-                                '-',
-                                style: TextStyle(
-                                    color: themeNotifier.isDark
-                                        ? darkFontColor
-                                        : lightFontColor,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              Card(
-                                color: _todayTime ? Colors.red : null,
+                              Container(
+                                decoration: BoxDecoration(
+                                    color: Colors.red,
+                                    borderRadius: BorderRadius.circular(2)),
                                 child: Center(
                                   child: Padding(
                                     padding: const EdgeInsets.symmetric(
-                                        horizontal: 6, vertical: 3),
+                                        horizontal: 3, vertical: 3),
                                     child: Text(
                                       'End: ${data.data[position].endTime}',
                                       style: TextStyle(
@@ -166,8 +161,8 @@ timetableList(
                             ],
                           )
                         : Padding(
-                          padding: const EdgeInsets.only(left: 6),
-                          child: Text(
+                            padding: const EdgeInsets.only(left: 6),
+                            child: Text(
                               'Time: ${data.data[position].startTime} - ${data.data[position].endTime}',
                               style: TextStyle(
                                   fontSize: 12,
@@ -175,7 +170,7 @@ timetableList(
                                   fontWeight: FontWeight.bold,
                                   fontFamily: fontStyle),
                             ),
-                        ),
+                          ),
                     Padding(
                       padding:
                           const EdgeInsets.only(bottom: 10, top: 8, left: 6),
