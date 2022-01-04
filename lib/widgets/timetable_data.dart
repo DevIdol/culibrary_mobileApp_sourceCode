@@ -186,7 +186,7 @@ timetableList(
                   ],
                 ),
                 trailing: Padding(
-                  padding: const EdgeInsets.only(top: 18),
+                  padding: const EdgeInsets.only(top: 14),
                   child: _todayTime
                       ? ClipOval(
                           child: Container(
