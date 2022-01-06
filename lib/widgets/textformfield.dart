@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import '../color_themes.dart';
 
 getTimeFormField(double width, _iconColor, themeNotifier, _themeMode,
-    _fontColor, labelText, _controller, _format, validate, {initialEntryMode = TimePickerEntryMode.input}) {
+    _fontColor, labelText, _controller, _format, validate,_cardColor, {initialEntryMode = TimePickerEntryMode.input}) {
   return SizedBox(
     width: width,
     child: DateTimeField(
@@ -24,7 +24,7 @@ getTimeFormField(double width, _iconColor, themeNotifier, _themeMode,
                           colorScheme: ColorScheme.dark(
                             primary: _iconColor,
                             onPrimary: _themeMode,
-                            surface: _themeMode,
+                            surface: _cardColor,
                             onSurface: _fontColor,
                           ),
                         )
@@ -32,7 +32,7 @@ getTimeFormField(double width, _iconColor, themeNotifier, _themeMode,
                           colorScheme: ColorScheme.light(
                             primary: _iconColor,
                             onPrimary: _themeMode,
-                            surface: _themeMode,
+                            surface: _cardColor,
                             onSurface: _fontColor,
                           ),
                         ),

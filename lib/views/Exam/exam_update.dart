@@ -68,22 +68,20 @@ class _UpdateExamDateTimeState extends State<UpdateExamDateTime> {
                                 : null,
                       ),
                       getTimeFormField(
-                        width,
-                        _iconColor,
-                        themeNotifier,
-                        _themeMode,
-                        _fontColor,
-                        'Exam Time',
-                        _examTime,
-                        formatTime,
-                        (date) =>
-                            (date == exam.examTime || _examTime.text == '')
-                                ? 'Enter your exam time.'
-                                : null,
-                                
-                                initialEntryMode: TimePickerEntryMode.dial
-                      ),
-                    
+                          width,
+                          _iconColor,
+                          themeNotifier,
+                          _themeMode,
+                          _fontColor,
+                          'Exam Time',
+                          _examTime,
+                          formatTime,
+                          (date) =>
+                              (date == exam.examTime || _examTime.text == '')
+                                  ? 'Enter your exam time.'
+                                  : null,
+                          _cardColor,
+                          initialEntryMode: TimePickerEntryMode.dial),
                     ],
                   ),
                   const SizedBox(height: 10),

@@ -59,6 +59,7 @@ class _AddTuesdayClassState extends State<AddTuesdayClass> {
                         (date) => (date == null || _startTime.text == '')
                             ? enterStartTime
                             : null,
+                        _cardColor,
                       ),
                       getTimeFormField(
                         width,
@@ -72,6 +73,7 @@ class _AddTuesdayClassState extends State<AddTuesdayClass> {
                         (date) => (date == null || _endTime.text == '')
                             ? enterEndTime
                             : null,
+                        _cardColor,
                       ),
                     ],
                   ),

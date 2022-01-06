@@ -61,6 +61,7 @@ class _UpdateThursdayClassState extends State<UpdateThursdayClass> {
                               (date == thu.startTime || startTime.text == '')
                                   ? enterStartTime
                                   : null,
+                                  _cardColor,
                           initialEntryMode: TimePickerEntryMode.dial),
                       getTimeFormField(
                           width,
@@ -74,6 +75,7 @@ class _UpdateThursdayClassState extends State<UpdateThursdayClass> {
                           (date) => (date == thu.endTime || endTime.text == '')
                               ? enterEndTime
                               : null,
+                              _cardColor,
                           initialEntryMode: TimePickerEntryMode.dial),
                     ],
                   ),

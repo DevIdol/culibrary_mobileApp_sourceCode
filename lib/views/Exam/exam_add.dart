@@ -72,6 +72,7 @@ class _AddExamDateTimeState extends State<AddExamDateTime> {
                         (date) => (date == null || _examTime.text == '')
                             ? 'Enter your exam time.'
                             : null,
+                        _cardColor,
                       ),
                     ],
                   ),
