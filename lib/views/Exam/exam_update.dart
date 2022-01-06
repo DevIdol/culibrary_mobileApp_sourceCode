@@ -53,7 +53,7 @@ class _UpdateExamDateTimeState extends State<UpdateExamDateTime> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      dateFormField(
+                      getDateFormField(
                         width,
                         _iconColor,
                         _themeMode,
@@ -67,7 +67,7 @@ class _UpdateExamDateTimeState extends State<UpdateExamDateTime> {
                                 ? 'Enter your exam date.'
                                 : null,
                       ),
-                      dateTimeFormField(
+                      getTimeFormField(
                         width,
                         _iconColor,
                         themeNotifier,
@@ -80,7 +80,10 @@ class _UpdateExamDateTimeState extends State<UpdateExamDateTime> {
                             (date == exam.examTime || _examTime.text == '')
                                 ? 'Enter your exam time.'
                                 : null,
+                                
+                                initialEntryMode: TimePickerEntryMode.dial
                       ),
+                    
                     ],
                   ),
                   const SizedBox(height: 10),

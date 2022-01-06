@@ -47,7 +47,7 @@ class _AddExamDateTimeState extends State<AddExamDateTime> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      dateFormField(
+                      getDateFormField(
                         width,
                         _iconColor,
                         _themeMode,
@@ -60,7 +60,7 @@ class _AddExamDateTimeState extends State<AddExamDateTime> {
                             ? 'Enter your exam date.'
                             : null,
                       ),
-                      dateTimeFormField(
+                      getTimeFormField(
                         width,
                         _iconColor,
                         themeNotifier,

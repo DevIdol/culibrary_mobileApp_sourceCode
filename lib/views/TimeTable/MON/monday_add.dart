@@ -47,7 +47,7 @@ class _AddMondayClassState extends State<AddMondayClass> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      dateTimeFormField(
+                      getTimeFormField(
                         width,
                         _iconColor,
                         themeNotifier,
@@ -60,7 +60,7 @@ class _AddMondayClassState extends State<AddMondayClass> {
                             ? enterStartTime
                             : null,
                       ),
-                      dateTimeFormField(
+                      getTimeFormField(
                         width,
                         _iconColor,
                         themeNotifier,

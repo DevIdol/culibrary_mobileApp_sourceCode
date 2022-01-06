@@ -47,33 +47,33 @@ class _UpdateFridayClassState extends State<UpdateFridayClass> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      dateTimeFormField(
-                        width,
-                        _iconColor,
-                        themeNotifier,
-                        _themeMode,
-                        _fontColor,
-                        timeStart,
-                        startTime,
-                        formatTime,
-                        (date) =>
-                            (date == fri.startTime || startTime.text == '')
-                                ? enterStartTime
-                                : null,
-                      ),
-                      dateTimeFormField(
-                        width,
-                        _iconColor,
-                        themeNotifier,
-                        _themeMode,
-                        _fontColor,
-                        timeEnd,
-                        endTime,
-                        formatTime,
-                        (date) => (date == fri.endTime || endTime.text == '')
-                            ? enterEndTime
-                            : null,
-                      ),
+                      getTimeFormField(
+                          width,
+                          _iconColor,
+                          themeNotifier,
+                          _themeMode,
+                          _fontColor,
+                          timeStart,
+                          startTime,
+                          formatTime,
+                          (date) =>
+                              (date == fri.startTime || startTime.text == '')
+                                  ? enterStartTime
+                                  : null,
+                          initialEntryMode: TimePickerEntryMode.dial),
+                      getTimeFormField(
+                          width,
+                          _iconColor,
+                          themeNotifier,
+                          _themeMode,
+                          _fontColor,
+                          timeEnd,
+                          endTime,
+                          formatTime,
+                          (date) => (date == fri.endTime || endTime.text == '')
+                              ? enterEndTime
+                              : null,
+                          initialEntryMode: TimePickerEntryMode.dial),
                     ],
                   ),
                   const SizedBox(height: 10),

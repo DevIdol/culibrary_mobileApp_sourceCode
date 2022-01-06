@@ -129,7 +129,7 @@ class _TimeTableViewState extends State<TimeTableView>
                     ? darkModeIconColor
                     : lightModeIconColor,
                 unselectedLabelColor: _fontColor,
-                indicatorWeight: 3.0,
+                indicatorWeight: 4.0,
                 labelColor: _iconColor,
                 labelPadding: EdgeInsets.all(0),
                 labelStyle: TextStyle(

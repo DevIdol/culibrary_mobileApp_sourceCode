@@ -96,83 +96,75 @@ timetableList(
                     width: _todayTime ? 1.4 : 0.4),
                 borderRadius: BorderRadius.circular(10),
               ),
-              child: Container(
-                decoration: _todayTime
-                    ? BoxDecoration(
-                        border: Border(
-                            left: BorderSide(color: _iconColor, width: 10)),
-                      )
-                    : null,
-                child: ListTile(
-                  title: Padding(
-                    padding: const EdgeInsets.only(bottom: 4, top: 10),
-                    child: Text(
-                      data.data[position].subject,
-                      style: TextStyle(
-                          fontSize: _todayTime ? 16 : 14.8,
-                          color: _iconColor,
-                          letterSpacing: 0.5,
-                          fontWeight:
-                              _todayTime ? FontWeight.w900 : FontWeight.w500,
-                          fontFamily: fontStyle),
+              child: ListTile(
+                title: Padding(
+                  padding: const EdgeInsets.only(bottom: 6, top: 12),
+                  child: Text(
+                    data.data[position].subject,
+                    style: TextStyle(
+                        fontSize: _todayTime ? 16 : 14.8,
+                        color: _iconColor,
+                        letterSpacing: 0.5,
+                        fontWeight:
+                            _todayTime ? FontWeight.w900 : FontWeight.w500,
+                        fontFamily: fontStyle),
+                  ),
+                ),
+                subtitle: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 4),
+                      child: Text(
+                        'Time: ${data.data[position].startTime} - ${data.data[position].endTime}',
+                        style: TextStyle(
+                            fontSize: 12,
+                            letterSpacing: 0.5,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: fontStyle),
+                      ),
                     ),
-                  ),
-                  subtitle: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 6),
-                        child: Text(
-                          'Time: ${data.data[position].startTime} - ${data.data[position].endTime}',
-                          style: TextStyle(
-                              fontSize: 12,
-                              letterSpacing: 0.5,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: fontStyle),
-                        ),
+                    Padding(
+                      padding:
+                          const EdgeInsets.only(bottom: 10, top: 8, left: 6),
+                      child: Text(
+                        data.data[position].note,
+                        style: TextStyle(
+                            fontSize: 12,
+                            color: secondColor,
+                            letterSpacing: 0.5,
+                            fontFamily: fontStyle),
                       ),
-                      Padding(
-                        padding:
-                            const EdgeInsets.only(bottom: 10, top: 8, left: 6),
-                        child: Text(
-                          data.data[position].note,
-                          style: TextStyle(
-                              fontSize: 12,
-                              color: secondColor,
-                              letterSpacing: 0.5,
-                              fontFamily: fontStyle),
-                        ),
-                      ),
-                    ],
-                  ),
-                  trailing: Padding(
-                    padding: const EdgeInsets.only(top: 14),
-                    child: _todayTime
-                        ? ClipOval(
-                            child: Container(
-                              color: _iconColor,
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 4, vertical: 10),
-                              child: AnimatedTextKit(
-                                animatedTexts: [
-                                  WavyAnimatedText("NOW",
-                                      textStyle: TextStyle(
-                                          color: themeNotifier.isDark
-                                              ? lightFontColor
-                                              : darkFontColor,
-                                          fontSize: 10,
-                                          fontWeight: FontWeight.bold,
-                                          fontFamily: fontStyle),
-                                      speed: const Duration(milliseconds: 150))
-                                ],
-                                isRepeatingAnimation: true,
-                                repeatForever: true,
-                                displayFullTextOnTap: true,
-                              ),
+                    ),
+                  ],
+                ),
+                trailing: Padding(
+                  padding: const EdgeInsets.only(top: 12),
+                  child: _todayTime
+                      ? ClipOval(
+                          child: Container(
+                            color: _iconColor,
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 4, vertical: 10),
+                            child: AnimatedTextKit(
+                              animatedTexts: [
+                                WavyAnimatedText("NOW",
+                                    textStyle: TextStyle(
+                                        color: themeNotifier.isDark
+                                            ? lightFontColor
+                                            : darkFontColor,
+                                        fontSize: 10,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: fontStyle),
+                                    speed: const Duration(milliseconds: 150))
+                              ],
+                              isRepeatingAnimation: true,
+                              repeatForever: true,
+                              displayFullTextOnTap: true,
                             ),
-                          )
-                        : null,
-                  ),
+                          ),
+                        )
+                      : null,
                 ),
               ),
             ),

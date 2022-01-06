@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../color_themes.dart';
 
-dateTimeFormField(double width, _iconColor, themeNotifier, _themeMode,
-    _fontColor, labelText, _controller, _format, validate) {
+getTimeFormField(double width, _iconColor, themeNotifier, _themeMode,
+    _fontColor, labelText, _controller, _format, validate, {initialEntryMode = TimePickerEntryMode.input}) {
   return SizedBox(
     width: width,
     child: DateTimeField(
@@ -16,6 +16,7 @@ dateTimeFormField(double width, _iconColor, themeNotifier, _themeMode,
       cursorColor: _iconColor,
       onShowPicker: (context, currentValue) async {
         final time = await showTimePicker(
+            initialEntryMode: initialEntryMode ,
             builder: (context, child) {
               return Theme(
                   data: themeNotifier.isDark
@@ -70,8 +71,8 @@ dateTimeFormField(double width, _iconColor, themeNotifier, _themeMode,
   );
 }
 
-dateFormField(double width, _iconColor, _themeMode, themeNotifier, _fontColor,
-    labelText, _controller, _format, validate) {
+getDateFormField(double width, _iconColor, _themeMode, themeNotifier,
+    _fontColor, labelText, _controller, _format, validate) {
   return SizedBox(
     width: width,
     child: DateTimeField(
@@ -110,7 +111,7 @@ dateFormField(double width, _iconColor, _themeMode, themeNotifier, _fontColor,
       },
       style: TextStyle(
           color: _fontColor,
-          fontSize: 14,
+          fontSize: 12,
           fontWeight: FontWeight.bold,
           fontFamily: fontStyle),
       decoration: InputDecoration(
