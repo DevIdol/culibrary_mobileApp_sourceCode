@@ -189,13 +189,12 @@ class _NoteViewState extends State<NoteView> with TickerProviderStateMixin {
                           : data.data[position].title,
                       deleteAlert);
                 },
-                child: Card(
-                  elevation: 4,
-                  shape: RoundedRectangleBorder(
-                    side: BorderSide(color: secondColor, width: 0.4),
-                    borderRadius: BorderRadius.circular(10),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: _cardColor,
+                    borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                    border: Border.all(color: secondColor, width: 0.99),
                   ),
-                  color: _cardColor,
                   child: ListTile(
                     title: Column(
                       children: [

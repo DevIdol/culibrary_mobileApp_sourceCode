@@ -76,25 +76,32 @@ timetableList(
               }, _themeMode, _iconColor, data.data[position].subject,
                   deleteAlert);
             },
-            child: Card(
-              color: themeNotifier.isDark
-                  ? _todayTime
-                      ? darkMode
-                      : darkCardColor
-                  : _todayTime
-                      ? darkFontColor
-                      : lightCardColor,
-              elevation: _todayTime ? 4 : 2,
-              shadowColor: _todayTime
-                  ? themeNotifier.isDark
-                      ? darkFontColor
-                      : lightFontColor
-                  : null,
-              shape: RoundedRectangleBorder(
-                side: BorderSide(
+            child: Container(
+              decoration: BoxDecoration(
+                color: themeNotifier.isDark
+                    ? _todayTime
+                        ? darkMode
+                        : darkCardColor
+                    : _todayTime
+                        ? darkFontColor
+                        : lightCardColor,
+                borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                border: Border.all(
                     color: _todayTime ? _iconColor : secondColor,
-                    width: _todayTime ? 1.4 : 0.4),
-                borderRadius: BorderRadius.circular(10),
+                    width: _todayTime ? 1.4 : 0.99),
+                boxShadow: [
+                  _todayTime
+                      ? BoxShadow(
+                          blurStyle: BlurStyle.inner,
+                          blurRadius: 100,
+                          color: _iconColor,
+                          offset: Offset(
+                            0,
+                            4,
+                          ),
+                        )
+                      : BoxShadow()
+                ],
               ),
               child: ListTile(
                 title: Padding(

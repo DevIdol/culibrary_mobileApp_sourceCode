@@ -4,25 +4,35 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../color_themes.dart';
 
-chooseButton(press, double height, double width, img, name, double toLeft,
-    double toRight, double bottomLeft, double bottomRight) {
+chooseButton(press, double height, double width, img, name, double topLeft,
+    double topRight, double bottomLeft, double bottomRight) {
   return Consumer(builder: (context, ThemeModel themeNotifier, child) {
     return InkWell(
       onTap: press,
       child: SizedBox(
         height: height,
         width: width,
-        child: Card(
-          color: themeNotifier.isDark ? darkCardColor : lightCardColor,
-          elevation: 4,
-          shadowColor: themeNotifier.isDark ? Colors.white : Colors.black,
-          shape: RoundedRectangleBorder(
-              side: BorderSide(color: secondColor, width: 0.4),
-              borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(toLeft),
-                  topRight: Radius.circular(toRight),
-                  bottomLeft: Radius.circular(bottomLeft),
-                  bottomRight: Radius.circular(bottomRight))),
+        child: Container(
+          decoration: BoxDecoration(
+            color: themeNotifier.isDark ? darkCardColor : lightCardColor,
+            borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(topLeft),
+                topRight: Radius.circular(topRight),
+                bottomLeft: Radius.circular(bottomLeft),
+                bottomRight: Radius.circular(bottomRight)),
+            border: Border.all(color: secondColor, width: 0.99),
+            boxShadow: [
+              BoxShadow(
+                blurStyle: BlurStyle.inner,
+                blurRadius: 100,
+                color: secondColor,
+                offset: Offset(
+                  0,
+                  4,
+                ),
+              )
+            ],
+          ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

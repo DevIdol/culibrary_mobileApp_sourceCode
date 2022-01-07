@@ -93,17 +93,14 @@ class _SubjectViewState extends State<SubjectView> {
                           Get.to(const UpdateSubject(),
                               arguments: data.data[position]);
                         },
-                        child: Card(
-                          color: themeNotifier.isDark
-                              ? darkCardColor
-                              : lightCardColor,
-                          elevation: 6,
-                          shadowColor: themeNotifier.isDark
-                              ? darkShawdowColor
-                              : lightShawdowColor,
-                          shape: RoundedRectangleBorder(
-                            side: BorderSide(color: secondColor, width: 0.6),
-                            borderRadius: BorderRadius.circular(10),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: themeNotifier.isDark
+                                ? darkCardColor
+                                : lightCardColor,
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(10.0)),
+                            border: Border.all(color: secondColor, width: 0.99),
                           ),
                           child: ListTile(
                             leading: Padding(

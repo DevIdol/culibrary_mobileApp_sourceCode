@@ -169,8 +169,7 @@ class _ExamViewState extends State<ExamView> with TickerProviderStateMixin {
           exams = data.data;
           if (exams.isEmpty) {
             return Center(
-              child: noData(
-                  'No Exam Date And Time', ''),
+              child: noData('No Exam Date And Time', ''),
             );
           } else {
             return ListView.builder(
@@ -228,21 +227,32 @@ class _ExamViewState extends State<ExamView> with TickerProviderStateMixin {
                         Get.to(const UpdateExamDateTime(),
                             arguments: data.data[position]);
                       },
-                      child: Card(
-                        color: themeNotifier.isDark
-                            ? _todayDate
-                                ? darkMode
-                                : darkCardColor
-                            : _todayDate
-                                ? darkFontColor
-                                : lightCardColor,
-                        elevation: _todayDate ? 4 : 3,
-                        shadowColor: _todayDate ? darkFontColor : null,
-                        shape: RoundedRectangleBorder(
-                          side: BorderSide(
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: themeNotifier.isDark
+                              ? _todayDate
+                                  ? darkMode
+                                  : darkCardColor
+                              : _todayDate
+                                  ? darkFontColor
+                                  : lightCardColor,
+                          borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                          border: Border.all(
                               color: _todayDate ? _iconColor : secondColor,
-                              width: _todayDate ? 1.4 : 0.4),
-                          borderRadius: BorderRadius.circular(10),
+                              width: _todayDate ? 1.4 : 0.99),
+                          boxShadow: [
+                            _todayDate
+                                ? BoxShadow(
+                                    blurStyle: BlurStyle.inner,
+                                    blurRadius: 100,
+                                    color: _iconColor,
+                                    offset: Offset(
+                                      0,
+                                      4,
+                                    ),
+                                  )
+                                : BoxShadow()
+                          ],
                         ),
                         child: ListTile(
                           leading: _todayDate
