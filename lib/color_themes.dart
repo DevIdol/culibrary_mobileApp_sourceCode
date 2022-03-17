@@ -4,7 +4,7 @@ const Color firstColor = Color(0xFF083663);
 const Color secondColor = Colors.grey;
 
 //DarkMode
-const Color darkMode = Color(0xFF141414);
+const Color darkMode = Color(0xFF161616);
 const Color darkFontColor = Colors.white;
 const Color darkCardColor = Color(0xFF333333);
 const Color darkShawdowColor = Color(0xFF616161);

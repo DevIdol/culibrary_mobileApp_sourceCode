@@ -32,8 +32,10 @@ class _AboutPageState extends State<AboutPage> {
             children: [
               const SizedBox(height: 60),
               SizedBox(
-                width: 100,
-                child: Image.asset('assets/icon.png',)),
+                  width: 100,
+                  child: Image.asset(
+                    'assets/icon.png',
+                  )),
               const SizedBox(height: 20),
               DefaultTextStyle(
                   style: TextStyle(
@@ -67,7 +69,7 @@ class _AboutPageState extends State<AboutPage> {
               ),
               const SizedBox(height: 16),
               InkWell(
-                onTap: () => Utils.openLink(url: 'https://github.com/DevIdol'),
+                onTap: () => Utils.openLink(url: 'https://devidol.github.io/portfo/#resume'),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
@@ -279,7 +281,7 @@ class _AboutPageState extends State<AboutPage> {
                     Container(
                       alignment: Alignment.topLeft,
                       child: Text(
-                        '4. To Delete All Datas',
+                        '4. To Delete All Data',
                         style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,

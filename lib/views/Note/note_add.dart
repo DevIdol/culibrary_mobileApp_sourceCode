@@ -51,6 +51,7 @@ class _NoteAddState extends State<NoteAdd> {
               if (value!.length > 60) {
                 return "Title is too long.";
               }
+              return null;
             },
             style: TextStyle(
                 color: _fontColor,

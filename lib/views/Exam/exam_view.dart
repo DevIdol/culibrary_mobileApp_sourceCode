@@ -239,16 +239,16 @@ class _ExamViewState extends State<ExamView> with TickerProviderStateMixin {
                           borderRadius: BorderRadius.all(Radius.circular(10.0)),
                           border: Border.all(
                               color: _todayDate ? _iconColor : secondColor,
-                              width: _todayDate ? 1.4 : 0.99),
+                              width: _todayDate ? 1 : 0.6),
                           boxShadow: [
                             _todayDate
                                 ? BoxShadow(
-                                    blurStyle: BlurStyle.inner,
-                                    blurRadius: 100,
-                                    color: _iconColor,
+                                    spreadRadius: 2,
+                                    blurRadius: 8,
+                                    color: secondColor,
                                     offset: Offset(
-                                      0,
-                                      4,
+                                      2,
+                                      2,
                                     ),
                                   )
                                 : BoxShadow()

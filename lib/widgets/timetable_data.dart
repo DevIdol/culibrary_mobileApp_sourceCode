@@ -88,16 +88,16 @@ timetableList(
                 borderRadius: BorderRadius.all(Radius.circular(10.0)),
                 border: Border.all(
                     color: _todayTime ? _iconColor : secondColor,
-                    width: _todayTime ? 1.4 : 0.99),
+                    width: _todayTime ? 1 : 0.8),
                 boxShadow: [
                   _todayTime
                       ? BoxShadow(
-                          blurStyle: BlurStyle.inner,
-                          blurRadius: 100,
-                          color: _iconColor,
+                          spreadRadius: 2,
+                          blurRadius: 8,
+                          color: secondColor,
                           offset: Offset(
-                            0,
-                            4,
+                            2,
+                            2,
                           ),
                         )
                       : BoxShadow()

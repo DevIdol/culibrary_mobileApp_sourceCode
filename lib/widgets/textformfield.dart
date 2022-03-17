@@ -143,6 +143,7 @@ textFormField(_iconColor, _fontColor, labelText, _controller, maxLength,
     child: TextFormField(
       controller: _controller,
       textCapitalization: TextCapitalization.words,
+      
       inputFormatters: [LengthLimitingTextInputFormatter(maxLength)],
       autocorrect: true,
       autovalidateMode: AutovalidateMode.onUserInteraction,

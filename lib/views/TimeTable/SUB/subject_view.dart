@@ -100,7 +100,29 @@ class _SubjectViewState extends State<SubjectView> {
                                 : lightCardColor,
                             borderRadius:
                                 BorderRadius.all(Radius.circular(10.0)),
-                            border: Border.all(color: secondColor, width: 0.99),
+                            border: Border.all(color: secondColor, width: 0.6),
+                            boxShadow: [
+                              BoxShadow(
+                                spreadRadius: 2,
+                                blurRadius: 8,
+                                color: secondColor,
+                                offset: Offset(
+                                  4,
+                                  4,
+                                ),
+                              ),
+                              BoxShadow(
+                                spreadRadius: 2,
+                                blurRadius: 8,
+                                color: themeNotifier.isDark
+                                    ? darkCardColor
+                                    : Colors.white,
+                                offset: Offset(
+                                  -2,
+                                  -2,
+                                ),
+                              )
+                            ],
                           ),
                           child: ListTile(
                             leading: Padding(

@@ -112,8 +112,8 @@ class _NoteViewState extends State<NoteView> with TickerProviderStateMixin {
             },
             child: Padding(
                 padding: EdgeInsets.only(top: 10, bottom: 10),
-                child:
-                    _noteDate(_fontColor, _iconColor, _cardColor, _themeMode)),
+                child: _noteDate(themeNotifier, _fontColor, _iconColor,
+                    _cardColor, _themeMode)),
           ),
           floatingActionButton: Visibility(
             visible: _floatAButton,
@@ -157,7 +157,7 @@ class _NoteViewState extends State<NoteView> with TickerProviderStateMixin {
     });
   }
 
-  _noteDate(_fontColor, _iconColor, _cardColor, _themeMode) {
+  _noteDate(themeNotifier, _fontColor, _iconColor, _cardColor, _themeMode) {
     return StreamBuilder(
       stream: noteDao.getAllNotes(),
       builder: (context, dynamic data) {
@@ -190,10 +190,32 @@ class _NoteViewState extends State<NoteView> with TickerProviderStateMixin {
                       deleteAlert);
                 },
                 child: Container(
+                  margin: EdgeInsets.only(bottom: 10),
                   decoration: BoxDecoration(
                     color: _cardColor,
                     borderRadius: BorderRadius.all(Radius.circular(8.0)),
-                    border: Border.all(color: secondColor, width: 0.99),
+                    border: Border.all(color: secondColor, width: 0.6),
+                    boxShadow: [
+                      BoxShadow(
+                        spreadRadius: 1,
+                        blurRadius: 2,
+                        color: secondColor,
+                        offset: Offset(
+                          1,
+                          4,
+                        ),
+                      ),
+                      BoxShadow(
+                        spreadRadius: 2,
+                        blurRadius: 8,
+                        color:
+                            themeNotifier.isDark ? darkCardColor : Colors.white,
+                        offset: Offset(
+                          -2,
+                          -2,
+                        ),
+                      )
+                    ],
                   ),
                   child: ListTile(
                     title: Column(

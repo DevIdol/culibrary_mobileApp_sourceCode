@@ -45,8 +45,8 @@ class HomePage extends StatelessWidget {
   }
 
   _selectButton(context, _themeMode, _iconColor) {
-    final width = MediaQuery.of(context).size.width * 0.41;
-    final height = MediaQuery.of(context).size.height * 0.24;
+    final width = MediaQuery.of(context).size.width * 0.4;
+    final height = MediaQuery.of(context).size.height * 0.23;
     return SingleChildScrollView(
       child: DoubleBackToCloseApp(
         snackBar: SnackBar(
@@ -109,7 +109,7 @@ class HomePage extends StatelessWidget {
               ],
             ),
             const SizedBox(
-              height: 20,
+              height: 30,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -153,7 +153,7 @@ class HomePage extends StatelessWidget {
               ],
             ),
             const SizedBox(
-              height: 20,
+              height: 30,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,

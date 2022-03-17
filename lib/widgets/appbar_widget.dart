@@ -6,7 +6,8 @@ appBar(_cardColor, _fontColor, title, themeNotifier, _iconColor,
     {tabBar, double? leadingWidth, double? toolbarHeight}) {
   return AppBar(
     shape: RoundedRectangleBorder(
-      side: BorderSide(color: secondColor, width: 0.6),
+      
+      side: BorderSide(color: secondColor, width: 0.9),
       borderRadius: BorderRadius.circular(10),
     ),
     shadowColor: themeNotifier.isDark ? Colors.white24 : Colors.black,

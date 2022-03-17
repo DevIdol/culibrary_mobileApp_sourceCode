@@ -20,15 +20,23 @@ chooseButton(press, double height, double width, img, name, double topLeft,
                 topRight: Radius.circular(topRight),
                 bottomLeft: Radius.circular(bottomLeft),
                 bottomRight: Radius.circular(bottomRight)),
-            border: Border.all(color: secondColor, width: 0.99),
             boxShadow: [
               BoxShadow(
-                blurStyle: BlurStyle.inner,
-                blurRadius: 100,
+                spreadRadius: 2,
+                blurRadius: 8,
                 color: secondColor,
                 offset: Offset(
-                  0,
                   4,
+                  4,
+                ),
+              ),
+              BoxShadow(
+                spreadRadius: 2,
+                blurRadius: 8,
+                color: themeNotifier.isDark ? darkCardColor : Colors.white,
+                offset: Offset(
+                  -2,
+                  -2,
                 ),
               )
             ],

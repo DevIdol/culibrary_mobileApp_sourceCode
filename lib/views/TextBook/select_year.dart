@@ -96,7 +96,7 @@ class _SelectYearState extends State<SelectYear> {
           ],
         ),
         const SizedBox(
-          height: 20,
+          height: 30,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -140,7 +140,7 @@ class _SelectYearState extends State<SelectYear> {
           ],
         ),
         const SizedBox(
-          height: 20,
+          height: 30,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
